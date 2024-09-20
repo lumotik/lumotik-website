@@ -1,0 +1,22 @@
+include ./abstracts/_functions
+include ./abstracts/_variables
+include ./abstracts/_mixins
+- let currentPage = "index";
+doctype html
+html(lang= lang , dir = direction)
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    title #{projectName}
+    +mainStyle( direction , [])
+  body 
+    //- Start NavBar
+    include ./layout/_header.pug 
+    //- End NavBar
+
+    //- Start footer
+    include ./layout/_footer.pug 
+    //- End footer
+
+    //- Start Scripts 
+    +mainScript()
