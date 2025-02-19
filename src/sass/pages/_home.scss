@@ -1,0 +1,86 @@
+.projects {
+  &__header {
+    &__name {
+      color: $rose-color;
+      font-weight: 500;
+      font-size: 20px;
+      margin-bottom: 16px;
+    }
+
+    &__title {
+      color: black;
+      font-weight: bold;
+      font-size: 40px;
+    }
+
+    // tabs
+    .nav-tabs {
+      border-bottom: none;
+
+      .nav-link {
+        color: #525260;
+        font-size: 20px;
+        font-weight: 500;
+        border: none;
+        border-bottom: 1px solid transparent;
+        transition: all .3s ease-in-out;
+        padding: 0;
+
+        &.active,
+        &:hover,
+        &:focus {
+          color: #27272E;
+          border-bottom-color: $primary-color;
+        }
+      }
+    }
+
+    .tab-content {
+      .project-item {
+        margin: 0 32px;
+        border-radius: 30px;
+        overflow: hidden;
+        box-shadow: 0 55px 86px -35px #ECF2F6;
+
+        .image {
+          height: 380px;
+          overflow: hidden;
+
+          img {
+            transition: all .6s ease-in-out;
+            height: 100%;
+            width: 100%;
+          }
+        }
+
+        &__info {
+          padding: 32px;
+
+          h4 {
+            font-size: 32px;
+            color: #292930;
+            transition: color .3s ease-in-out;
+
+            &:hover {
+              color: $primary-color
+            }
+          }
+
+          p {
+            font-size: 16px;
+            color: #525260
+          }
+        }
+
+        &:hover {
+          .image {
+            img {
+              transform: scale(1.1);
+            }
+          }
+        }
+
+      }
+    }
+  }
+}
