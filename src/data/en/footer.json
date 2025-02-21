@@ -5,6 +5,32 @@
       "description": "Fusce varius, dolor tempor interdum tristique, dui urna bib endum magna, ut ullamcorper puru.",
       "placeholder": "Email address",
       "subscribe": "Subscribe"
+    },
+    "links": {
+      "services_title": "Services",
+      "services": [
+        { "text": "Logo & Branding", "url": "#" },
+        { "text": "Website Development", "url": "#" },
+        { "text": "Mobile App Development", "url": "#" },
+        { "text": "Search Engine Optimization", "url": "#" },
+        { "text": "Pay-Per-Click", "url": "#" },
+        { "text": "Social Media Marketing", "url": "#" }
+      ],
+      "resources_title": "Resources",
+      "resources": [
+        { "text": "Contact", "url": "#" },
+        { "text": "Blog", "url": "#" },
+        { "text": "Case Studies", "url": "#" },
+        { "text": "Portfolio", "url": "#" }
+      ]
+    },
+    "copyright": {
+      "title": "© 2025. All rights reserved by",
+      "company": "Lumotik Team",
+      "support": [
+        { "text": "Privacy Policy", "url": "#" },
+        { "text": "Terms of Use", "url": "#" }
+      ]
     }
   }
 }

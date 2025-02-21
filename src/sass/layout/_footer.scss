@@ -22,6 +22,13 @@
     border-inline-end: 2px solid $lighter-gray-color;
     margin-inline-end: 2.5rem;
     margin-block-end: 5rem;
+
+    @include responsive(max, 1200px) {
+      padding-inline-end: unset;
+      border-inline-end: unset;
+      margin-inline-end: unset;
+      margin-block-end: 3rem;
+    }
   }
 
   &__title {
@@ -67,8 +74,42 @@
     }
   }
 
+  &__widget {
+    margin-bottom: 3rem;
+
+    &__title {
+      font-size: 20px;
+      font-weight: 700;
+      margin-bottom: 1.5rem;
+    }
+
+    ul {
+      li {
+        a {
+          display: inline-block;
+          color: $gray-color;
+          padding-block: 8px;
+          font-size: 18px;
+
+          &:hover {
+            color: $primary-color;
+          }
+        }
+      }
+    }
+  }
+
   &__copyright {
     padding: 25px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    border-top: 1px solid $gray-color;
+
+    @include responsive(max, 768px) {
+      justify-content: center;
+    }
 
     &__description {
       color: $gray-color;
@@ -79,6 +120,35 @@
 
         &:hover {
           color: $primary-color;
+        }
+      }
+    }
+
+    ul {
+      li {
+        display: inline-block;
+        position: relative;
+        padding-inline: 20px;
+
+        &:not(:last-child)::after {
+          content: "";
+          height: 4px;
+          width: 4px;
+          background-color: $gray-color;
+          border-radius: 50%;
+          position: absolute;
+          top: 50%;
+          inset-inline-end: -5px;
+          transform: translateY(-50%);
+        }
+
+        a {
+          font-size: 1rem;
+          color: $gray-color;
+
+          &:hover {
+            color: $primary-color;
+          }
         }
       }
     }

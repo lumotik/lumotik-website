@@ -1,18 +1,40 @@
+- const footerData = data.footer;
+
 footer.footer
     .container 
         .footer__social
-            each link in data.socialLinks
-                a(class="footer__social__item" href=link.url, target="_blank" title=`${link.name}`)
+            each link ,index in data.socialLinks
+                a(class="footer__social__item" href=link.url, target="_blank" title=`${link.name}` data-aos="fade-up" data-aos-delay=`${index}00` data-aos-duration="1000")
                     i(class=`fa-brands ${link.icon}` aria-hidden="true")
         .row 
-            .col-6
+            .col-xl-6.col-lg-5(data-aos="fade-right", data-aos-duration="1000")
                 .footer__info 
-                    h2.footer__title=data.footer.info.header
-                    p.footer__description=data.footer.info.description
+                    h2.footer__title=footerData.info.header
+                    p.footer__description=footerData.info.description
                     form.footer__newsletter
-                        input(type="email", placeholder=data.footer.info.placeholder)
-                        button.main-button(type="submit", class="btn btn-primary")=data.footer.info.subscribe
-            .col-6
-                | asdas
+                        input(type="email", placeholder=footerData.info.placeholder)
+                        button.main-button(type="submit", class="btn btn-primary")=footerData.info.subscribe
+
+            .col-xl-6.col-lg-7(data-aos="fade-left", data-aos-duration="1000")
+                .row
+                    .col-sm-6
+                        .footer__widget
+                            h6.footer__widget__title=footerData.links.services_title
+                            ul.list-unstyled
+                                each link in footerData.links.services
+                                    li #[a(href=link.url)= link.text]
+
+                    .col-sm-6
+                        .footer__widget
+                            h6.footer__widget__title=footerData.links.resources_title
+                            ul.list-unstyled
+                                each link in footerData.links.resources
+                                    li #[a(href=link.url)= link.text]
+
         .footer__copyright
-            p.footer__copyright__description © 2025. All rights reserved by #[a(href=linkHandler("index" , lang)) Lumotik Team]
+            p.footer__copyright__description=footerData.copyright.title 
+                a(href=linkHandler("index" , lang))=footerData.copyright.company
+            ul.list-unstyled
+                each link in footerData.copyright.support
+                    li #[a(href=link.url)= link.text]
+

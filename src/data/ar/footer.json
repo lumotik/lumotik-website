@@ -1,8 +1,36 @@
 {
   "footer": {
     "info": {
-      "header": "Get in touch!",
-      "description": "Fusce varius, dolor tempor interdum tristique, dui urna bib endum magna, ut ullamcorper puru."
+      "header": "تواصل معنا!",
+      "description": "فوسكيه فارياس، دولور تيمبور إنتردم تريستيك، دوي أورنا بيب إندم ماجنا، أوت أولامكوربر بورو.",
+      "placeholder": "عنوان البريد الإلكتروني",
+      "subscribe": "اشترك"
+    },
+    "links": {
+      "services_title": "الخدمات",
+      "services": [
+        { "text": "الشعار والعلامة التجارية", "url": "#" },
+        { "text": "تطوير المواقع الإلكترونية", "url": "#" },
+        { "text": "تطوير تطبيقات الهاتف المحمول", "url": "#" },
+        { "text": "تحسين محركات البحث", "url": "#" },
+        { "text": "الإعلانات المدفوعة لكل نقرة", "url": "#" },
+        { "text": "تسويق وسائل التواصل الاجتماعي", "url": "#" }
+      ],
+      "resources_title": "الموارد",
+      "resources": [
+        { "text": "اتصل بنا", "url": "#" },
+        { "text": "المدونة", "url": "#" },
+        { "text": "دراسات الحالة", "url": "#" },
+        { "text": "معرض الأعمال", "url": "#" }
+      ]
+    },
+    "copyright": {
+      "title": "© 2025. جميع الحقوق محفوظة لـ",
+      "company": "فريق Lumotik",
+      "support": [
+        { "text": "سياسة الخصوصية", "url": "#" },
+        { "text": "شروط الاستخدام", "url": "#" }
+      ]
     }
   }
 }
