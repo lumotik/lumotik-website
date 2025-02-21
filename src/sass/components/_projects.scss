@@ -1,0 +1,70 @@
+.projects {
+  // tabs
+  .nav-tabs {
+    border-bottom: none;
+
+    .nav-link {
+      color: #525260;
+      font-size: 20px;
+      font-weight: 500;
+      border: none;
+      border-bottom: 1px solid transparent;
+      transition: all 0.3s ease-in-out;
+      padding: 0;
+
+      &.active,
+      &:hover,
+      &:focus {
+        color: $dark-color;
+        border-bottom-color: $primary-color;
+      }
+    }
+  }
+
+  .tab-content {
+    .project-item {
+      margin: 0 32px;
+      border-radius: 30px;
+      overflow: hidden;
+      box-shadow: 0 55px 86px -35px $lighter-gray-color;
+
+      .image {
+        height: 380px;
+        overflow: hidden;
+
+        img {
+          transition: all 0.6s ease-in-out;
+          height: 100%;
+          width: 100%;
+        }
+      }
+
+      &__info {
+        padding: 32px;
+
+        h4 {
+          font-size: 32px;
+          color: #292930;
+          transition: color 0.3s ease-in-out;
+
+          &:hover {
+            color: $primary-color;
+          }
+        }
+
+        p {
+          font-size: 16px;
+          color: #525260;
+        }
+      }
+
+      &:hover {
+        .image {
+          img {
+            transform: scale(1.1);
+          }
+        }
+      }
+    }
+  }
+}

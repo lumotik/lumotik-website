@@ -1,0 +1,42 @@
+.about-us {
+  background-color: $lighter-gray-color;
+  position: relative;
+
+  &__bubble,
+  &__line {
+    position: absolute;
+    inset-inline-start: 0;
+  }
+
+  &__bubble {
+    top: 0;
+    height: 320px;
+  }
+
+  &__line {
+    top: 64px;
+  }
+
+  &__form {
+    background-color: white;
+    border-radius: 32px;
+
+    &__field {
+      p {
+        font-weight: 500;
+        color: $dark-color;
+        border: none;
+        border-bottom: 1px solid transparent;
+        transition: all 0.3s ease-in-out;
+        padding: 0;
+
+        &.active,
+        &:hover,
+        &:focus {
+          color: #27272e;
+          border-bottom-color: $primary-color;
+        }
+      }
+    }
+  }
+}

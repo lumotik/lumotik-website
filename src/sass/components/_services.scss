@@ -1,0 +1,79 @@
+.services {
+  padding-block: 120px;
+  background-color: $dark-color;
+  position: relative;
+  &__wrapper {
+    position: relative;
+    z-index: 1;
+  }
+  &__header {
+    margin-block-end: 60px;
+    position: relative;
+    z-index: 1;
+  }
+  &__subtitle {
+    color: $rose-color;
+    font-weight: 500;
+    font-size: 20px;
+    margin-block-end: 16px;
+  }
+
+  &__title {
+    color: $white-color;
+    font-weight: 500;
+    font-size: 56px;
+    margin-block-end: 35px;
+  }
+  &__description {
+    color: $white-color;
+    opacity: 0.6;
+    font-size: 18px;
+  }
+  &__cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 24px;
+  }
+  &__card {
+    display: flex;
+    gap: 24px;
+    padding: 40px;
+    border-radius: 30px;
+    position: relative;
+    border: 1px solid transparent;
+    cursor: pointer;
+    transition: border-color 0.3s ease-in-out, background-image 0.3s ease-in;
+    &:hover {
+      background-image: linear-gradient(180deg, #27272e 0%, #303035 100%);
+      border-color: rgb(82, 82, 96);
+    }
+    &-img {
+      flex-shrink: 0;
+      width: 60px;
+    }
+    &-title {
+      color: $white-color;
+      font-size: 24px;
+      margin-block-end: 32px;
+    }
+    &-description {
+      color: $lighter-gray-color;
+      font-size: 16px;
+      margin-block-end: 32px;
+    }
+  }
+  &__bubbles {
+    position: absolute;
+    inset: 0;
+    &-line {
+      position: absolute;
+      top: 120px;
+      inset-inline-end: 0;
+    }
+    &-curve {
+      position: absolute;
+      bottom: 120px;
+      inset-inline-start: 0;
+    }
+  }
+}
