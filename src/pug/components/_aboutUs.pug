@@ -1,0 +1,30 @@
+- const aboutUsInfo = data.aboutUs.info
+- const form = data.aboutUs.form
+
+  section.about-us
+    .container.position-relative.z-2
+      .row.g-4.align-items-center
+        .col-12.col-md-7
+          div.px-3.px-md-5(data-aos="fade-up" data-aos-duration="1000")
+            .section-title
+              .p.sub-title= aboutUsInfo.subTitle
+              h2.main-title.mb-4= aboutUsInfo.title
+            p.mb-4=aboutUsInfo.text1
+
+            p=aboutUsInfo.text2
+
+        .col-12.col-md-5
+          .about-us__form.p-5(data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100")
+            h3.mb-3= form.title
+
+            .d-flex.flex-column.gap-3
+              each input in form.inputs
+                .about-us__form__field.d-flex.flex-column.gap-1
+                  p=input.title
+                  input(type=input.type, name=input.name, placeholder=input.placeholder)
+              button.main-button.w-100.mt-2= form.actionButton
+    div
+      .about-us__bubble
+        img.flip-shape(src="./images/shapes/bubble-7.webp" alt="bubble")
+      .about-us__line.d-none.d-md-block
+        img(src="./images/shapes/line-4.webp" alt="line")

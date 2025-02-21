@@ -1,4 +1,36 @@
 {
+	"aboutUs": {
+		"info": {
+			"subTitle": "عنا",
+			"title": "We do design, code & develop.",
+			"text1": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries,",
+			"text2": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters"
+		},
+		"form": {
+			"title": "Get a free Keystroke quote now",
+			"inputs": [
+				{
+					"title": "الأسم",
+					"placeholder": "John Smith",
+					"id": "name",
+					"type": "text"
+				},
+				{
+					"title": "البريد الالكترونى",
+					"placeholder": "Example@gmail.com",
+					"id": "email",
+					"type": "email"
+				},
+				{
+					"title": "الهاتف",
+					"placeholder": "+20123456789",
+					"id": "phone",
+					"type": "phone"
+				}
+			],
+			"actionButton": "ارسل"
+		}
+	},
 	"footer": {
 		"info": {
 			"header": "تواصل معنا!",
@@ -68,6 +100,53 @@
 				}
 			]
 		}
+	},
+	"projects": {
+		"info": {
+			"subTitle": "مشاريعنا",
+			"title1": "بعض من",
+			"title2": "افضل اعمالنا"
+		},
+		"tabs": [
+			{
+				"id": "all",
+				"title": "كل المشاريع"
+			},
+			{
+				"id": "cat1",
+				"title": "الفئة 1"
+			},
+			{
+				"id": "cat2",
+				"title": "الفئة 2"
+			}
+		],
+		"allProjects": [
+			{
+				"image": "https://images.unsplash.com/photo-1739582814657-10931286d7a5?q=80&w=1528&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+				"title": "Creative Agency",
+				"subTitle": "Full Branding, Website, App",
+				"category": "cat2"
+			},
+			{
+				"image": "https://images.unsplash.com/photo-1736618626242-542735175261?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+				"title": "Digital Marketing",
+				"subTitle": "Logo, Website & Mobile App",
+				"category": "cat2"
+			},
+			{
+				"image": "https://images.unsplash.com/photo-1728984273683-d962fd89ef4d?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+				"title": "Digital Agency",
+				"subTitle": "Website, UI/UX, App",
+				"category": "cat2"
+			},
+			{
+				"image": "https://images.unsplash.com/photo-1738430275589-2cd3d0d0d57a?q=80&w=1461&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+				"title": "Plan Management",
+				"subTitle": "Branding, Website, IOS App",
+				"category": "cat1"
+			}
+		]
 	},
 	"socialLinks": [
 		{

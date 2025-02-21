@@ -53,6 +53,7 @@ input {
     color: $rose-color;
     font-weight: 500;
     font-size: 20px;
+    margin-block-end: 16px;
 
     @include responsive(max, 575px) {
       font-size: 16px;
@@ -65,14 +66,21 @@ input {
 
   .main-title {
     color: $dark-color;
+    font-weight: 500;
     font-size: 64px;
+    margin-block-end: 32px;
 
     @include responsive(max, 575px) {
       font-size: 32px;
     }
 
     @include responsive(max, 991px) {
+      margin-block-end: 16px;
       font-size: 32px;
     }
   }
+}
+
+.flip-shape {
+  transform: scaleX(#{$n * 1});
 }

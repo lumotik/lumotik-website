@@ -1,0 +1,34 @@
+- const projectsInfo = data.projects.info;
+- const projectsTabs = data.projects.tabs;
+- const allProjects = data.projects.allProjects;
+
+  section.projects
+    .container
+      .section-title
+        p.sub-title=projectsInfo.subTitle
+        h2.main-title
+          span=projectsInfo.title1
+          br
+          span=projectsInfo.title2
+      //- tabs
+      .projects__tabs
+
+        ul#myTab.nav.nav-tabs.mb-3.mb-md-5.gap-md-5.gap-3(role='tablist')
+          each tab, index in projectsTabs
+            li.nav-item(role='presentation')
+              button(id=`${tab.id}-tab` class=`nav-link ${index == 0 ? 'active' : ''}` data-bs-toggle='tab' data-bs-target=`#${tab.id}-tab-pane` type='button' role='tab' aria-controls=`${tab.id}-tab-pane` aria-selected='true')= tab.title
+
+        //- contents
+        .tab-content
+          each tab, index in projectsTabs
+            div(id=`${tab.id}-tab-pane` class=`tab-pane fade show ${index == 0 ? 'active' : ''}`  role='tabpanel' aria-labelledby=`${tab.id}-tab` tabindex='0')
+              .row.g-md-5.g-2
+                each project in tab.id == "all" ? allProjects :allProjects.filter(project => project.category == tab.id )
+                  .col-12.col-md-6
+                    .project-item.mx-2.mx-md-4(data-aos="fade-up" data-aos-duration="1000")
+                      a(href="#")
+                        .image
+                          img(src=project.image)
+                        .project-item__info
+                          h4.mb-2= project.title
+                          p= project.subTitle
