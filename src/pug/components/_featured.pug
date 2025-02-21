@@ -1,0 +1,25 @@
+- var services = Array.from({ length: 6 }, (_, i) => ({icon: `./images/services/icon-${i + 1}.webp`,title: ["Design", "Development", "Online marketing", "Business", "Technology", "Content strategy"][i], description: "Simply drag and drop photos and videos into your workspace to automatically add them to your Collab Cloud library."}));
+
+section.featured
+  .container
+    .featured__wrapper
+      .featured__item
+        .featured__header
+          p.featured__subtitle Featured Case Study
+          h2.featured__title 
+            | Website and web 
+            br
+            | Development,Design
+          p.featured__description Donec metus lorem, vulputate at sapien sit amet, auctor iaculis lorem. In vel hendrerit nisi. Vestibulum eget risus velit. Aliquam tristique libero at dui sodales, et placerat orci lobortis..
+          p.featured__description Maecenas ipsum neque, elementum id dignissim et, imperdiet vitae mauris.
+          button.main-button.featured__btn Read Case Study
+        .featured__counter
+          .featured__count
+            p.featured__number 20%
+            p.featured__text ROI increase
+          .featured__count
+            p.featured__number 20%
+            p.featured__text ROI increase
+      .featured__item
+        .featured__img
+          img(src="./images/featured/case-study-5.webp")
