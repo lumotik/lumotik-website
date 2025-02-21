@@ -45,8 +45,8 @@ ul {
 
 img {
   object-fit: cover;
-  height: 100%;
   width: 100%;
+  height: auto;
 }
 
 textarea {
@@ -55,7 +55,7 @@ textarea {
 
 textarea:focus,
 input:not([type="radio"]):focus {
-  border-color: $primary-color ;
+  border-color: $primary-color;
   outline: none;
   box-shadow: none;
 }
@@ -70,7 +70,6 @@ h6 {
   line-height: 1;
   margin-bottom: 0;
 }
-
 
 button {
   cursor: pointer;

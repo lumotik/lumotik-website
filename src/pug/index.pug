@@ -17,7 +17,9 @@ html(lang= lang , dir = direction)
     //- Start footer
     include ./layout/_footer.pug 
     //- End footer
-
+    //- Start Services
+    include ./components/_services.pug 
+    //- End Services
     //- start about us
     -var formInputs = [{title:"Name",placeholder:"John Smith",id:"name",type:"text"},{title:"Email",placeholder:"Example@gmail.com",id:"email",type:"email"},{title:"Phone",placeholder:"+20123456789",id:"phone",type:"phone"}]
 
@@ -73,21 +75,20 @@ html(lang= lang , dir = direction)
               li.nav-item(role='presentation')
                 button(id=`${tab.id}-tab` class=`nav-link ${index == 0 ? 'active' : ''}` data-bs-toggle='tab' data-bs-target=`#${tab.id}-tab-pane` type='button' role='tab' aria-controls=`${tab.id}-tab-pane` aria-selected='true')= tab.title
 
-          //- contents
-          .tab-content
-            each tab, index in tabs
-              div(id=`${tab.id}-tab-pane` class=`tab-pane fade show ${index == 0 ? 'active' : ''}`  role='tabpanel' aria-labelledby=`${tabs.id}-tab` tabindex='0')
-                .row.g-md-5.g-2 
-                  each project in tab.id == "all" ? allProjects :allProjects.filter(project => project.category == tab.id )
-                    .col-12.col-md-6 
-                      .project-item.mx-2.mx-md-4
-                        a(href="#")
-                          .image
-                            img(src=project.image)
-                          .project-item__info 
-                            h4.mb-2= project.title
-                            p= project.subTitle
-    //- end projects
-
+            //- contents
+            .tab-content
+              each tab, index in tabs
+                div(id=`${tab.id}-tab-pane` class=`tab-pane fade show ${index == 0 ? 'active' : ''}`  role='tabpanel' aria-labelledby=`${tabs.id}-tab` tabindex='0')
+                  .row.g-md-5.g-2 
+                    each project in tab.id == "all" ? allProjects :allProjects.filter(project => project.category == tab.id )
+                      .col-12.col-md-6 
+                        .project-item.mx-2.mx-md-4
+                          a(href="#")
+                            .image
+                              img(src=project.image)
+                            .project-item__info 
+                              h4.mb-2= project.title
+                              p= project.subTitle
+    //- start projects
     //- Start Scripts 
     +mainScript()
