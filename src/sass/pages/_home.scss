@@ -1,86 +1,107 @@
-.projects {
-  &__header {
-    &__name {
-      color: $rose-color;
-      font-weight: 500;
-      font-size: 20px;
-      margin-bottom: 16px;
-    }
+.about-us {
+  background-color: $lighter-gray-color;
+  position: relative;
 
-    &__title {
-      color: black;
-      font-weight: bold;
-      font-size: 40px;
-    }
+  &__bubble,
+  &__line {
+    position: absolute;
+    inset-inline-start: 0;
+  }
 
-    // tabs
-    .nav-tabs {
-      border-bottom: none;
+  &__bubble {
+    top: 0;
+    height: 320px;
 
-      .nav-link {
-        color: #525260;
-        font-size: 20px;
+  }
+
+  &__line {
+    top: 64px;
+  }
+
+
+  &__form {
+    background-color: white;
+    border-radius: 32px;
+
+    &__field {
+      p {
         font-weight: 500;
-        border: none;
-        border-bottom: 1px solid transparent;
-        transition: all .3s ease-in-out;
-        padding: 0;
+        color: $dark-color;
+      }
 
-        &.active,
-        &:hover,
-        &:focus {
-          color: #27272E;
-          border-bottom-color: $primary-color;
-        }
+    }
+  }
+}
+
+.projects {
+
+  // tabs
+  .nav-tabs {
+    border-bottom: none;
+
+    .nav-link {
+      color: #525260;
+      font-size: 20px;
+      font-weight: 500;
+      border: none;
+      border-bottom: 1px solid transparent;
+      transition: all .3s ease-in-out;
+      padding: 0;
+
+      &.active,
+      &:hover,
+      &:focus {
+        color: $dark-color;
+        border-bottom-color: $primary-color;
       }
     }
+  }
 
-    .tab-content {
-      .project-item {
-        margin: 0 32px;
-        border-radius: 30px;
+  .tab-content {
+    .project-item {
+      margin: 0 32px;
+      border-radius: 30px;
+      overflow: hidden;
+      box-shadow: 0 55px 86px -35px $lighter-gray-color;
+
+      .image {
+        height: 380px;
         overflow: hidden;
-        box-shadow: 0 55px 86px -35px #ECF2F6;
 
-        .image {
-          height: 380px;
-          overflow: hidden;
-
-          img {
-            transition: all .6s ease-in-out;
-            height: 100%;
-            width: 100%;
-          }
+        img {
+          transition: all .6s ease-in-out;
+          height: 100%;
+          width: 100%;
         }
-
-        &__info {
-          padding: 32px;
-
-          h4 {
-            font-size: 32px;
-            color: #292930;
-            transition: color .3s ease-in-out;
-
-            &:hover {
-              color: $primary-color
-            }
-          }
-
-          p {
-            font-size: 16px;
-            color: #525260
-          }
-        }
-
-        &:hover {
-          .image {
-            img {
-              transform: scale(1.1);
-            }
-          }
-        }
-
       }
+
+      &__info {
+        padding: 32px;
+
+        h4 {
+          font-size: 32px;
+          color: #292930;
+          transition: color .3s ease-in-out;
+
+          &:hover {
+            color: $primary-color
+          }
+        }
+
+        p {
+          font-size: 16px;
+          color: #525260
+        }
+      }
+
+      &:hover {
+        .image {
+          img {
+            transform: scale(1.1);
+          }
+        }
+      }
+
     }
   }
 }

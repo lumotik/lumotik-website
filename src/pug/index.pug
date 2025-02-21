@@ -18,43 +18,76 @@ html(lang= lang , dir = direction)
     include ./layout/_footer.pug 
     //- End footer
 
+    //- start about us
+    -var formInputs = [{title:"Name",placeholder:"John Smith",id:"name",type:"text"},{title:"Email",placeholder:"Example@gmail.com",id:"email",type:"email"},{title:"Phone",placeholder:"+20123456789",id:"phone",type:"phone"}]
+
+    section.about-us
+      .container.position-relative.z-2
+        .row.g-4.align-items-center
+          .col-12.col-md-7
+            div.px-3.px-md-5
+              .section-title 
+                .p.sub-title.mb-3 About us
+                h2.main-title.mb-4 We do design, code & develop.
+              p.mb-4 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries,
+
+              p It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters
+
+          .col-12.col-md-5
+            .about-us__form.p-5
+              h3.mb-3 Get a free Keystroke quote now
+
+              .d-flex.flex-column.gap-3
+                each input in formInputs
+                  .about-us__form__field.d-flex.flex-column.gap-1
+                    p=input.title
+                    input(type=input.type, name=input.name, placeholder=input.placeholder)
+                button.main-button.w-100.mt-2 Send
+      div
+        .about-us__bubble 
+          img(src="./assets/img/shapes/bubble-7.png" alt="bubble")
+        .about-us__line.d-none.d-md-block 
+          img(src="./assets/img/shapes/line-4.png" alt="line")
+    //- end about us
+
+
     //- start projects
     - var tabs = [{id:"all",title:"All Work"},{id:"cat1",title:"Category 1"},{id:"cat2",title:"Category 2"}]
 
     - var allProjects = [{image:"https://images.unsplash.com/photo-1739582814657-10931286d7a5?q=80&w=1528&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",title:"Creative Agency",subTitle:"Full Branding, Website, App",category:"cat2"},{image:"https://images.unsplash.com/photo-1736618626242-542735175261?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",title:"Digital Marketing",subTitle:"Logo, Website & Mobile App",category:"cat2"},{image:"https://images.unsplash.com/photo-1728984273683-d962fd89ef4d?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",title:"Digital Agency",subTitle:"Website, UI/UX, App",category:"cat2"},{image:"https://images.unsplash.com/photo-1738430275589-2cd3d0d0d57a?q=80&w=1461&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",title:"Plan Management",subTitle:"Branding, Website, IOS App",category:"cat1"}];
 
-    section.projects.py-md-5.px-2.my-md-5.my-4
+    section.projects
       .container
-        .projects__header
-          p.projects__header__name Our Project
-          h2.projects__header__title.mb-4
+        .section-title 
+          p.sub-title Our Project
+          h2.main-title.mb-3
             | Some of our 
             br
             | finest work.
 
-          //- tabs
-          .projects__tabs
+        //- tabs
+        .projects__tabs
 
-            ul#myTab.nav.nav-tabs.mb-3.mb-md-5.gap-md-5.gap-2(role='tablist')
-              each tab, index in tabs
-                li.nav-item(role='presentation')
-                  button(id=`${tab.id}-tab` class=`nav-link ${index == 0 ? 'active' : ''}` data-bs-toggle='tab' data-bs-target=`#${tab.id}-tab-pane` type='button' role='tab' aria-controls=`${tab.id}-tab-pane` aria-selected='true')= tab.title
+          ul#myTab.nav.nav-tabs.mb-3.mb-md-5.gap-md-5.gap-3(role='tablist')
+            each tab, index in tabs
+              li.nav-item(role='presentation')
+                button(id=`${tab.id}-tab` class=`nav-link ${index == 0 ? 'active' : ''}` data-bs-toggle='tab' data-bs-target=`#${tab.id}-tab-pane` type='button' role='tab' aria-controls=`${tab.id}-tab-pane` aria-selected='true')= tab.title
 
-            //- contents
-            .tab-content
-              each tab, index in tabs
-                div(id=`${tab.id}-tab-pane` class=`tab-pane fade show ${index == 0 ? 'active' : ''}`  role='tabpanel' aria-labelledby=`${tabs.id}-tab` tabindex='0')
-                  .row.g-md-5.g-2 
-                    each project in tab.id == "all" ? allProjects :allProjects.filter(project => project.category == tab.id )
-                      .col-12.col-md-6 
-                        .project-item.mx-2.mx-md-4
-                          a(href="#")
-                            .image
-                              img(src=project.image)
-                            .project-item__info 
-                              h4.mb-2= project.title
-                              p= project.subTitle
-    //- start projects
+          //- contents
+          .tab-content
+            each tab, index in tabs
+              div(id=`${tab.id}-tab-pane` class=`tab-pane fade show ${index == 0 ? 'active' : ''}`  role='tabpanel' aria-labelledby=`${tabs.id}-tab` tabindex='0')
+                .row.g-md-5.g-2 
+                  each project in tab.id == "all" ? allProjects :allProjects.filter(project => project.category == tab.id )
+                    .col-12.col-md-6 
+                      .project-item.mx-2.mx-md-4
+                        a(href="#")
+                          .image
+                            img(src=project.image)
+                          .project-item__info 
+                            h4.mb-2= project.title
+                            p= project.subTitle
+    //- end projects
 
     //- Start Scripts 
     +mainScript()
