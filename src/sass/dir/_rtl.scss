@@ -4,7 +4,15 @@ $e: left;
 $p: 1;
 $n: -1;
 
+// overwrite fonts for arabic fonts
+$primary-font: "Tajawal", sans-serif;
+$secondary-font: "Tajawal", sans-serif;
+
 body {
   direction: rtl;
-  font-family: 'Tajawal', sans-serif;
+  font-family: $primary-font;
+}
+
+input[type="email"] {
+  direction: rtl;
 }

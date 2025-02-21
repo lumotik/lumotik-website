@@ -4,6 +4,7 @@ $secondary-color: #1677ae;
 $white-color: #fff;
 $black-color: #000000;
 $border-color: #ddd;
+$gray-color: #999ab8;
 $lighter-gray-color: #ecf2f6;
 $dark-color: #27272e;
 $rose-color: #c75c6f;
@@ -17,8 +18,4 @@ $transition-lg: all 0.7s;
 $borderRadius-sm: 4px;
 $borderRadius-md: 16px;
 $borderRadius-lg: 24px;
-$linearGradient: linear-gradient(
-  to right,
-  $primary-color,
-  $secondary-color 60%
-);
+$linearGradient: linear-gradient(to right, $primary-color, $secondary-color 60%);

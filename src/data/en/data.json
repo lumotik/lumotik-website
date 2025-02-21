@@ -1,0 +1,52 @@
+{
+	"footer": {
+		"info": {
+			"header": "Get in touch!",
+			"description": "Fusce varius, dolor tempor interdum tristique, dui urna bib endum magna, ut ullamcorper puru.",
+			"placeholder": "Email address",
+			"subscribe": "Subscribe"
+		}
+	},
+	"socialLinks": [
+		{
+			"name": "Facebook",
+			"url": "https://www.facebook.com",
+			"icon": "fa-facebook-f"
+		},
+		{
+			"name": "Twitter",
+			"url": "https://www.twitter.com",
+			"icon": "fa-x-twitter"
+		},
+		{
+			"name": "Pinterest",
+			"url": "https://www.pinterest.com",
+			"icon": "fa-pinterest-p"
+		},
+		{
+			"name": "Linkedin",
+			"url": "https://www.linkedin.com",
+			"icon": "fa-linkedin-in"
+		},
+		{
+			"name": "Instagram",
+			"url": "https://www.instagram.com",
+			"icon": "fa-instagram"
+		},
+		{
+			"name": "Vimeo",
+			"url": "https://www.vimeo.com",
+			"icon": "fa-vimeo-v"
+		},
+		{
+			"name": "Dribbble",
+			"url": "https://www.dribbble.com",
+			"icon": "fa-dribbble"
+		},
+		{
+			"name": "Behance",
+			"url": "https://www.behance.com",
+			"icon": "fa-behance"
+		}
+	]
+}
