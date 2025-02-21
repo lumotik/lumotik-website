@@ -1,0 +1,18 @@
+footer.footer
+    .container 
+        .footer__social
+            each link in data.socialLinks
+                a(class="footer__social__item" href=link.url, target="_blank" title=`${link.name}`)
+                    i(class=`fa-brands ${link.icon}` aria-hidden="true")
+        .row 
+            .col-6
+                .footer__info 
+                    h2.footer__title=data.footer.info.header
+                    p.footer__description=data.footer.info.description
+                    form.footer__newsletter
+                        input(type="email", placeholder=data.footer.info.placeholder)
+                        button.main-button(type="submit", class="btn btn-primary")=data.footer.info.subscribe
+            .col-6
+                | asdas
+        .footer__copyright
+            p.footer__copyright__description © 2025. All rights reserved by #[a(href=linkHandler("index" , lang)) Lumotik Team]
