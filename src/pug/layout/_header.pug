@@ -1,0 +1,40 @@
+a(ref="#main-wrapper" id="goTop" class="go-top")
+  i(class="fa-solid fa-angles-up")
+
+//- header.header
+//-   .container 
+//-     nav.header__nav
+//-       a.header__logo(href="#")
+//-         img(src="./images/logo.svg", alt="")
+//-       .header__links
+//-         a(href="#") Home
+//-         a(href="#") Services
+//-         a(href="#") Case Study
+//-         a(href="#") Portfolio
+//-         a(href="#") Pricing
+//-         a(href="#") Blog
+//-         a(href="#") Let's Talk
+
+
+header.header
+  .container
+    nav.navbar
+      a.navbar-brand(href="./index.html")
+        img(src="./images/logo.svg", width="70", height="auto", alt="Hi to Soni Courses")
+      .overlay
+      ul#onePageNav.navbar-nav.collapsed-mobile
+        h5.collapsed-mobile__header القائمة
+        li.nav-item.active
+          a.nav-link(href="#hero") Home
+        li.nav-item
+          a.nav-link(href="#services") Services
+        li.nav-item
+          a.nav-link(href="#featured") featured
+        //- li.nav-item
+        //-   a.nav-link(href="#") Portfolio
+        //- li.nav-item
+        //-   a.nav-link(href="#") Pricing
+        //- li.nav-item
+        //-   a.nav-link(href="#") Blog
+      button.navbar-toggler(type="button")
+        i.fas.fa-bars

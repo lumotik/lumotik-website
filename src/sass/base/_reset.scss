@@ -1,3 +1,8 @@
+html,
+body {
+  scroll-behavior: smooth;
+}
+
 p {
   font-family: $secondary-font;
   margin-bottom: 0;
@@ -77,22 +82,3 @@ h6 {
 button {
   cursor: pointer;
 }
-
-// h1{
-//   font-size: 128px;
-// }
-// h2{
-//   font-size: 72px;
-// }
-// h3{
-//   font-size: 44px;
-// }
-// h4{
-//   font-size: 36px;
-// }
-// h5{
-//   font-size: 18px;
-// }
-// h6{
-//   font-size: 16px;
-// }

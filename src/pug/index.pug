@@ -13,6 +13,10 @@ html(lang= lang , dir = direction)
     //- Start NavBar
     include ./layout/_header.pug
     //- End NavBar
+    
+    //- Start Hero
+    include ./components/_hero.pug 
+    //- End Hero
 
     //- Start Services
     include ./components/_services.pug
@@ -35,4 +39,6 @@ html(lang= lang , dir = direction)
     //- End footer
 
     //- Start Scripts
-    +mainScript()
+    +mainScript([
+      "./js/onePageNav.js"
+    ])

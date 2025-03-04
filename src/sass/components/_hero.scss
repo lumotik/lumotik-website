@@ -1,0 +1,45 @@
+// Hero styles
+.hero {
+  padding: 8rem 5% 10rem;
+  text-align: center;
+
+  &__content {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  &__title {
+    font-size: 5.6rem;
+    line-height: 1.1;
+    margin-bottom: 3rem;
+
+    span {
+      color: #2563eb; // Blue color for accent
+    }
+  }
+
+  &__text {
+    font-size: 2rem;
+    color: #666;
+    line-height: 1.6;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+}
+
+// Responsive adjustments
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    gap: 2rem;
+
+    &__links {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  }
+
+  .hero__title {
+    font-size: 4rem;
+  }
+}
