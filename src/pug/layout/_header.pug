@@ -2,10 +2,10 @@ a(ref="#main-wrapper" id="goTop" class="go-top")
   i(class="fa-solid fa-angles-up")
 
 //- header.header
-//-   .container 
+//-   .container
 //-     nav.header__nav
 //-       a.header__logo(href="#")
-//-         img(src="./images/logo.svg", alt="")
+//-         img(src="./images/logo.svg" alt="")
 //-       .header__links
 //-         a(href="#") Home
 //-         a(href="#") Services
@@ -20,16 +20,13 @@ header.header
   .container
     nav.navbar
       a.navbar-brand(href="./index.html")
-        img(src="./images/logo.svg", width="70", height="auto", alt="Hi to Soni Courses")
+        img(src="./images/logo.svg" width="70" height="auto" alt="Hi to Soni Courses")
       .overlay
       ul#onePageNav.navbar-nav.collapsed-mobile
         h5.collapsed-mobile__header القائمة
-        li.nav-item.active
-          a.nav-link(href="#hero") Home
-        li.nav-item
-          a.nav-link(href="#services") Services
-        li.nav-item
-          a.nav-link(href="#featured") featured
+        each link, index in data.navbar
+          li.nav-item(class=(index === 0 ? "active" : ""))
+            a.nav-link(href=link.url)= link.text
         //- li.nav-item
         //-   a.nav-link(href="#") Portfolio
         //- li.nav-item

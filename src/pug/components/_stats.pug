@@ -1,0 +1,17 @@
+section.stats#stats
+  .container
+    .stats__header(data-aos="fade-up")
+      p.stats__subtitle= data.stats.subTitle
+      h2.stats__title= data.stats.title
+      p.stats__description= data.stats.description
+
+    .stats__grid
+      each item, index in data.stats.items
+        .stats__card(data-aos="fade-up" data-aos-delay=(index * 100))
+          .stats__card-icon
+            i(class=item.icon)
+          .stats__card-content
+            .stats__card-number-wrapper
+              span.stats__card-number(data-target=item.value) 0
+              span.stats__card-suffix= item.suffix
+            p.stats__card-label= item.label

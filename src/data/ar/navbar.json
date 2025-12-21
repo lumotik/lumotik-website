@@ -1,0 +1,10 @@
+{
+  "navbar": [
+    { "text": "الرئيسية", "url": "#hero" },
+    { "text": "خدماتنا", "url": "#services" },
+    { "text": "أعمال مميزة", "url": "#featured" },
+    { "text": "من نحن", "url": "#about-us" },
+    { "text": "مشاريعنا", "url": "#projects" },
+    { "text": "إحصائياتنا", "url": "#stats" }
+  ]
+}

@@ -101,6 +101,32 @@
 			]
 		}
 	},
+	"navbar": [
+		{
+			"text": "الرئيسية",
+			"url": "#hero"
+		},
+		{
+			"text": "خدماتنا",
+			"url": "#services"
+		},
+		{
+			"text": "أعمال مميزة",
+			"url": "#featured"
+		},
+		{
+			"text": "من نحن",
+			"url": "#about-us"
+		},
+		{
+			"text": "مشاريعنا",
+			"url": "#projects"
+		},
+		{
+			"text": "إحصائياتنا",
+			"url": "#stats"
+		}
+	],
 	"projects": {
 		"info": {
 			"subTitle": "مشاريعنا",
@@ -189,5 +215,36 @@
 			"url": "https://www.behance.com",
 			"icon": "fa-behance"
 		}
-	]
+	],
+	"stats": {
+		"subTitle": "دراسة حالة مميزة",
+		"title": "حركة الشركات الناشئة في التصميم",
+		"description": "في فيل فاريوس توربيس، غير ديكتوم سيم. في عيينة في إفيكتيتور إيبسوم، في إيجستاس إيبسوم. موريس في مي آك تيلوس.",
+		"items": [
+			{
+				"icon": "far fa-smile",
+				"value": 15,
+				"suffix": "+",
+				"label": "سنوات من العمل"
+			},
+			{
+				"icon": "fas fa-th-large",
+				"value": 360,
+				"suffix": "+",
+				"label": "مشاريع تم تسليمها"
+			},
+			{
+				"icon": "fas fa-users",
+				"value": 600,
+				"suffix": "+",
+				"label": "أخصائي"
+			},
+			{
+				"icon": "fab fa-apple",
+				"value": 64,
+				"suffix": "+",
+				"label": "سنوات من العمل"
+			}
+		]
+	}
 }

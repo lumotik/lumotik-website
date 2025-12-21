@@ -1,0 +1,33 @@
+{
+  "stats": {
+    "subTitle": "Featured Case Study",
+    "title": "Design startup movement",
+    "description": "In vel varius turpis, non dictum sem. Aenean in efficitur ipsum, in egestas ipsum. Mauris in mi ac tellus.",
+    "items": [
+      {
+        "icon": "far fa-smile",
+        "value": 15,
+        "suffix": "+",
+        "label": "Years of operation"
+      },
+      {
+        "icon": "fas fa-th-large",
+        "value": 360,
+        "suffix": "+",
+        "label": "Projects delivered"
+      },
+      {
+        "icon": "fas fa-users",
+        "value": 600,
+        "suffix": "+",
+        "label": "Specialist"
+      },
+      {
+        "icon": "fab fa-apple",
+        "value": 64,
+        "suffix": "+",
+        "label": "Years of operation"
+      }
+    ]
+  }
+}
