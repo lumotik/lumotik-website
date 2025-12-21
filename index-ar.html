@@ -12,20 +12,30 @@
   </head>
   <body><a class="go-top" ref="#main-wrapper" id="goTop"><i class="fa-solid fa-angles-up"></i></a>
     <header class="header">
-      <div class="container"> 
-        <nav class="header__nav"><a class="header__logo" href="#"><img src="./images/logo.svg" alt=""></a>
-          <div class="header__links"><a href="#">Home</a><a href="#">Services</a><a href="#">Case Study</a><a href="#">Portfolio</a><a href="#">Pricing</a><a href="#">Blog</a><a href="#">Let's Talk</a></div>
+      <div class="container">
+        <nav class="navbar"><a class="navbar-brand" href="./index.html"><img src="./images/logo.svg" width="70" height="auto" alt="Hi to Soni Courses"></a>
+          <div class="overlay"></div>
+          <ul class="navbar-nav collapsed-mobile" id="onePageNav">
+            <h5 class="collapsed-mobile__header">القائمة</h5>
+            <li class="nav-item active"><a class="nav-link" href="#hero">الرئيسية</a></li>
+            <li class="nav-item"><a class="nav-link" href="#services">خدماتنا</a></li>
+            <li class="nav-item"><a class="nav-link" href="#featured">أعمال مميزة</a></li>
+            <li class="nav-item"><a class="nav-link" href="#about-us">من نحن</a></li>
+            <li class="nav-item"><a class="nav-link" href="#projects">مشاريعنا</a></li>
+            <li class="nav-item"><a class="nav-link" href="#stats">إحصائياتنا</a></li>
+          </ul>
+          <button class="navbar-toggler" type="button"><i class="fas fa-bars"></i></button>
         </nav>
       </div>
     </header>
-    <section class="hero">
+    <section class="hero" id="hero">
       <div class="container"> </div>
       <div class="hero__content">
         <h1 class="hero__title"></h1>Build beautiful <span>website&</span><br>mobile apps.
         <p class="hero__text">Create live segments and target the right people for messages based on their behaviors.</p>
       </div>
     </section>
-    <section class="services">
+    <section class="services" id="services">
       <div class="container">
         <div class="services__wrapper">
           <div class="services__header">
@@ -84,7 +94,7 @@
         <div class="services__bubbles-curve"><img class="flip-shape" src="https://new.axilthemes.com/demo/template/abstrak/assets/media/others/bubble-42.png"></div>
       </div>
     </section>
-    <section class="featured">
+    <section class="featured" id="featured">
       <div class="container">
         <div class="featured__wrapper">
           <div class="featured__item">
@@ -113,7 +123,7 @@
         </div>
       </div>
     </section>
-    <section class="about-us">
+    <section class="about-us" id="about-us">
       <div class="container position-relative z-2">
         <div class="row g-4 align-items-center">
           <div class="col-12 col-md-7">
@@ -153,7 +163,7 @@
         <div class="about-us__line d-none d-md-block"><img src="./images/shapes/line-4.webp" alt="line"></div>
       </div>
     </section>
-    <section class="projects">
+    <section class="projects" id="projects">
       <div class="container">
         <div class="section-title">
           <p class="sub-title">مشاريعنا</p>
@@ -252,6 +262,45 @@
         </div>
       </div>
     </section>
+    <section class="stats" id="stats">
+      <div class="container">
+        <div class="stats__header" data-aos="fade-up">
+          <p class="stats__subtitle">دراسة حالة مميزة</p>
+          <h2 class="stats__title">حركة الشركات الناشئة في التصميم</h2>
+          <p class="stats__description">في فيل فاريوس توربيس، غير ديكتوم سيم. في عيينة في إفيكتيتور إيبسوم، في إيجستاس إيبسوم. موريس في مي آك تيلوس.</p>
+        </div>
+        <div class="stats__grid">
+          <div class="stats__card" data-aos="fade-up" data-aos-delay="0">
+            <div class="stats__card-icon"><i class="far fa-smile"></i></div>
+            <div class="stats__card-content">
+              <div class="stats__card-number-wrapper"><span class="stats__card-number" data-target="15">0</span><span class="stats__card-suffix">+</span></div>
+              <p class="stats__card-label">سنوات من العمل</p>
+            </div>
+          </div>
+          <div class="stats__card" data-aos="fade-up" data-aos-delay="100">
+            <div class="stats__card-icon"><i class="fas fa-th-large"></i></div>
+            <div class="stats__card-content">
+              <div class="stats__card-number-wrapper"><span class="stats__card-number" data-target="360">0</span><span class="stats__card-suffix">+</span></div>
+              <p class="stats__card-label">مشاريع تم تسليمها</p>
+            </div>
+          </div>
+          <div class="stats__card" data-aos="fade-up" data-aos-delay="200">
+            <div class="stats__card-icon"><i class="fas fa-users"></i></div>
+            <div class="stats__card-content">
+              <div class="stats__card-number-wrapper"><span class="stats__card-number" data-target="600">0</span><span class="stats__card-suffix">+</span></div>
+              <p class="stats__card-label">أخصائي</p>
+            </div>
+          </div>
+          <div class="stats__card" data-aos="fade-up" data-aos-delay="300">
+            <div class="stats__card-icon"><i class="fab fa-apple"></i></div>
+            <div class="stats__card-content">
+              <div class="stats__card-number-wrapper"><span class="stats__card-number" data-target="64">0</span><span class="stats__card-suffix">+</span></div>
+              <p class="stats__card-label">سنوات من العمل</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
     <footer class="footer">
       <div class="container"> 
         <div class="footer__social"><a class="footer__social__item" href="https://www.facebook.com" target="_blank" title="فيسبوك" data-aos="fade-up" data-aos-delay="000" data-aos-duration="1000"><i class="fa-brands fa-facebook-f" aria-hidden="true"></i></a><a class="footer__social__item" href="https://www.twitter.com" target="_blank" title="تويطر" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000"><i class="fa-brands fa-x-twitter" aria-hidden="true"></i></a><a class="footer__social__item" href="https://www.pinterest.com" target="_blank" title="Pinterest" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000"><i class="fa-brands fa-pinterest-p" aria-hidden="true"></i></a><a class="footer__social__item" href="https://www.linkedin.com" target="_blank" title="Linkedin" data-aos="fade-up" data-aos-delay="300" data-aos-duration="1000"><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i></a><a class="footer__social__item" href="https://www.instagram.com" target="_blank" title="Instagram" data-aos="fade-up" data-aos-delay="400" data-aos-duration="1000"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a><a class="footer__social__item" href="https://www.vimeo.com" target="_blank" title="Vimeo" data-aos="fade-up" data-aos-delay="500" data-aos-duration="1000"><i class="fa-brands fa-vimeo-v" aria-hidden="true"></i></a><a class="footer__social__item" href="https://www.dribbble.com" target="_blank" title="Dribbble" data-aos="fade-up" data-aos-delay="600" data-aos-duration="1000"><i class="fa-brands fa-dribbble" aria-hidden="true"></i></a><a class="footer__social__item" href="https://www.behance.com" target="_blank" title="Behance" data-aos="fade-up" data-aos-delay="700" data-aos-duration="1000"><i class="fa-brands fa-behance" aria-hidden="true"></i></a>
@@ -308,6 +357,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="./js/onePageNav.js"></script>
     <script src="./js/script.js" type="module"></script>
   </body>
 </html>
