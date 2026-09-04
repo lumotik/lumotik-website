@@ -10,252 +10,303 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css"/>
     <link rel="stylesheet" href="css/main-ltr.css"/>
   </head>
-  <body><a class="go-top" ref="#main-wrapper" id="goTop"><i class="fa-solid fa-angles-up"></i></a>
+  <body><a class="go-top" href="#hero" id="goTop"><i class="fa-solid fa-angles-up"></i></a>
     <header class="header">
       <div class="container">
-        <nav class="navbar"><a class="navbar-brand" href="./index.html"><img src="./images/logo.svg" width="70" height="auto" alt="Hi to Soni Courses"></a>
+        <nav class="navbar"><a class="navbar-brand" href="./index.html"><img src="./images/logo.svg" width="160" height="42" alt="Lumotik Digital Agency"></a>
           <div class="overlay"></div>
           <ul class="navbar-nav collapsed-mobile" id="onePageNav">
-            <h5 class="collapsed-mobile__header">القائمة</h5>
+            <div class="collapsed-mobile__header"><span>Navigation</span>
+              <button class="close__btn" type="button" style="background: none; border: none; color: #00ffff; font-size: 20px;">&times;</button>
+            </div>
             <li class="nav-item active"><a class="nav-link" href="#hero">Home</a></li>
             <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
             <li class="nav-item"><a class="nav-link" href="#featured">Featured</a></li>
             <li class="nav-item"><a class="nav-link" href="#about-us">About Us</a></li>
             <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
             <li class="nav-item"><a class="nav-link" href="#stats">Stats</a></li>
+            <li class="nav-item"><a class="nav-link" href="./index-ar.html"><i class="fa-solid fa-globe me-1"></i><span>العربية</span></a></li>
+            <li class="nav-item nav-cta"><a class="main-button" href="#about-us"><span>Start a Project</span></a></li>
           </ul>
           <button class="navbar-toggler" type="button"><i class="fas fa-bars"></i></button>
         </nav>
       </div>
     </header>
     <section class="hero" id="hero">
-      <div class="container"> </div>
-      <div class="hero__content">
-        <h1 class="hero__title"></h1>Build beautiful <span>website&</span><br>mobile apps.
-        <p class="hero__text">Create live segments and target the right people for messages based on their behaviors.</p>
+      <div class="container">
+        <div class="hero__content" data-aos="fade-up" data-aos-duration="1000">
+          <div class="hero__badge"><span class="pulse-dot"></span><span>Next-Gen Digital Engineering</span></div>
+          <h1 class="hero__title">Designing & Engineering <br><span class="gradient-text">The Future of Digital Experiences.</span>
+          </h1>
+          <p class="hero__text">Lumotik is a premium digital agency crafting high-impact UI/UX design, full-stack web platforms, mobile ecosystems, and high-performance cloud architectures.
+          </p>
+          <div class="hero__actions"><a class="main-button" href="#projects"><i class="fa-solid fa-rocket me-2"></i><span>Explore Projects</span></a><a class="main-button main-button--ghost" href="#about-us"><i class="fa-regular fa-paper-plane me-2"></i><span>Request a Quote</span></a></div>
+          <div class="hero__features">
+            <div class="hero__features-item"><i class="fa-solid fa-check-double"></i><span>Production-Grade Code</span></div>
+            <div class="hero__features-item"><i class="fa-solid fa-bolt"></i><span>Ultra Fast Performance</span></div>
+            <div class="hero__features-item"><i class="fa-solid fa-shield-halved"></i><span>Enterprise Security</span></div>
+          </div>
+        </div>
       </div>
     </section>
     <section class="services" id="services">
       <div class="container">
         <div class="services__wrapper">
-          <div class="services__header">
-            <p class="services__subtitle">What We Can Do For You</p>
-            <h2 class="services__title">Services we can help<br>you with.</h2>
-            <p class="services__description">Nulla facilisi. Nullam in magna id dolor blandit rutrum eget vulputate augue sed eu imperdiet.</p>
+          <div class="services__header" data-aos="fade-up">
+            <p class="services__subtitle">Capabilities &amp; Expertise</p>
+            <h2 class="services__title">Engineering high-impact digital solutions.
+            </h2>
+            <p class="services__description">From napkin concept to enterprise deployment, we provide end-to-end craft across the modern digital spectrum.</p>
           </div>
           <div class="services__cards">
-            <div class="services__card">
-              <div class="services__card-img"><img src="./images/services/icon-1.webp" alt="Design Icon"></div>
+            <div class="services__card" data-aos="fade-up" data-aos-delay="0">
+              <div class="services__card-icon-box"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
               <div class="services__body">
-                <h3 class="services__card-title">Design</h3>
-                <p class="services__card-description">Simply drag and drop photos and videos into your workspace to automatically add them to your Collab Cloud library.</p>
+                <h3 class="services__card-title">UI/UX &amp; Brand Identity</h3>
+                <p class="services__card-description">World-class interface design, design systems, interactive prototypes, and cohesive brand identities built to convert.</p>
               </div>
+              <div class="services__card-tag"><i class="fa-solid fa-terminal me-1"></i><span>Figma • Design Systems • 3D</span></div>
             </div>
-            <div class="services__card active">
-              <div class="services__card-img"><img src="./images/services/icon-2.webp" alt="Development Icon"></div>
+            <div class="services__card" data-aos="fade-up" data-aos-delay="100">
+              <div class="services__card-icon-box"><i class="fa-solid fa-code"></i></div>
               <div class="services__body">
-                <h3 class="services__card-title">Development</h3>
-                <p class="services__card-description">Simply drag and drop photos and videos into your workspace to automatically add them to your Collab Cloud library.</p>
+                <h3 class="services__card-title">Web &amp; Mobile Development</h3>
+                <p class="services__card-description">Robust web applications, Jamstack architectures, cross-platform mobile apps, and scalable APIs built with modern stacks.</p>
               </div>
+              <div class="services__card-tag"><i class="fa-solid fa-terminal me-1"></i><span>React • Next.js • Flutter • Node.js</span></div>
             </div>
-            <div class="services__card">
-              <div class="services__card-img"><img src="./images/services/icon-3.webp" alt="Online marketing Icon"></div>
+            <div class="services__card" data-aos="fade-up" data-aos-delay="200">
+              <div class="services__card-icon-box"><i class="fa-solid fa-cloud-arrow-up"></i></div>
               <div class="services__body">
-                <h3 class="services__card-title">Online marketing</h3>
-                <p class="services__card-description">Simply drag and drop photos and videos into your workspace to automatically add them to your Collab Cloud library.</p>
+                <h3 class="services__card-title">Cloud &amp; DevOps Architecture</h3>
+                <p class="services__card-description">Automated CI/CD pipelines, high-availability microservices, Kubernetes clusters, and zero-downtime serverless infra.</p>
               </div>
+              <div class="services__card-tag"><i class="fa-solid fa-terminal me-1"></i><span>AWS • Docker • Kubernetes • Serverless</span></div>
             </div>
-            <div class="services__card">
-              <div class="services__card-img"><img src="./images/services/icon-4.webp" alt="Business Icon"></div>
+            <div class="services__card" data-aos="fade-up" data-aos-delay="300">
+              <div class="services__card-icon-box"><i class="fa-solid fa-brain"></i></div>
               <div class="services__body">
-                <h3 class="services__card-title">Business</h3>
-                <p class="services__card-description">Simply drag and drop photos and videos into your workspace to automatically add them to your Collab Cloud library.</p>
+                <h3 class="services__card-title">AI &amp; Interactive Systems</h3>
+                <p class="services__card-description">Custom LLM integrations, AI agents, conversational interfaces, WebGL shaders, and immersive interactive graphics.</p>
               </div>
+              <div class="services__card-tag"><i class="fa-solid fa-terminal me-1"></i><span>OpenAI • WebGL • Three.js • Python</span></div>
             </div>
-            <div class="services__card">
-              <div class="services__card-img"><img src="./images/services/icon-5.webp" alt="Technology Icon"></div>
+            <div class="services__card" data-aos="fade-up" data-aos-delay="400">
+              <div class="services__card-icon-box"><i class="fa-solid fa-chart-line"></i></div>
               <div class="services__body">
-                <h3 class="services__card-title">Technology</h3>
-                <p class="services__card-description">Simply drag and drop photos and videos into your workspace to automatically add them to your Collab Cloud library.</p>
+                <h3 class="services__card-title">Performance &amp; SEO Engineering</h3>
+                <p class="services__card-description">Sub-second load times, Core Web Vitals optimization, semantic architecture, and high-conversion landing funnels.</p>
               </div>
+              <div class="services__card-tag"><i class="fa-solid fa-terminal me-1"></i><span>Lighthouse 100 • Core Web Vitals</span></div>
             </div>
-            <div class="services__card">
-              <div class="services__card-img"><img src="./images/services/icon-6.webp" alt="Content strategy Icon"></div>
+            <div class="services__card" data-aos="fade-up" data-aos-delay="500">
+              <div class="services__card-icon-box"><i class="fa-solid fa-shield-halved"></i></div>
               <div class="services__body">
-                <h3 class="services__card-title">Content strategy</h3>
-                <p class="services__card-description">Simply drag and drop photos and videos into your workspace to automatically add them to your Collab Cloud library.</p>
+                <h3 class="services__card-title">Cybersecurity &amp; Code Audits</h3>
+                <p class="services__card-description">Comprehensive source code audits, vulnerability mitigation, automated testing suites, and data privacy compliance.</p>
               </div>
+              <div class="services__card-tag"><i class="fa-solid fa-terminal me-1"></i><span>OWASP • SOC2 Ready • Automated Tests</span></div>
             </div>
           </div>
         </div>
-      </div>
-      <div class="services__bubbles">
-        <div class="services__bubbles-line"><img src="https://new.axilthemes.com/demo/template/abstrak/assets/media/others/line-9.png"></div>
-        <div class="services__bubbles-curve"><img class="flip-shape" src="https://new.axilthemes.com/demo/template/abstrak/assets/media/others/bubble-42.png"></div>
       </div>
     </section>
     <section class="featured" id="featured">
       <div class="container">
         <div class="featured__wrapper">
-          <div class="featured__item">
+          <div class="featured__item" data-aos="fade-right" data-aos-duration="1000">
             <div class="featured__header">
               <p class="featured__subtitle">Featured Case Study</p>
-              <h2 class="featured__title">
-                 Website and web <br>Development,Design</h2>
-              <p class="featured__description">Donec metus lorem, vulputate at sapien sit amet, auctor iaculis lorem. In vel hendrerit nisi. Vestibulum eget risus velit. Aliquam tristique libero at dui sodales, et placerat orci lobortis..</p>
-              <p class="featured__description">Maecenas ipsum neque, elementum id dignissim et, imperdiet vitae mauris.</p>
-              <button class="main-button featured__btn">Read Case Study</button>
+              <h2 class="featured__title">Next-Gen FinTech Platform & Mobile App
+              </h2>
+              <p class="featured__description">We partnered with leading venture-backed fintechs to re-architect their transaction engine and build a fluid, ultra-responsive mobile experience from the ground up.
+              </p>
+              <p class="featured__description">Scaled to 2M+ active users with sub-50ms latency and 99.99% system availability.
+              </p><a class="main-button featured__btn" href="#projects"><i class="fa-solid fa-arrow-up-right-from-square me-2"></i><span>Explore Case Study</span></a>
             </div>
             <div class="featured__counter">
               <div class="featured__count">
-                <p class="featured__number">20%</p>
-                <p class="featured__text">ROI increase</p>
+                <p class="featured__number">+145%</p>
+                <p class="featured__text">User Conversion Rate</p>
               </div>
               <div class="featured__count">
-                <p class="featured__number">20%</p>
-                <p class="featured__text">ROI increase</p>
+                <p class="featured__number">0.4s</p>
+                <p class="featured__text">Average Load Speed</p>
               </div>
             </div>
           </div>
-          <div class="featured__item">
-            <div class="featured__img"><img src="./images/featured/case-study-5.webp"></div>
+          <div class="featured__item" data-aos="fade-left" data-aos-duration="1000">
+            <div class="featured__img"><img src="./images/featured/case-study-5.webp" alt="Lumotik Featured Case Study"></div>
           </div>
         </div>
       </div>
     </section>
     <section class="about-us" id="about-us">
       <div class="container position-relative z-2">
-        <div class="row g-4 align-items-center">
-          <div class="col-12 col-md-7">
-            <div class="px-3 px-md-5" data-aos="fade-up" data-aos-duration="1000">
+        <div class="row g-5 align-items-center">
+          <div class="col-12 col-lg-7">
+            <div data-aos="fade-up" data-aos-duration="1000">
               <div class="section-title">
-                <div class="p sub-title">About us</div>
-                <h2 class="main-title mb-4">We do design, code &amp; develop.</h2>
+                <p class="sub-title">About Lumotik</p>
+                <h2 class="main-title">We engineer digital excellence through design and code.</h2>
               </div>
-              <p class="mb-4">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries,</p>
-              <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters</p>
+              <p class="mb-4 fs-5">At Lumotik, we blend cutting-edge aesthetic precision with enterprise-grade engineering. We build high-impact web and mobile products, scalable cloud ecosystems, and transformative AI systems that help forward-thinking companies scale faster.</p>
+              <p class="text-white-50">Our dedicated multidisciplinary teams of designers, architects, and full-stack engineers turn complex technical challenges into sleek, frictionless user experiences.</p>
+              <div class="row g-3 mt-4">
+                <div class="col-6">
+                  <div class="p-3 rounded-3" style="background: rgba(255,255,255,0.03); border: 1px solid rgba(0,255,255,0.15);">
+                    <h4 class="text-primary mb-1">100%</h4><small class="text-white-50">Code Ownership</small>
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="p-3 rounded-3" style="background: rgba(255,255,255,0.03); border: 1px solid rgba(0,255,255,0.15);">
+                    <h4 class="text-primary mb-1">24/7</h4><small class="text-white-50">Dedicated Support</small>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
-          <div class="col-12 col-md-5">
-            <div class="about-us__form p-5" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
-              <h3 class="mb-3">Get a free Keystroke quote now</h3>
-              <div class="d-flex flex-column gap-3">
+          <div class="col-12 col-lg-5">
+            <div class="about-us__form p-4 p-md-5" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
+              <h3 class="mb-2">Request a Free Project Consultation</h3>
+              <p class="small text-white-50 mb-4">Tell us about your project and we'll reply within 24 hours.</p>
+              <form class="d-flex flex-column gap-3" action="#" method="POST" onsubmit="event.preventDefault(); alert('Thank you! We will get back to you shortly.');">
                 <div class="about-us__form__field d-flex flex-column gap-1">
-                  <p>Name</p>
-                  <input type="text" placeholder="John Smith">
+                  <p>Your Name</p>
+                  <input type="text" name="name" placeholder="Alex Johnson" required>
                 </div>
                 <div class="about-us__form__field d-flex flex-column gap-1">
-                  <p>Email</p>
-                  <input type="email" placeholder="Example@gmail.com">
+                  <p>Work Email</p>
+                  <input type="email" name="email" placeholder="alex@company.com" required>
                 </div>
                 <div class="about-us__form__field d-flex flex-column gap-1">
-                  <p>Phone</p>
-                  <input type="phone" placeholder="+20123456789">
+                  <p>Phone / WhatsApp</p>
+                  <input type="tel" name="phone" placeholder="+1 (555) 019-2834" required>
                 </div>
-                <button class="main-button w-100 mt-2">Send</button>
-              </div>
+                <button class="main-button w-100 mt-3" type="submit"><i class="fa-solid fa-paper-plane me-2"></i><span>Send Inquiry</span></button>
+              </form>
             </div>
           </div>
         </div>
-      </div>
-      <div>
-        <div class="about-us__bubble"><img class="flip-shape" src="./images/shapes/bubble-7.webp" alt="bubble"></div>
-        <div class="about-us__line d-none d-md-block"><img src="./images/shapes/line-4.webp" alt="line"></div>
       </div>
     </section>
     <section class="projects" id="projects">
       <div class="container">
-        <div class="section-title">
-          <p class="sub-title">Our Project</p>
-          <h2 class="main-title"><span>Some of our</span><br><span>finest work.</span></h2>
+        <div class="section-title" data-aos="fade-up">
+          <p class="sub-title">Client Case &amp; Works</p>
+          <h2 class="main-title"><span>Platforms we've engineered.</span><br><span>Built for industry leaders.</span></h2>
         </div>
-        <div class="projects__tabs">
-          <ul class="nav nav-tabs mb-3 mb-md-5 gap-md-5 gap-3" id="myTab" role="tablist">
+        <div class="projects__tabs" data-aos="fade-up">
+          <ul class="nav nav-tabs mb-4 mb-md-5" id="myTab" role="tablist">
             <li class="nav-item" role="presentation">
-              <button class="nav-link active" id="all-tab" data-bs-toggle="tab" data-bs-target="#all-tab-pane" type="button" role="tab" aria-controls="all-tab-pane" aria-selected="true">All Work</button>
+              <button class="nav-link active" id="all-tab" data-bs-toggle="tab" data-bs-target="#all-tab-pane" type="button" role="tab" aria-controls="all-tab-pane" aria-selected="true">All Projects</button>
             </li>
             <li class="nav-item" role="presentation">
-              <button class="nav-link " id="cat1-tab" data-bs-toggle="tab" data-bs-target="#cat1-tab-pane" type="button" role="tab" aria-controls="cat1-tab-pane" aria-selected="true">Category 1</button>
+              <button class="nav-link " id="web-tab" data-bs-toggle="tab" data-bs-target="#web-tab-pane" type="button" role="tab" aria-controls="web-tab-pane" aria-selected="true">Web Platforms</button>
             </li>
             <li class="nav-item" role="presentation">
-              <button class="nav-link " id="cat2-tab" data-bs-toggle="tab" data-bs-target="#cat2-tab-pane" type="button" role="tab" aria-controls="cat2-tab-pane" aria-selected="true">Category 2</button>
+              <button class="nav-link " id="luxury-tab" data-bs-toggle="tab" data-bs-target="#luxury-tab-pane" type="button" role="tab" aria-controls="luxury-tab-pane" aria-selected="true">Luxury &amp; Corporate</button>
             </li>
           </ul>
           <div class="tab-content">
             <div class="tab-pane fade show active" id="all-tab-pane" role="tabpanel" aria-labelledby="all-tab" tabindex="0">
-              <div class="row g-md-5 g-2">
-                <div class="col-12 col-md-6">
-                  <div class="project-item mx-2 mx-md-4" data-aos="fade-up" data-aos-duration="1000"><a href="#">
-                      <div class="image"><img src="https://images.unsplash.com/photo-1739582814657-10931286d7a5?q=80&amp;w=1528&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"></div>
-                      <div class="project-item__info">
-                        <h4 class="mb-2">Creative Agency</h4>
-                        <p>Full Branding, Website, App</p>
-                      </div></a></div>
-                </div>
-                <div class="col-12 col-md-6">
-                  <div class="project-item mx-2 mx-md-4" data-aos="fade-up" data-aos-duration="1000"><a href="#">
-                      <div class="image"><img src="https://images.unsplash.com/photo-1736618626242-542735175261?q=80&amp;w=1374&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"></div>
-                      <div class="project-item__info">
-                        <h4 class="mb-2">Digital Marketing</h4>
-                        <p>Logo, Website &amp; Mobile App</p>
-                      </div></a></div>
-                </div>
-                <div class="col-12 col-md-6">
-                  <div class="project-item mx-2 mx-md-4" data-aos="fade-up" data-aos-duration="1000"><a href="#">
-                      <div class="image"><img src="https://images.unsplash.com/photo-1728984273683-d962fd89ef4d?q=80&amp;w=1374&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"></div>
-                      <div class="project-item__info">
-                        <h4 class="mb-2">Digital Agency</h4>
-                        <p>Website, UI/UX, App</p>
-                      </div></a></div>
-                </div>
-                <div class="col-12 col-md-6">
-                  <div class="project-item mx-2 mx-md-4" data-aos="fade-up" data-aos-duration="1000"><a href="#">
-                      <div class="image"><img src="https://images.unsplash.com/photo-1738430275589-2cd3d0d0d57a?q=80&amp;w=1461&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"></div>
-                      <div class="project-item__info">
-                        <h4 class="mb-2">Plan Management</h4>
-                        <p>Branding, Website, IOS App</p>
-                      </div></a></div>
+              <div class="project-showcase" data-aos="fade-up" data-aos-duration="1000">
+                <div class="row g-4 align-items-center">
+                  <div class="col-12 col-lg-7">
+                    <div class="project-showcase__preview">
+                      <div class="project-media-stage">
+                        <video class="main-video" src="https://beta.imperium-group.com/storage/media/legacy/2f7440f7eb0edcca-hero.mp4" poster="https://beta.imperium-group.com/storage/media/legacy/52f95ae072cf5a4f-img-ext-night.jpg" autoplay muted loop playsinline preload="metadata"></video><img class="main-img d-none" src="https://beta.imperium-group.com/storage/media/legacy/52f95ae072cf5a4f-img-ext-night.jpg" alt="Imperium Group — Luxury Architecture &amp; Fit-Out Platform" loading="lazy"><span class="project-badge">Live Client Platform</span>
+                        <div class="media-playback-controls">
+                          <button class="media-btn-toggle" type="button" title="Play/Pause" aria-label="Toggle playback"><i class="fa-solid fa-pause"></i></button>
+                          <button class="media-btn-mute" type="button" title="Mute/Unmute" aria-label="Toggle audio"><i class="fa-solid fa-volume-xmark"></i></button>
+                        </div>
+                      </div>
+                      <div class="project-gallery-wrapper">
+                        <div class="project-gallery-header"><span class="gallery-label"><i class="fa-solid fa-photo-film me-2"></i><span>Project Media &amp; Photo Gallery</span></span><span class="gallery-hint">Click to switch view</span></div>
+                        <div class="project-showcase__thumbs interactive-gallery">
+                          <button class="gallery-thumb active" type="button" data-media-type="video" data-media-src="https://beta.imperium-group.com/storage/media/legacy/2f7440f7eb0edcca-hero.mp4" data-media-poster="https://beta.imperium-group.com/storage/media/legacy/52f95ae072cf5a4f-img-ext-night.jpg" title="🎬 Interactive Platform Video" aria-label="🎬 Interactive Platform Video"><img src="https://beta.imperium-group.com/storage/media/legacy/52f95ae072cf5a4f-img-ext-night.jpg" alt="🎬 Interactive Platform Video" loading="lazy"><span class="thumb-video-badge"><i class="fa-solid fa-play"></i></span>
+                          </button>
+                          <button class="gallery-thumb" type="button" data-media-type="image" data-media-src="./images/imperium-platform/tab-01-home.jpg" data-media-poster="" title="🏠 Tab: Home &amp; Hero Cinematic Architecture" aria-label="🏠 Tab: Home &amp; Hero Cinematic Architecture"><img src="./images/imperium-platform/tab-01-home.jpg" alt="🏠 Tab: Home &amp; Hero Cinematic Architecture" loading="lazy">
+                          </button>
+                          <button class="gallery-thumb" type="button" data-media-type="image" data-media-src="./images/imperium-platform/tab-02-architecture-service.jpg" data-media-poster="" title="🏛️ Tab: Architecture Design &amp; Master Planning" aria-label="🏛️ Tab: Architecture Design &amp; Master Planning"><img src="./images/imperium-platform/tab-02-architecture-service.jpg" alt="🏛️ Tab: Architecture Design &amp; Master Planning" loading="lazy">
+                          </button>
+                          <button class="gallery-thumb" type="button" data-media-type="image" data-media-src="./images/imperium-platform/tab-03-interior-service.jpg" data-media-poster="" title="✨ Tab: Luxury Interior Design &amp; Bespoke Living" aria-label="✨ Tab: Luxury Interior Design &amp; Bespoke Living"><img src="./images/imperium-platform/tab-03-interior-service.jpg" alt="✨ Tab: Luxury Interior Design &amp; Bespoke Living" loading="lazy">
+                          </button>
+                          <button class="gallery-thumb" type="button" data-media-type="image" data-media-src="./images/imperium-platform/tab-04-landscape-fitout.jpg" data-media-poster="" title="🌿 Tab: Landscape Architecture &amp; Fit-Out" aria-label="🌿 Tab: Landscape Architecture &amp; Fit-Out"><img src="./images/imperium-platform/tab-04-landscape-fitout.jpg" alt="🌿 Tab: Landscape Architecture &amp; Fit-Out" loading="lazy">
+                          </button>
+                          <button class="gallery-thumb" type="button" data-media-type="image" data-media-src="./images/imperium-platform/tab-05-projects-portfolio.jpg" data-media-poster="" title="📁 Tab: Projects &amp; Portfolio Showcase" aria-label="📁 Tab: Projects &amp; Portfolio Showcase"><img src="./images/imperium-platform/tab-05-projects-portfolio.jpg" alt="📁 Tab: Projects &amp; Portfolio Showcase" loading="lazy">
+                          </button>
+                          <button class="gallery-thumb" type="button" data-media-type="image" data-media-src="./images/imperium-platform/tab-06-about-team.jpg" data-media-poster="" title="👥 Tab: About Us, Philosophy &amp; Leadership Team" aria-label="👥 Tab: About Us, Philosophy &amp; Leadership Team"><img src="./images/imperium-platform/tab-06-about-team.jpg" alt="👥 Tab: About Us, Philosophy &amp; Leadership Team" loading="lazy">
+                          </button>
+                          <button class="gallery-thumb" type="button" data-media-type="image" data-media-src="./images/imperium-platform/tab-07-contacts.jpg" data-media-poster="" title="📍 Tab: Contacts, Consultation &amp; Global Inquiries" aria-label="📍 Tab: Contacts, Consultation &amp; Global Inquiries"><img src="./images/imperium-platform/tab-07-contacts.jpg" alt="📍 Tab: Contacts, Consultation &amp; Global Inquiries" loading="lazy">
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-12 col-lg-5">
+                    <div class="project-showcase__content">
+                      <div class="d-flex align-items-center gap-2 mb-3"><span class="badge bg-primary text-dark fw-bold">Web Platform</span><span class="badge" style="background: rgba(0,255,255,0.15); color: #00ffff; border: 1px solid rgba(0,255,255,0.3);">Client: Imperium Group (UAE)</span></div>
+                      <h3 class="project-showcase__title">Imperium Group — Luxury Architecture &amp; Fit-Out Platform</h3>
+                      <p class="project-showcase__subtitle">Full-Stack Web Platform • UI/UX Design • UAE Brand</p>
+                      <p class="project-showcase__desc">We engineered the official digital flagship platform for Imperium Group (UAE). Built with cinematic scroll-synchronized video playback, fluid architectural service accordions, filterable project portfolio, dynamic ISO &amp; award certifications carousel, and ultra-smooth mobile responsive experience.</p>
+                      <div class="project-showcase__tech"><i class="fa-solid fa-code me-2"></i><span>Next.js • TailwindCSS • Swiper • Interactive Video</span></div>
+                      <div class="mt-4 d-flex flex-wrap gap-3"><a class="main-button" href="https://beta.imperium-group.com/" target="_blank" rel="noopener"><i class="fa-solid fa-arrow-up-right-from-square me-2"></i><span>Launch Live Platform</span></a></div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
-            <div class="tab-pane fade show " id="cat1-tab-pane" role="tabpanel" aria-labelledby="cat1-tab" tabindex="0">
-              <div class="row g-md-5 g-2">
-                <div class="col-12 col-md-6">
-                  <div class="project-item mx-2 mx-md-4" data-aos="fade-up" data-aos-duration="1000"><a href="#">
-                      <div class="image"><img src="https://images.unsplash.com/photo-1738430275589-2cd3d0d0d57a?q=80&amp;w=1461&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"></div>
-                      <div class="project-item__info">
-                        <h4 class="mb-2">Plan Management</h4>
-                        <p>Branding, Website, IOS App</p>
-                      </div></a></div>
+            <div class="tab-pane fade show " id="web-tab-pane" role="tabpanel" aria-labelledby="web-tab" tabindex="0">
+              <div class="project-showcase" data-aos="fade-up" data-aos-duration="1000">
+                <div class="row g-4 align-items-center">
+                  <div class="col-12 col-lg-7">
+                    <div class="project-showcase__preview">
+                      <div class="project-media-stage">
+                        <video class="main-video" src="https://beta.imperium-group.com/storage/media/legacy/2f7440f7eb0edcca-hero.mp4" poster="https://beta.imperium-group.com/storage/media/legacy/52f95ae072cf5a4f-img-ext-night.jpg" autoplay muted loop playsinline preload="metadata"></video><img class="main-img d-none" src="https://beta.imperium-group.com/storage/media/legacy/52f95ae072cf5a4f-img-ext-night.jpg" alt="Imperium Group — Luxury Architecture &amp; Fit-Out Platform" loading="lazy"><span class="project-badge">Live Client Platform</span>
+                        <div class="media-playback-controls">
+                          <button class="media-btn-toggle" type="button" title="Play/Pause" aria-label="Toggle playback"><i class="fa-solid fa-pause"></i></button>
+                          <button class="media-btn-mute" type="button" title="Mute/Unmute" aria-label="Toggle audio"><i class="fa-solid fa-volume-xmark"></i></button>
+                        </div>
+                      </div>
+                      <div class="project-gallery-wrapper">
+                        <div class="project-gallery-header"><span class="gallery-label"><i class="fa-solid fa-photo-film me-2"></i><span>Project Media &amp; Photo Gallery</span></span><span class="gallery-hint">Click to switch view</span></div>
+                        <div class="project-showcase__thumbs interactive-gallery">
+                          <button class="gallery-thumb active" type="button" data-media-type="video" data-media-src="https://beta.imperium-group.com/storage/media/legacy/2f7440f7eb0edcca-hero.mp4" data-media-poster="https://beta.imperium-group.com/storage/media/legacy/52f95ae072cf5a4f-img-ext-night.jpg" title="🎬 Interactive Platform Video" aria-label="🎬 Interactive Platform Video"><img src="https://beta.imperium-group.com/storage/media/legacy/52f95ae072cf5a4f-img-ext-night.jpg" alt="🎬 Interactive Platform Video" loading="lazy"><span class="thumb-video-badge"><i class="fa-solid fa-play"></i></span>
+                          </button>
+                          <button class="gallery-thumb" type="button" data-media-type="image" data-media-src="./images/imperium-platform/tab-01-home.jpg" data-media-poster="" title="🏠 Tab: Home &amp; Hero Cinematic Architecture" aria-label="🏠 Tab: Home &amp; Hero Cinematic Architecture"><img src="./images/imperium-platform/tab-01-home.jpg" alt="🏠 Tab: Home &amp; Hero Cinematic Architecture" loading="lazy">
+                          </button>
+                          <button class="gallery-thumb" type="button" data-media-type="image" data-media-src="./images/imperium-platform/tab-02-architecture-service.jpg" data-media-poster="" title="🏛️ Tab: Architecture Design &amp; Master Planning" aria-label="🏛️ Tab: Architecture Design &amp; Master Planning"><img src="./images/imperium-platform/tab-02-architecture-service.jpg" alt="🏛️ Tab: Architecture Design &amp; Master Planning" loading="lazy">
+                          </button>
+                          <button class="gallery-thumb" type="button" data-media-type="image" data-media-src="./images/imperium-platform/tab-03-interior-service.jpg" data-media-poster="" title="✨ Tab: Luxury Interior Design &amp; Bespoke Living" aria-label="✨ Tab: Luxury Interior Design &amp; Bespoke Living"><img src="./images/imperium-platform/tab-03-interior-service.jpg" alt="✨ Tab: Luxury Interior Design &amp; Bespoke Living" loading="lazy">
+                          </button>
+                          <button class="gallery-thumb" type="button" data-media-type="image" data-media-src="./images/imperium-platform/tab-04-landscape-fitout.jpg" data-media-poster="" title="🌿 Tab: Landscape Architecture &amp; Fit-Out" aria-label="🌿 Tab: Landscape Architecture &amp; Fit-Out"><img src="./images/imperium-platform/tab-04-landscape-fitout.jpg" alt="🌿 Tab: Landscape Architecture &amp; Fit-Out" loading="lazy">
+                          </button>
+                          <button class="gallery-thumb" type="button" data-media-type="image" data-media-src="./images/imperium-platform/tab-05-projects-portfolio.jpg" data-media-poster="" title="📁 Tab: Projects &amp; Portfolio Showcase" aria-label="📁 Tab: Projects &amp; Portfolio Showcase"><img src="./images/imperium-platform/tab-05-projects-portfolio.jpg" alt="📁 Tab: Projects &amp; Portfolio Showcase" loading="lazy">
+                          </button>
+                          <button class="gallery-thumb" type="button" data-media-type="image" data-media-src="./images/imperium-platform/tab-06-about-team.jpg" data-media-poster="" title="👥 Tab: About Us, Philosophy &amp; Leadership Team" aria-label="👥 Tab: About Us, Philosophy &amp; Leadership Team"><img src="./images/imperium-platform/tab-06-about-team.jpg" alt="👥 Tab: About Us, Philosophy &amp; Leadership Team" loading="lazy">
+                          </button>
+                          <button class="gallery-thumb" type="button" data-media-type="image" data-media-src="./images/imperium-platform/tab-07-contacts.jpg" data-media-poster="" title="📍 Tab: Contacts, Consultation &amp; Global Inquiries" aria-label="📍 Tab: Contacts, Consultation &amp; Global Inquiries"><img src="./images/imperium-platform/tab-07-contacts.jpg" alt="📍 Tab: Contacts, Consultation &amp; Global Inquiries" loading="lazy">
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-12 col-lg-5">
+                    <div class="project-showcase__content">
+                      <div class="d-flex align-items-center gap-2 mb-3"><span class="badge bg-primary text-dark fw-bold">Web Platform</span><span class="badge" style="background: rgba(0,255,255,0.15); color: #00ffff; border: 1px solid rgba(0,255,255,0.3);">Client: Imperium Group (UAE)</span></div>
+                      <h3 class="project-showcase__title">Imperium Group — Luxury Architecture &amp; Fit-Out Platform</h3>
+                      <p class="project-showcase__subtitle">Full-Stack Web Platform • UI/UX Design • UAE Brand</p>
+                      <p class="project-showcase__desc">We engineered the official digital flagship platform for Imperium Group (UAE). Built with cinematic scroll-synchronized video playback, fluid architectural service accordions, filterable project portfolio, dynamic ISO &amp; award certifications carousel, and ultra-smooth mobile responsive experience.</p>
+                      <div class="project-showcase__tech"><i class="fa-solid fa-code me-2"></i><span>Next.js • TailwindCSS • Swiper • Interactive Video</span></div>
+                      <div class="mt-4 d-flex flex-wrap gap-3"><a class="main-button" href="https://beta.imperium-group.com/" target="_blank" rel="noopener"><i class="fa-solid fa-arrow-up-right-from-square me-2"></i><span>Launch Live Platform</span></a></div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
-            <div class="tab-pane fade show " id="cat2-tab-pane" role="tabpanel" aria-labelledby="cat2-tab" tabindex="0">
-              <div class="row g-md-5 g-2">
-                <div class="col-12 col-md-6">
-                  <div class="project-item mx-2 mx-md-4" data-aos="fade-up" data-aos-duration="1000"><a href="#">
-                      <div class="image"><img src="https://images.unsplash.com/photo-1739582814657-10931286d7a5?q=80&amp;w=1528&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"></div>
-                      <div class="project-item__info">
-                        <h4 class="mb-2">Creative Agency</h4>
-                        <p>Full Branding, Website, App</p>
-                      </div></a></div>
-                </div>
-                <div class="col-12 col-md-6">
-                  <div class="project-item mx-2 mx-md-4" data-aos="fade-up" data-aos-duration="1000"><a href="#">
-                      <div class="image"><img src="https://images.unsplash.com/photo-1736618626242-542735175261?q=80&amp;w=1374&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"></div>
-                      <div class="project-item__info">
-                        <h4 class="mb-2">Digital Marketing</h4>
-                        <p>Logo, Website &amp; Mobile App</p>
-                      </div></a></div>
-                </div>
-                <div class="col-12 col-md-6">
-                  <div class="project-item mx-2 mx-md-4" data-aos="fade-up" data-aos-duration="1000"><a href="#">
-                      <div class="image"><img src="https://images.unsplash.com/photo-1728984273683-d962fd89ef4d?q=80&amp;w=1374&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"></div>
-                      <div class="project-item__info">
-                        <h4 class="mb-2">Digital Agency</h4>
-                        <p>Website, UI/UX, App</p>
-                      </div></a></div>
-                </div>
+            <div class="tab-pane fade show " id="luxury-tab-pane" role="tabpanel" aria-labelledby="luxury-tab" tabindex="0">
+              <div class="row g-4">
               </div>
             </div>
           </div>
@@ -265,37 +316,37 @@
     <section class="stats" id="stats">
       <div class="container">
         <div class="stats__header" data-aos="fade-up">
-          <p class="stats__subtitle">Featured Case Study</p>
-          <h2 class="stats__title">Design startup movement</h2>
-          <p class="stats__description">In vel varius turpis, non dictum sem. Aenean in efficitur ipsum, in egestas ipsum. Mauris in mi ac tellus.</p>
+          <p class="stats__subtitle">Proven Impact &amp; Metrics</p>
+          <h2 class="stats__title">Numbers that speak for our craftsmanship.</h2>
+          <p class="stats__description">We engineer high-performance software and brand identities that deliver measurable business growth and exceptional reliability.</p>
         </div>
         <div class="stats__grid">
           <div class="stats__card" data-aos="fade-up" data-aos-delay="0">
-            <div class="stats__card-icon"><i class="far fa-smile"></i></div>
+            <div class="stats__card-icon"><i class="fa-solid fa-code-branch"></i></div>
             <div class="stats__card-content">
-              <div class="stats__card-number-wrapper"><span class="stats__card-number" data-target="15">0</span><span class="stats__card-suffix">+</span></div>
-              <p class="stats__card-label">Years of operation</p>
+              <div class="stats__card-number-wrapper"><span class="stats__card-number" data-target="150">0</span><span class="stats__card-suffix">+</span></div>
+              <p class="stats__card-label">Products Delivered</p>
             </div>
           </div>
           <div class="stats__card" data-aos="fade-up" data-aos-delay="100">
-            <div class="stats__card-icon"><i class="fas fa-th-large"></i></div>
+            <div class="stats__card-icon"><i class="fa-solid fa-face-smile"></i></div>
             <div class="stats__card-content">
-              <div class="stats__card-number-wrapper"><span class="stats__card-number" data-target="360">0</span><span class="stats__card-suffix">+</span></div>
-              <p class="stats__card-label">Projects delivered</p>
+              <div class="stats__card-number-wrapper"><span class="stats__card-number" data-target="99">0</span><span class="stats__card-suffix">%</span></div>
+              <p class="stats__card-label">Client Satisfaction</p>
             </div>
           </div>
           <div class="stats__card" data-aos="fade-up" data-aos-delay="200">
-            <div class="stats__card-icon"><i class="fas fa-users"></i></div>
+            <div class="stats__card-icon"><i class="fa-solid fa-trophy"></i></div>
             <div class="stats__card-content">
-              <div class="stats__card-number-wrapper"><span class="stats__card-number" data-target="600">0</span><span class="stats__card-suffix">+</span></div>
-              <p class="stats__card-label">Specialist</p>
+              <div class="stats__card-number-wrapper"><span class="stats__card-number" data-target="12">0</span><span class="stats__card-suffix">+</span></div>
+              <p class="stats__card-label">Design &amp; Tech Awards</p>
             </div>
           </div>
           <div class="stats__card" data-aos="fade-up" data-aos-delay="300">
-            <div class="stats__card-icon"><i class="fab fa-apple"></i></div>
+            <div class="stats__card-icon"><i class="fa-solid fa-bolt"></i></div>
             <div class="stats__card-content">
-              <div class="stats__card-number-wrapper"><span class="stats__card-number" data-target="64">0</span><span class="stats__card-suffix">+</span></div>
-              <p class="stats__card-label">Years of operation</p>
+              <div class="stats__card-number-wrapper"><span class="stats__card-number" data-target="10">0</span><span class="stats__card-suffix">x</span></div>
+              <p class="stats__card-label">Performance Speedup</p>
             </div>
           </div>
         </div>
@@ -308,11 +359,11 @@
         <div class="row"> 
           <div class="col-xl-6 col-lg-5" data-aos="fade-right" data-aos-duration="1000">
             <div class="footer__info"> 
-              <h2 class="footer__title">Get in touch!</h2>
-              <p class="footer__description">Fusce varius, dolor tempor interdum tristique, dui urna bib endum magna, ut ullamcorper puru.</p>
+              <h2 class="footer__title">Let's build the future together.</h2>
+              <p class="footer__description">Have an ambitious project in mind? Subscribe for our tech insights or reach out to start collaborating.</p>
               <form class="footer__newsletter">
-                <input type="email" placeholder="Email address">
-                <button class="main-button btn btn-primary" type="submit">Subscribe</button>
+                <input type="email" placeholder="Enter your work email">
+                <button class="main-button btn btn-primary" type="submit">Join Insights</button>
               </form>
             </div>
           </div>
@@ -320,25 +371,25 @@
             <div class="row">
               <div class="col-sm-6">
                 <div class="footer__widget">
-                  <h6 class="footer__widget__title">Services</h6>
+                  <h6 class="footer__widget__title">Core Services</h6>
                   <ul class="list-unstyled">
-                    <li><a href="#">Logo &amp; Branding</a></li>
-                    <li><a href="#">Website Development</a></li>
-                    <li><a href="#">Mobile App Development</a></li>
-                    <li><a href="#">Search Engine Optimization</a></li>
-                    <li><a href="#">Pay-Per-Click</a></li>
-                    <li><a href="#">Social Media Marketing</a></li>
+                    <li><a href="#services">UI/UX &amp; Brand Identity</a></li>
+                    <li><a href="#services">Web &amp; Mobile Development</a></li>
+                    <li><a href="#services">Cloud Architecture &amp; DevOps</a></li>
+                    <li><a href="#services">AI &amp; Interactive 3D Web</a></li>
+                    <li><a href="#services">Performance &amp; SEO Audits</a></li>
+                    <li><a href="#services">Cybersecurity &amp; Code Review</a></li>
                   </ul>
                 </div>
               </div>
               <div class="col-sm-6">
                 <div class="footer__widget">
-                  <h6 class="footer__widget__title">Resources</h6>
+                  <h6 class="footer__widget__title">Navigation</h6>
                   <ul class="list-unstyled">
-                    <li><a href="#">Contact</a></li>
-                    <li><a href="#">Blog</a></li>
-                    <li><a href="#">Case Studies</a></li>
-                    <li><a href="#">Portfolio</a></li>
+                    <li><a href="#featured">Featured Case Studies</a></li>
+                    <li><a href="#projects">Selected Portfolio</a></li>
+                    <li><a href="#stats">Impact &amp; Stats</a></li>
+                    <li><a href="#about-us">Request a Quote</a></li>
                   </ul>
                 </div>
               </div>
@@ -346,10 +397,10 @@
           </div>
         </div>
         <div class="footer__copyright">
-          <p class="footer__copyright__description">© 2025. All rights reserved by<a href="index.html">Lumotik Team</a></p>
+          <p class="footer__copyright__description">© 2026. All rights reserved by<a href="index.html">Lumotik Digital Agency</a></p>
           <ul class="list-unstyled">
             <li><a href="#">Privacy Policy</a></li>
-            <li><a href="#">Terms of Use</a></li>
+            <li><a href="#">Terms of Service</a></li>
           </ul>
         </div>
       </div>

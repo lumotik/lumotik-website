@@ -10,252 +10,303 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.rtl.min.css"/>
     <link rel="stylesheet" href="css/main-rtl.css"/>
   </head>
-  <body><a class="go-top" ref="#main-wrapper" id="goTop"><i class="fa-solid fa-angles-up"></i></a>
+  <body><a class="go-top" href="#hero" id="goTop"><i class="fa-solid fa-angles-up"></i></a>
     <header class="header">
       <div class="container">
-        <nav class="navbar"><a class="navbar-brand" href="./index.html"><img src="./images/logo.svg" width="70" height="auto" alt="Hi to Soni Courses"></a>
+        <nav class="navbar"><a class="navbar-brand" href="./index-ar.html"><img src="./images/logo.svg" width="160" height="42" alt="Lumotik Digital Agency"></a>
           <div class="overlay"></div>
           <ul class="navbar-nav collapsed-mobile" id="onePageNav">
-            <h5 class="collapsed-mobile__header">القائمة</h5>
+            <div class="collapsed-mobile__header"><span>القائمة</span>
+              <button class="close__btn" type="button" style="background: none; border: none; color: #00ffff; font-size: 20px;">&times;</button>
+            </div>
             <li class="nav-item active"><a class="nav-link" href="#hero">الرئيسية</a></li>
             <li class="nav-item"><a class="nav-link" href="#services">خدماتنا</a></li>
             <li class="nav-item"><a class="nav-link" href="#featured">أعمال مميزة</a></li>
             <li class="nav-item"><a class="nav-link" href="#about-us">من نحن</a></li>
             <li class="nav-item"><a class="nav-link" href="#projects">مشاريعنا</a></li>
             <li class="nav-item"><a class="nav-link" href="#stats">إحصائياتنا</a></li>
+            <li class="nav-item"><a class="nav-link" href="./index.html"><i class="fa-solid fa-globe me-1"></i><span>English</span></a></li>
+            <li class="nav-item nav-cta"><a class="main-button" href="#about-us"><span>ابدأ مشروعك</span></a></li>
           </ul>
           <button class="navbar-toggler" type="button"><i class="fas fa-bars"></i></button>
         </nav>
       </div>
     </header>
     <section class="hero" id="hero">
-      <div class="container"> </div>
-      <div class="hero__content">
-        <h1 class="hero__title"></h1>Build beautiful <span>website&</span><br>mobile apps.
-        <p class="hero__text">Create live segments and target the right people for messages based on their behaviors.</p>
+      <div class="container">
+        <div class="hero__content" data-aos="fade-up" data-aos-duration="1000">
+          <div class="hero__badge"><span class="pulse-dot"></span><span>هندسة رقمية فائقة التطور</span></div>
+          <h1 class="hero__title">نصمم ونبتكر <br><span class="gradient-text">مستقبل التجارب الرقمية الذكية.</span>
+          </h1>
+          <p class="hero__text">لوموتيك هي وكالة رقمية متقدمة تصنع واجهات المستخدم المتميزة، وتطور منصات الويب وتطبيقات الجوال والأنظمة السحابية عالية الكفاءة.
+          </p>
+          <div class="hero__actions"><a class="main-button" href="#projects"><i class="fa-solid fa-rocket me-2"></i><span>استكشف أعمالنا</span></a><a class="main-button main-button--ghost" href="#about-us"><i class="fa-regular fa-paper-plane me-2"></i><span>اطلب عرض سعر</span></a></div>
+          <div class="hero__features">
+            <div class="hero__features-item"><i class="fa-solid fa-check-double"></i><span>كود عالي الجودة</span></div>
+            <div class="hero__features-item"><i class="fa-solid fa-bolt"></i><span>أداء فائق السرعة</span></div>
+            <div class="hero__features-item"><i class="fa-solid fa-shield-halved"></i><span>أمان على مستوى المؤسسات</span></div>
+          </div>
+        </div>
       </div>
     </section>
     <section class="services" id="services">
       <div class="container">
         <div class="services__wrapper">
-          <div class="services__header">
-            <p class="services__subtitle">What We Can Do For You</p>
-            <h2 class="services__title">Services we can help<br>you with.</h2>
-            <p class="services__description">Nulla facilisi. Nullam in magna id dolor blandit rutrum eget vulputate augue sed eu imperdiet.</p>
+          <div class="services__header" data-aos="fade-up">
+            <p class="services__subtitle">خدماتنا وخبراتنا</p>
+            <h2 class="services__title">نصنع حلولاً برمجية وتصميمية تصنع الفارق.
+            </h2>
+            <p class="services__description">من الفكرة المبدئية إلى الإطلاق الشامل، نقدم حلولاً تقنية متكاملة تضمن تفوق علامتك التجارية.</p>
           </div>
           <div class="services__cards">
-            <div class="services__card">
-              <div class="services__card-img"><img src="./images/services/icon-1.webp" alt="Design Icon"></div>
+            <div class="services__card" data-aos="fade-up" data-aos-delay="0">
+              <div class="services__card-icon-box"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
               <div class="services__body">
-                <h3 class="services__card-title">Design</h3>
-                <p class="services__card-description">Simply drag and drop photos and videos into your workspace to automatically add them to your Collab Cloud library.</p>
+                <h3 class="services__card-title">تصميم واجهات وتجربة المستخدم</h3>
+                <p class="services__card-description">تصميم واجهات رقمية متقدمة، وأنظمة تصميم متكاملة، ونماذج تفاعلية تعزز ولاء المستخدم وتزيد معدلات التحويل.</p>
               </div>
+              <div class="services__card-tag"><i class="fa-solid fa-terminal me-1"></i><span>Figma • Design Systems • 3D</span></div>
             </div>
-            <div class="services__card active">
-              <div class="services__card-img"><img src="./images/services/icon-2.webp" alt="Development Icon"></div>
+            <div class="services__card" data-aos="fade-up" data-aos-delay="100">
+              <div class="services__card-icon-box"><i class="fa-solid fa-code"></i></div>
               <div class="services__body">
-                <h3 class="services__card-title">Development</h3>
-                <p class="services__card-description">Simply drag and drop photos and videos into your workspace to automatically add them to your Collab Cloud library.</p>
+                <h3 class="services__card-title">تطوير الويب وتطبيقات الجوال</h3>
+                <p class="services__card-description">تطوير منصات وتطبيقات عالية الأداء وقابلة للتوسع باستخدام أحدث التقنيات وأفضل الممارسات البرمجية.</p>
               </div>
+              <div class="services__card-tag"><i class="fa-solid fa-terminal me-1"></i><span>React • Next.js • Flutter • Node.js</span></div>
             </div>
-            <div class="services__card">
-              <div class="services__card-img"><img src="./images/services/icon-3.webp" alt="Online marketing Icon"></div>
+            <div class="services__card" data-aos="fade-up" data-aos-delay="200">
+              <div class="services__card-icon-box"><i class="fa-solid fa-cloud-arrow-up"></i></div>
               <div class="services__body">
-                <h3 class="services__card-title">Online marketing</h3>
-                <p class="services__card-description">Simply drag and drop photos and videos into your workspace to automatically add them to your Collab Cloud library.</p>
+                <h3 class="services__card-title">البنية السحابية وهندسة ديف أوبس</h3>
+                <p class="services__card-description">بناء بنية تحتية سحابية آمنة ومؤتمتة تضمن استمرارية الخدمة وسرعة استجابة فائقة تحت أقصى ضغط.</p>
               </div>
+              <div class="services__card-tag"><i class="fa-solid fa-terminal me-1"></i><span>AWS • Docker • Kubernetes • Serverless</span></div>
             </div>
-            <div class="services__card">
-              <div class="services__card-img"><img src="./images/services/icon-4.webp" alt="Business Icon"></div>
+            <div class="services__card" data-aos="fade-up" data-aos-delay="300">
+              <div class="services__card-icon-box"><i class="fa-solid fa-brain"></i></div>
               <div class="services__body">
-                <h3 class="services__card-title">Business</h3>
-                <p class="services__card-description">Simply drag and drop photos and videos into your workspace to automatically add them to your Collab Cloud library.</p>
+                <h3 class="services__card-title">أنظمة الذكاء الاصطناعي والتفاعل 3D</h3>
+                <p class="services__card-description">تكامل نماذج الذكاء الاصطناعي التوليدي، وتطوير الأنظمة الذكية، وتجارب الويب ثلاثية الأبعاد التفاعلية.</p>
               </div>
+              <div class="services__card-tag"><i class="fa-solid fa-terminal me-1"></i><span>OpenAI • WebGL • Three.js • Python</span></div>
             </div>
-            <div class="services__card">
-              <div class="services__card-img"><img src="./images/services/icon-5.webp" alt="Technology Icon"></div>
+            <div class="services__card" data-aos="fade-up" data-aos-delay="400">
+              <div class="services__card-icon-box"><i class="fa-solid fa-chart-line"></i></div>
               <div class="services__body">
-                <h3 class="services__card-title">Technology</h3>
-                <p class="services__card-description">Simply drag and drop photos and videos into your workspace to automatically add them to your Collab Cloud library.</p>
+                <h3 class="services__card-title">تحسين الأداء ومحركات البحث</h3>
+                <p class="services__card-description">تسريع تحميل الصفحات لكسر حاجز الثواني، وتحقيق أعلى مؤشرات Core Web Vitals لضمان تصدر النتائج.</p>
               </div>
+              <div class="services__card-tag"><i class="fa-solid fa-terminal me-1"></i><span>Lighthouse 100 • Core Web Vitals</span></div>
             </div>
-            <div class="services__card">
-              <div class="services__card-img"><img src="./images/services/icon-6.webp" alt="Content strategy Icon"></div>
+            <div class="services__card" data-aos="fade-up" data-aos-delay="500">
+              <div class="services__card-icon-box"><i class="fa-solid fa-shield-halved"></i></div>
               <div class="services__body">
-                <h3 class="services__card-title">Content strategy</h3>
-                <p class="services__card-description">Simply drag and drop photos and videos into your workspace to automatically add them to your Collab Cloud library.</p>
+                <h3 class="services__card-title">الأمان السيبراني ومراجعة الكود</h3>
+                <p class="services__card-description">فحص شامل للكود المصدري، وسد الثغرات الأمنية، واختبارات الأمان لضمان سلامة بيانات عملائك.</p>
               </div>
+              <div class="services__card-tag"><i class="fa-solid fa-terminal me-1"></i><span>OWASP • SOC2 Ready • Automated Tests</span></div>
             </div>
           </div>
         </div>
-      </div>
-      <div class="services__bubbles">
-        <div class="services__bubbles-line"><img src="https://new.axilthemes.com/demo/template/abstrak/assets/media/others/line-9.png"></div>
-        <div class="services__bubbles-curve"><img class="flip-shape" src="https://new.axilthemes.com/demo/template/abstrak/assets/media/others/bubble-42.png"></div>
       </div>
     </section>
     <section class="featured" id="featured">
       <div class="container">
         <div class="featured__wrapper">
-          <div class="featured__item">
+          <div class="featured__item" data-aos="fade-right" data-aos-duration="1000">
             <div class="featured__header">
-              <p class="featured__subtitle">Featured Case Study</p>
-              <h2 class="featured__title">
-                 Website and web <br>Development,Design</h2>
-              <p class="featured__description">Donec metus lorem, vulputate at sapien sit amet, auctor iaculis lorem. In vel hendrerit nisi. Vestibulum eget risus velit. Aliquam tristique libero at dui sodales, et placerat orci lobortis..</p>
-              <p class="featured__description">Maecenas ipsum neque, elementum id dignissim et, imperdiet vitae mauris.</p>
-              <button class="main-button featured__btn">Read Case Study</button>
+              <p class="featured__subtitle">دراسة حالة مميزة</p>
+              <h2 class="featured__title">منصة التقنية المالية وتطبيق الجوال الذكي
+              </h2>
+              <p class="featured__description">قمنا بإعادة هندسة البنية الرقمية وتطوير تطبيق جوال فائق السلاسة لإحدى الشركات الرائدة في التقنية المالية مع أمان بنكي عالي المستوى.
+              </p>
+              <p class="featured__description">تم التوسع لخدمة أكثر من 2 مليون مستخدم نشط بزمن استجابة أقل من 50 مللي ثانية ونسبة توفر 99.99%.
+              </p><a class="main-button featured__btn" href="#projects"><i class="fa-solid fa-arrow-up-right-from-square me-2"></i><span>شاهد دراسة الحالة</span></a>
             </div>
             <div class="featured__counter">
               <div class="featured__count">
-                <p class="featured__number">20%</p>
-                <p class="featured__text">ROI increase</p>
+                <p class="featured__number">+145%</p>
+                <p class="featured__text">زيادة معدل التحويل</p>
               </div>
               <div class="featured__count">
-                <p class="featured__number">20%</p>
-                <p class="featured__text">ROI increase</p>
+                <p class="featured__number">0.4s</p>
+                <p class="featured__text">سرعة استجابة الصفحة</p>
               </div>
             </div>
           </div>
-          <div class="featured__item">
-            <div class="featured__img"><img src="./images/featured/case-study-5.webp"></div>
+          <div class="featured__item" data-aos="fade-left" data-aos-duration="1000">
+            <div class="featured__img"><img src="./images/featured/case-study-5.webp" alt="Lumotik Featured Case Study"></div>
           </div>
         </div>
       </div>
     </section>
     <section class="about-us" id="about-us">
       <div class="container position-relative z-2">
-        <div class="row g-4 align-items-center">
-          <div class="col-12 col-md-7">
-            <div class="px-3 px-md-5" data-aos="fade-up" data-aos-duration="1000">
+        <div class="row g-5 align-items-center">
+          <div class="col-12 col-lg-7">
+            <div data-aos="fade-up" data-aos-duration="1000">
               <div class="section-title">
-                <div class="p sub-title">عنا</div>
-                <h2 class="main-title mb-4">We do design, code &amp; develop.</h2>
+                <p class="sub-title">عن لوموتيك</p>
+                <h2 class="main-title">نبتكر التميز الرقمي عبر التصميم المتقن والبرمجة المتقدمة.</h2>
               </div>
-              <p class="mb-4">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries,</p>
-              <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters</p>
+              <p class="mb-4 fs-5">في لوموتيك، ندمج دقة التصميم الجمالي مع أعلى معايير الهندسة البرمجية. نبني منصات ويب وتطبيقات ذكية، وبنى تحتية سحابية مرنة، وأنظمة ذكاء اصطناعي تمكّن الشركات الطموحة من النمو والريادة.</p>
+              <p class="text-white-50">تعمل فرقنا المتخصصة من مصممين ومهندسي برمجيات على تحويل التحديات التقنية المعقدة إلى تجارب مستخدم مذهلة وسلسة.</p>
+              <div class="row g-3 mt-4">
+                <div class="col-6">
+                  <div class="p-3 rounded-3" style="background: rgba(255,255,255,0.03); border: 1px solid rgba(0,255,255,0.15);">
+                    <h4 class="text-primary mb-1">100%</h4><small class="text-white-50">ملكية الكود بالكامل</small>
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="p-3 rounded-3" style="background: rgba(255,255,255,0.03); border: 1px solid rgba(0,255,255,0.15);">
+                    <h4 class="text-primary mb-1">24/7</h4><small class="text-white-50">دعم فني مستمر</small>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
-          <div class="col-12 col-md-5">
-            <div class="about-us__form p-5" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
-              <h3 class="mb-3">Get a free Keystroke quote now</h3>
-              <div class="d-flex flex-column gap-3">
+          <div class="col-12 col-lg-5">
+            <div class="about-us__form p-4 p-md-5" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
+              <h3 class="mb-2">اطلب استشارة مجانية لمشروعك</h3>
+              <p class="small text-white-50 mb-4">أخبرنا عن تفاصيل مشروعك وسنتواصل معك خلال 24 ساعة.</p>
+              <form class="d-flex flex-column gap-3" action="#" method="POST" onsubmit="event.preventDefault(); alert('Thank you! We will get back to you shortly.');">
                 <div class="about-us__form__field d-flex flex-column gap-1">
-                  <p>الأسم</p>
-                  <input type="text" placeholder="John Smith">
+                  <p>الاسم بالكامل</p>
+                  <input type="text" name="name" placeholder="محمد أحمد" required>
                 </div>
                 <div class="about-us__form__field d-flex flex-column gap-1">
-                  <p>البريد الالكترونى</p>
-                  <input type="email" placeholder="Example@gmail.com">
+                  <p>البريد الإلكتروني للعمل</p>
+                  <input type="email" name="email" placeholder="name@company.com" required>
                 </div>
                 <div class="about-us__form__field d-flex flex-column gap-1">
-                  <p>الهاتف</p>
-                  <input type="phone" placeholder="+20123456789">
+                  <p>رقم الهاتف / واتساب</p>
+                  <input type="tel" name="phone" placeholder="+966 50 123 4567" required>
                 </div>
-                <button class="main-button w-100 mt-2">ارسل</button>
-              </div>
+                <button class="main-button w-100 mt-3" type="submit"><i class="fa-solid fa-paper-plane me-2"></i><span>إرسال الطلب</span></button>
+              </form>
             </div>
           </div>
         </div>
-      </div>
-      <div>
-        <div class="about-us__bubble"><img class="flip-shape" src="./images/shapes/bubble-7.webp" alt="bubble"></div>
-        <div class="about-us__line d-none d-md-block"><img src="./images/shapes/line-4.webp" alt="line"></div>
       </div>
     </section>
     <section class="projects" id="projects">
       <div class="container">
-        <div class="section-title">
-          <p class="sub-title">مشاريعنا</p>
-          <h2 class="main-title"><span>بعض من</span><br><span>افضل اعمالنا</span></h2>
+        <div class="section-title" data-aos="fade-up">
+          <p class="sub-title">أعمالنا ومشاريع عملائنا</p>
+          <h2 class="main-title"><span>منصات رقمية قمنا بتطويرها.</span><br><span>صُنعت لرواد الأعمال والمؤسسات الكبرى.</span></h2>
         </div>
-        <div class="projects__tabs">
-          <ul class="nav nav-tabs mb-3 mb-md-5 gap-md-5 gap-3" id="myTab" role="tablist">
+        <div class="projects__tabs" data-aos="fade-up">
+          <ul class="nav nav-tabs mb-4 mb-md-5" id="myTab" role="tablist">
             <li class="nav-item" role="presentation">
               <button class="nav-link active" id="all-tab" data-bs-toggle="tab" data-bs-target="#all-tab-pane" type="button" role="tab" aria-controls="all-tab-pane" aria-selected="true">كل المشاريع</button>
             </li>
             <li class="nav-item" role="presentation">
-              <button class="nav-link " id="cat1-tab" data-bs-toggle="tab" data-bs-target="#cat1-tab-pane" type="button" role="tab" aria-controls="cat1-tab-pane" aria-selected="true">الفئة 1</button>
+              <button class="nav-link " id="web-tab" data-bs-toggle="tab" data-bs-target="#web-tab-pane" type="button" role="tab" aria-controls="web-tab-pane" aria-selected="true">منصات الويب</button>
             </li>
             <li class="nav-item" role="presentation">
-              <button class="nav-link " id="cat2-tab" data-bs-toggle="tab" data-bs-target="#cat2-tab-pane" type="button" role="tab" aria-controls="cat2-tab-pane" aria-selected="true">الفئة 2</button>
+              <button class="nav-link " id="luxury-tab" data-bs-toggle="tab" data-bs-target="#luxury-tab-pane" type="button" role="tab" aria-controls="luxury-tab-pane" aria-selected="true">المشاريع الفاخرة</button>
             </li>
           </ul>
           <div class="tab-content">
             <div class="tab-pane fade show active" id="all-tab-pane" role="tabpanel" aria-labelledby="all-tab" tabindex="0">
-              <div class="row g-md-5 g-2">
-                <div class="col-12 col-md-6">
-                  <div class="project-item mx-2 mx-md-4" data-aos="fade-up" data-aos-duration="1000"><a href="#">
-                      <div class="image"><img src="https://images.unsplash.com/photo-1739582814657-10931286d7a5?q=80&amp;w=1528&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"></div>
-                      <div class="project-item__info">
-                        <h4 class="mb-2">Creative Agency</h4>
-                        <p>Full Branding, Website, App</p>
-                      </div></a></div>
-                </div>
-                <div class="col-12 col-md-6">
-                  <div class="project-item mx-2 mx-md-4" data-aos="fade-up" data-aos-duration="1000"><a href="#">
-                      <div class="image"><img src="https://images.unsplash.com/photo-1736618626242-542735175261?q=80&amp;w=1374&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"></div>
-                      <div class="project-item__info">
-                        <h4 class="mb-2">Digital Marketing</h4>
-                        <p>Logo, Website &amp; Mobile App</p>
-                      </div></a></div>
-                </div>
-                <div class="col-12 col-md-6">
-                  <div class="project-item mx-2 mx-md-4" data-aos="fade-up" data-aos-duration="1000"><a href="#">
-                      <div class="image"><img src="https://images.unsplash.com/photo-1728984273683-d962fd89ef4d?q=80&amp;w=1374&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"></div>
-                      <div class="project-item__info">
-                        <h4 class="mb-2">Digital Agency</h4>
-                        <p>Website, UI/UX, App</p>
-                      </div></a></div>
-                </div>
-                <div class="col-12 col-md-6">
-                  <div class="project-item mx-2 mx-md-4" data-aos="fade-up" data-aos-duration="1000"><a href="#">
-                      <div class="image"><img src="https://images.unsplash.com/photo-1738430275589-2cd3d0d0d57a?q=80&amp;w=1461&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"></div>
-                      <div class="project-item__info">
-                        <h4 class="mb-2">Plan Management</h4>
-                        <p>Branding, Website, IOS App</p>
-                      </div></a></div>
+              <div class="project-showcase" data-aos="fade-up" data-aos-duration="1000">
+                <div class="row g-4 align-items-center">
+                  <div class="col-12 col-lg-7">
+                    <div class="project-showcase__preview">
+                      <div class="project-media-stage">
+                        <video class="main-video" src="https://beta.imperium-group.com/storage/media/legacy/2f7440f7eb0edcca-hero.mp4" poster="https://beta.imperium-group.com/storage/media/legacy/52f95ae072cf5a4f-img-ext-night.jpg" autoplay muted loop playsinline preload="metadata"></video><img class="main-img d-none" src="https://beta.imperium-group.com/storage/media/legacy/52f95ae072cf5a4f-img-ext-night.jpg" alt="مجموعة إمبريوم (Imperium Group) — منصة العمارة والتأثيث الفاخر" loading="lazy"><span class="project-badge">مشروع حي لعميل</span>
+                        <div class="media-playback-controls">
+                          <button class="media-btn-toggle" type="button" title="Play/Pause" aria-label="Toggle playback"><i class="fa-solid fa-pause"></i></button>
+                          <button class="media-btn-mute" type="button" title="Mute/Unmute" aria-label="Toggle audio"><i class="fa-solid fa-volume-xmark"></i></button>
+                        </div>
+                      </div>
+                      <div class="project-gallery-wrapper">
+                        <div class="project-gallery-header"><span class="gallery-label"><i class="fa-solid fa-photo-film me-2"></i><span>معرض الوسائط والصور الحية</span></span><span class="gallery-hint">اضغط للتبديل</span></div>
+                        <div class="project-showcase__thumbs interactive-gallery">
+                          <button class="gallery-thumb active" type="button" data-media-type="video" data-media-src="https://beta.imperium-group.com/storage/media/legacy/2f7440f7eb0edcca-hero.mp4" data-media-poster="https://beta.imperium-group.com/storage/media/legacy/52f95ae072cf5a4f-img-ext-night.jpg" title="🎬 فيديو المنصة التفاعلي" aria-label="🎬 فيديو المنصة التفاعلي"><img src="https://beta.imperium-group.com/storage/media/legacy/52f95ae072cf5a4f-img-ext-night.jpg" alt="🎬 فيديو المنصة التفاعلي" loading="lazy"><span class="thumb-video-badge"><i class="fa-solid fa-play"></i></span>
+                          </button>
+                          <button class="gallery-thumb" type="button" data-media-type="image" data-media-src="./images/imperium-platform/tab-01-home.jpg" data-media-poster="" title="🏠 تبويب: الرئيسية والفيديو المعماري التفاعلي" aria-label="🏠 تبويب: الرئيسية والفيديو المعماري التفاعلي"><img src="./images/imperium-platform/tab-01-home.jpg" alt="🏠 تبويب: الرئيسية والفيديو المعماري التفاعلي" loading="lazy">
+                          </button>
+                          <button class="gallery-thumb" type="button" data-media-type="image" data-media-src="./images/imperium-platform/tab-02-architecture-service.jpg" data-media-poster="" title="🏛️ تبويب: التصميم المعماري والمخططات الرئيسية" aria-label="🏛️ تبويب: التصميم المعماري والمخططات الرئيسية"><img src="./images/imperium-platform/tab-02-architecture-service.jpg" alt="🏛️ تبويب: التصميم المعماري والمخططات الرئيسية" loading="lazy">
+                          </button>
+                          <button class="gallery-thumb" type="button" data-media-type="image" data-media-src="./images/imperium-platform/tab-03-interior-service.jpg" data-media-poster="" title="✨ تبويب: التصميم الداخلي الفاخر والتأثيث الراقي" aria-label="✨ تبويب: التصميم الداخلي الفاخر والتأثيث الراقي"><img src="./images/imperium-platform/tab-03-interior-service.jpg" alt="✨ تبويب: التصميم الداخلي الفاخر والتأثيث الراقي" loading="lazy">
+                          </button>
+                          <button class="gallery-thumb" type="button" data-media-type="image" data-media-src="./images/imperium-platform/tab-04-landscape-fitout.jpg" data-media-poster="" title="🌿 تبويب: تنسيق الحدائق وأعمال التشطيبات الفاخرة" aria-label="🌿 تبويب: تنسيق الحدائق وأعمال التشطيبات الفاخرة"><img src="./images/imperium-platform/tab-04-landscape-fitout.jpg" alt="🌿 تبويب: تنسيق الحدائق وأعمال التشطيبات الفاخرة" loading="lazy">
+                          </button>
+                          <button class="gallery-thumb" type="button" data-media-type="image" data-media-src="./images/imperium-platform/tab-05-projects-portfolio.jpg" data-media-poster="" title="📁 تبويب: معرض المشاريع ودراسات الحالة" aria-label="📁 تبويب: معرض المشاريع ودراسات الحالة"><img src="./images/imperium-platform/tab-05-projects-portfolio.jpg" alt="📁 تبويب: معرض المشاريع ودراسات الحالة" loading="lazy">
+                          </button>
+                          <button class="gallery-thumb" type="button" data-media-type="image" data-media-src="./images/imperium-platform/tab-06-about-team.jpg" data-media-poster="" title="👥 تبويب: من نحن، الرؤية وفريق القيادة" aria-label="👥 تبويب: من نحن، الرؤية وفريق القيادة"><img src="./images/imperium-platform/tab-06-about-team.jpg" alt="👥 تبويب: من نحن، الرؤية وفريق القيادة" loading="lazy">
+                          </button>
+                          <button class="gallery-thumb" type="button" data-media-type="image" data-media-src="./images/imperium-platform/tab-07-contacts.jpg" data-media-poster="" title="📍 تبويب: التواصل وطلب الاستشارات الرقمية" aria-label="📍 تبويب: التواصل وطلب الاستشارات الرقمية"><img src="./images/imperium-platform/tab-07-contacts.jpg" alt="📍 تبويب: التواصل وطلب الاستشارات الرقمية" loading="lazy">
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-12 col-lg-5">
+                    <div class="project-showcase__content">
+                      <div class="d-flex align-items-center gap-2 mb-3"><span class="badge bg-primary text-dark fw-bold">منصة ويب</span><span class="badge" style="background: rgba(0,255,255,0.15); color: #00ffff; border: 1px solid rgba(0,255,255,0.3);">العميل: مجموعة إمبريوم (الإمارات)</span></div>
+                      <h3 class="project-showcase__title">مجموعة إمبريوم (Imperium Group) — منصة العمارة والتأثيث الفاخر</h3>
+                      <p class="project-showcase__subtitle">تطوير منصة ويب متكاملة • تصميم تجربة المستخدم • الإمارات</p>
+                      <p class="project-showcase__desc">قمنا بتصميم وتطوير المنصة الرقمية الرسمية لمجموعة إمبريوم الرائدة في التصميم المعماري والتنفيذ الفاخر في الإمارات. تشتمل على فيديو تفاعلي مرتبط بالتمرير، وقوائم خدمات تفاعلية، ومعرض أعمال ديناميكي وأداء فائق السرعة وتجربة مستخدم سلسة على جميع الأجهزة.</p>
+                      <div class="project-showcase__tech"><i class="fa-solid fa-code me-2"></i><span>Next.js • TailwindCSS • Swiper • Interactive Video</span></div>
+                      <div class="mt-4 d-flex flex-wrap gap-3"><a class="main-button" href="https://beta.imperium-group.com/" target="_blank" rel="noopener"><i class="fa-solid fa-arrow-up-right-from-square me-2"></i><span>زيارة المنصة الرقمية</span></a></div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
-            <div class="tab-pane fade show " id="cat1-tab-pane" role="tabpanel" aria-labelledby="cat1-tab" tabindex="0">
-              <div class="row g-md-5 g-2">
-                <div class="col-12 col-md-6">
-                  <div class="project-item mx-2 mx-md-4" data-aos="fade-up" data-aos-duration="1000"><a href="#">
-                      <div class="image"><img src="https://images.unsplash.com/photo-1738430275589-2cd3d0d0d57a?q=80&amp;w=1461&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"></div>
-                      <div class="project-item__info">
-                        <h4 class="mb-2">Plan Management</h4>
-                        <p>Branding, Website, IOS App</p>
-                      </div></a></div>
+            <div class="tab-pane fade show " id="web-tab-pane" role="tabpanel" aria-labelledby="web-tab" tabindex="0">
+              <div class="project-showcase" data-aos="fade-up" data-aos-duration="1000">
+                <div class="row g-4 align-items-center">
+                  <div class="col-12 col-lg-7">
+                    <div class="project-showcase__preview">
+                      <div class="project-media-stage">
+                        <video class="main-video" src="https://beta.imperium-group.com/storage/media/legacy/2f7440f7eb0edcca-hero.mp4" poster="https://beta.imperium-group.com/storage/media/legacy/52f95ae072cf5a4f-img-ext-night.jpg" autoplay muted loop playsinline preload="metadata"></video><img class="main-img d-none" src="https://beta.imperium-group.com/storage/media/legacy/52f95ae072cf5a4f-img-ext-night.jpg" alt="مجموعة إمبريوم (Imperium Group) — منصة العمارة والتأثيث الفاخر" loading="lazy"><span class="project-badge">مشروع حي لعميل</span>
+                        <div class="media-playback-controls">
+                          <button class="media-btn-toggle" type="button" title="Play/Pause" aria-label="Toggle playback"><i class="fa-solid fa-pause"></i></button>
+                          <button class="media-btn-mute" type="button" title="Mute/Unmute" aria-label="Toggle audio"><i class="fa-solid fa-volume-xmark"></i></button>
+                        </div>
+                      </div>
+                      <div class="project-gallery-wrapper">
+                        <div class="project-gallery-header"><span class="gallery-label"><i class="fa-solid fa-photo-film me-2"></i><span>معرض الوسائط والصور الحية</span></span><span class="gallery-hint">اضغط للتبديل</span></div>
+                        <div class="project-showcase__thumbs interactive-gallery">
+                          <button class="gallery-thumb active" type="button" data-media-type="video" data-media-src="https://beta.imperium-group.com/storage/media/legacy/2f7440f7eb0edcca-hero.mp4" data-media-poster="https://beta.imperium-group.com/storage/media/legacy/52f95ae072cf5a4f-img-ext-night.jpg" title="🎬 فيديو المنصة التفاعلي" aria-label="🎬 فيديو المنصة التفاعلي"><img src="https://beta.imperium-group.com/storage/media/legacy/52f95ae072cf5a4f-img-ext-night.jpg" alt="🎬 فيديو المنصة التفاعلي" loading="lazy"><span class="thumb-video-badge"><i class="fa-solid fa-play"></i></span>
+                          </button>
+                          <button class="gallery-thumb" type="button" data-media-type="image" data-media-src="./images/imperium-platform/tab-01-home.jpg" data-media-poster="" title="🏠 تبويب: الرئيسية والفيديو المعماري التفاعلي" aria-label="🏠 تبويب: الرئيسية والفيديو المعماري التفاعلي"><img src="./images/imperium-platform/tab-01-home.jpg" alt="🏠 تبويب: الرئيسية والفيديو المعماري التفاعلي" loading="lazy">
+                          </button>
+                          <button class="gallery-thumb" type="button" data-media-type="image" data-media-src="./images/imperium-platform/tab-02-architecture-service.jpg" data-media-poster="" title="🏛️ تبويب: التصميم المعماري والمخططات الرئيسية" aria-label="🏛️ تبويب: التصميم المعماري والمخططات الرئيسية"><img src="./images/imperium-platform/tab-02-architecture-service.jpg" alt="🏛️ تبويب: التصميم المعماري والمخططات الرئيسية" loading="lazy">
+                          </button>
+                          <button class="gallery-thumb" type="button" data-media-type="image" data-media-src="./images/imperium-platform/tab-03-interior-service.jpg" data-media-poster="" title="✨ تبويب: التصميم الداخلي الفاخر والتأثيث الراقي" aria-label="✨ تبويب: التصميم الداخلي الفاخر والتأثيث الراقي"><img src="./images/imperium-platform/tab-03-interior-service.jpg" alt="✨ تبويب: التصميم الداخلي الفاخر والتأثيث الراقي" loading="lazy">
+                          </button>
+                          <button class="gallery-thumb" type="button" data-media-type="image" data-media-src="./images/imperium-platform/tab-04-landscape-fitout.jpg" data-media-poster="" title="🌿 تبويب: تنسيق الحدائق وأعمال التشطيبات الفاخرة" aria-label="🌿 تبويب: تنسيق الحدائق وأعمال التشطيبات الفاخرة"><img src="./images/imperium-platform/tab-04-landscape-fitout.jpg" alt="🌿 تبويب: تنسيق الحدائق وأعمال التشطيبات الفاخرة" loading="lazy">
+                          </button>
+                          <button class="gallery-thumb" type="button" data-media-type="image" data-media-src="./images/imperium-platform/tab-05-projects-portfolio.jpg" data-media-poster="" title="📁 تبويب: معرض المشاريع ودراسات الحالة" aria-label="📁 تبويب: معرض المشاريع ودراسات الحالة"><img src="./images/imperium-platform/tab-05-projects-portfolio.jpg" alt="📁 تبويب: معرض المشاريع ودراسات الحالة" loading="lazy">
+                          </button>
+                          <button class="gallery-thumb" type="button" data-media-type="image" data-media-src="./images/imperium-platform/tab-06-about-team.jpg" data-media-poster="" title="👥 تبويب: من نحن، الرؤية وفريق القيادة" aria-label="👥 تبويب: من نحن، الرؤية وفريق القيادة"><img src="./images/imperium-platform/tab-06-about-team.jpg" alt="👥 تبويب: من نحن، الرؤية وفريق القيادة" loading="lazy">
+                          </button>
+                          <button class="gallery-thumb" type="button" data-media-type="image" data-media-src="./images/imperium-platform/tab-07-contacts.jpg" data-media-poster="" title="📍 تبويب: التواصل وطلب الاستشارات الرقمية" aria-label="📍 تبويب: التواصل وطلب الاستشارات الرقمية"><img src="./images/imperium-platform/tab-07-contacts.jpg" alt="📍 تبويب: التواصل وطلب الاستشارات الرقمية" loading="lazy">
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-12 col-lg-5">
+                    <div class="project-showcase__content">
+                      <div class="d-flex align-items-center gap-2 mb-3"><span class="badge bg-primary text-dark fw-bold">منصة ويب</span><span class="badge" style="background: rgba(0,255,255,0.15); color: #00ffff; border: 1px solid rgba(0,255,255,0.3);">العميل: مجموعة إمبريوم (الإمارات)</span></div>
+                      <h3 class="project-showcase__title">مجموعة إمبريوم (Imperium Group) — منصة العمارة والتأثيث الفاخر</h3>
+                      <p class="project-showcase__subtitle">تطوير منصة ويب متكاملة • تصميم تجربة المستخدم • الإمارات</p>
+                      <p class="project-showcase__desc">قمنا بتصميم وتطوير المنصة الرقمية الرسمية لمجموعة إمبريوم الرائدة في التصميم المعماري والتنفيذ الفاخر في الإمارات. تشتمل على فيديو تفاعلي مرتبط بالتمرير، وقوائم خدمات تفاعلية، ومعرض أعمال ديناميكي وأداء فائق السرعة وتجربة مستخدم سلسة على جميع الأجهزة.</p>
+                      <div class="project-showcase__tech"><i class="fa-solid fa-code me-2"></i><span>Next.js • TailwindCSS • Swiper • Interactive Video</span></div>
+                      <div class="mt-4 d-flex flex-wrap gap-3"><a class="main-button" href="https://beta.imperium-group.com/" target="_blank" rel="noopener"><i class="fa-solid fa-arrow-up-right-from-square me-2"></i><span>زيارة المنصة الرقمية</span></a></div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
-            <div class="tab-pane fade show " id="cat2-tab-pane" role="tabpanel" aria-labelledby="cat2-tab" tabindex="0">
-              <div class="row g-md-5 g-2">
-                <div class="col-12 col-md-6">
-                  <div class="project-item mx-2 mx-md-4" data-aos="fade-up" data-aos-duration="1000"><a href="#">
-                      <div class="image"><img src="https://images.unsplash.com/photo-1739582814657-10931286d7a5?q=80&amp;w=1528&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"></div>
-                      <div class="project-item__info">
-                        <h4 class="mb-2">Creative Agency</h4>
-                        <p>Full Branding, Website, App</p>
-                      </div></a></div>
-                </div>
-                <div class="col-12 col-md-6">
-                  <div class="project-item mx-2 mx-md-4" data-aos="fade-up" data-aos-duration="1000"><a href="#">
-                      <div class="image"><img src="https://images.unsplash.com/photo-1736618626242-542735175261?q=80&amp;w=1374&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"></div>
-                      <div class="project-item__info">
-                        <h4 class="mb-2">Digital Marketing</h4>
-                        <p>Logo, Website &amp; Mobile App</p>
-                      </div></a></div>
-                </div>
-                <div class="col-12 col-md-6">
-                  <div class="project-item mx-2 mx-md-4" data-aos="fade-up" data-aos-duration="1000"><a href="#">
-                      <div class="image"><img src="https://images.unsplash.com/photo-1728984273683-d962fd89ef4d?q=80&amp;w=1374&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"></div>
-                      <div class="project-item__info">
-                        <h4 class="mb-2">Digital Agency</h4>
-                        <p>Website, UI/UX, App</p>
-                      </div></a></div>
-                </div>
+            <div class="tab-pane fade show " id="luxury-tab-pane" role="tabpanel" aria-labelledby="luxury-tab" tabindex="0">
+              <div class="row g-4">
               </div>
             </div>
           </div>
@@ -265,37 +316,37 @@
     <section class="stats" id="stats">
       <div class="container">
         <div class="stats__header" data-aos="fade-up">
-          <p class="stats__subtitle">دراسة حالة مميزة</p>
-          <h2 class="stats__title">حركة الشركات الناشئة في التصميم</h2>
-          <p class="stats__description">في فيل فاريوس توربيس، غير ديكتوم سيم. في عيينة في إفيكتيتور إيبسوم، في إيجستاس إيبسوم. موريس في مي آك تيلوس.</p>
+          <p class="stats__subtitle">أثر ملموس ونتائج مثبتة</p>
+          <h2 class="stats__title">أرقام تعكس دقة وإتقان أعمالنا البرمجية.</h2>
+          <p class="stats__description">نطور حلولاً برمجية وتصميمية متقدمة تحقق نمواً مستداماً وكفاءة تشغيلية فائقة لعملائنا.</p>
         </div>
         <div class="stats__grid">
           <div class="stats__card" data-aos="fade-up" data-aos-delay="0">
-            <div class="stats__card-icon"><i class="far fa-smile"></i></div>
+            <div class="stats__card-icon"><i class="fa-solid fa-code-branch"></i></div>
             <div class="stats__card-content">
-              <div class="stats__card-number-wrapper"><span class="stats__card-number" data-target="15">0</span><span class="stats__card-suffix">+</span></div>
-              <p class="stats__card-label">سنوات من العمل</p>
+              <div class="stats__card-number-wrapper"><span class="stats__card-number" data-target="150">0</span><span class="stats__card-suffix">+</span></div>
+              <p class="stats__card-label">مشروع رقمي تم تسليمه</p>
             </div>
           </div>
           <div class="stats__card" data-aos="fade-up" data-aos-delay="100">
-            <div class="stats__card-icon"><i class="fas fa-th-large"></i></div>
+            <div class="stats__card-icon"><i class="fa-solid fa-face-smile"></i></div>
             <div class="stats__card-content">
-              <div class="stats__card-number-wrapper"><span class="stats__card-number" data-target="360">0</span><span class="stats__card-suffix">+</span></div>
-              <p class="stats__card-label">مشاريع تم تسليمها</p>
+              <div class="stats__card-number-wrapper"><span class="stats__card-number" data-target="99">0</span><span class="stats__card-suffix">%</span></div>
+              <p class="stats__card-label">نسبة رضا العملاء</p>
             </div>
           </div>
           <div class="stats__card" data-aos="fade-up" data-aos-delay="200">
-            <div class="stats__card-icon"><i class="fas fa-users"></i></div>
+            <div class="stats__card-icon"><i class="fa-solid fa-trophy"></i></div>
             <div class="stats__card-content">
-              <div class="stats__card-number-wrapper"><span class="stats__card-number" data-target="600">0</span><span class="stats__card-suffix">+</span></div>
-              <p class="stats__card-label">أخصائي</p>
+              <div class="stats__card-number-wrapper"><span class="stats__card-number" data-target="12">0</span><span class="stats__card-suffix">+</span></div>
+              <p class="stats__card-label">جوائز تصميم وتقنية</p>
             </div>
           </div>
           <div class="stats__card" data-aos="fade-up" data-aos-delay="300">
-            <div class="stats__card-icon"><i class="fab fa-apple"></i></div>
+            <div class="stats__card-icon"><i class="fa-solid fa-bolt"></i></div>
             <div class="stats__card-content">
-              <div class="stats__card-number-wrapper"><span class="stats__card-number" data-target="64">0</span><span class="stats__card-suffix">+</span></div>
-              <p class="stats__card-label">سنوات من العمل</p>
+              <div class="stats__card-number-wrapper"><span class="stats__card-number" data-target="10">0</span><span class="stats__card-suffix">x</span></div>
+              <p class="stats__card-label">مضاعفة سرعة الأداء</p>
             </div>
           </div>
         </div>
@@ -308,11 +359,11 @@
         <div class="row"> 
           <div class="col-xl-6 col-lg-5" data-aos="fade-right" data-aos-duration="1000">
             <div class="footer__info"> 
-              <h2 class="footer__title">تواصل معنا!</h2>
-              <p class="footer__description">فوسكيه فارياس، دولور تيمبور إنتردم تريستيك، دوي أورنا بيب إندم ماجنا، أوت أولامكوربر بورو.</p>
+              <h2 class="footer__title">لنبتكر المستقبل سوياً.</h2>
+              <p class="footer__description">هل لديك فكرة مشروع واعدة؟ اشترك في نشرتنا التقنية أو تواصل معنا لبدء التعاون.</p>
               <form class="footer__newsletter">
-                <input type="email" placeholder="عنوان البريد الإلكتروني">
-                <button class="main-button btn btn-primary" type="submit">اشترك</button>
+                <input type="email" placeholder="أدخل بريدك الإلكتروني">
+                <button class="main-button btn btn-primary" type="submit">اشترك الآن</button>
               </form>
             </div>
           </div>
@@ -320,25 +371,25 @@
             <div class="row">
               <div class="col-sm-6">
                 <div class="footer__widget">
-                  <h6 class="footer__widget__title">الخدمات</h6>
+                  <h6 class="footer__widget__title">خدماتنا الأساسية</h6>
                   <ul class="list-unstyled">
-                    <li><a href="#">الشعار والعلامة التجارية</a></li>
-                    <li><a href="#">تطوير المواقع الإلكترونية</a></li>
-                    <li><a href="#">تطوير تطبيقات الهاتف المحمول</a></li>
-                    <li><a href="#">تحسين محركات البحث</a></li>
-                    <li><a href="#">الإعلانات المدفوعة لكل نقرة</a></li>
-                    <li><a href="#">تسويق وسائل التواصل الاجتماعي</a></li>
+                    <li><a href="#services">تصميم الهوية وتجربة المستخدم</a></li>
+                    <li><a href="#services">تطوير الويب وتطبيقات الجوال</a></li>
+                    <li><a href="#services">البنية السحابية وهندسة ديف أوبس</a></li>
+                    <li><a href="#services">أنظمة الذكاء الاصطناعي والتفاعل 3D</a></li>
+                    <li><a href="#services">تحسين الأداء ومحركات البحث</a></li>
+                    <li><a href="#services">الأمان السيبراني ومراجعة الكود</a></li>
                   </ul>
                 </div>
               </div>
               <div class="col-sm-6">
                 <div class="footer__widget">
-                  <h6 class="footer__widget__title">الموارد</h6>
+                  <h6 class="footer__widget__title">روابط سريعة</h6>
                   <ul class="list-unstyled">
-                    <li><a href="#">اتصل بنا</a></li>
-                    <li><a href="#">المدونة</a></li>
-                    <li><a href="#">دراسات الحالة</a></li>
-                    <li><a href="#">معرض الأعمال</a></li>
+                    <li><a href="#featured">دراسات الحالة المميزة</a></li>
+                    <li><a href="#projects">أعمالنا المختارة</a></li>
+                    <li><a href="#stats">إحصائياتنا ونتائجنا</a></li>
+                    <li><a href="#about-us">اطلب عرض سعر</a></li>
                   </ul>
                 </div>
               </div>
@@ -346,10 +397,10 @@
           </div>
         </div>
         <div class="footer__copyright">
-          <p class="footer__copyright__description">© 2025. جميع الحقوق محفوظة لـ<a href="index-ar.html">فريق Lumotik</a></p>
+          <p class="footer__copyright__description">© 2026. جميع الحقوق محفوظة لـ<a href="index-ar.html">وكالة لوموتيك الرقمية</a></p>
           <ul class="list-unstyled">
             <li><a href="#">سياسة الخصوصية</a></li>
-            <li><a href="#">شروط الاستخدام</a></li>
+            <li><a href="#">شروط الخدمة</a></li>
           </ul>
         </div>
       </div>
