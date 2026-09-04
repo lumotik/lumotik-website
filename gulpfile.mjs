@@ -143,6 +143,14 @@ gulp.task("cssVendor", () => {
     .pipe(gulp.dest("./dist/css/vendor/"));
 });
 
+// Copy images to dist
+gulp.task("copyImages", () => {
+  return gulp
+    .src("./src/images/**/*")
+    .pipe(changed("./dist/images"))
+    .pipe(gulp.dest("./dist/images"));
+});
+
 // Convert images to WebP
 gulp.task("imgSquash", () => {
   return gulp
@@ -160,6 +168,24 @@ gulp.task("videos", () => {
     .pipe(gulp.dest("./dist/videos"));
 });
 
+// Build task
+gulp.task(
+  "build",
+  gulp.series(
+    "clean-json",
+    "combine-json",
+    "sass",
+    "pugToHtmlEnglish",
+    "pugToHtmlArabic",
+    "copyImages",
+    "imgSquash",
+    "videos",
+    "fonts",
+    "javaScript",
+    "cssVendor"
+  )
+);
+
 // Serve and watch for changes
 gulp.task("serve", () => {
   create().init({
@@ -172,7 +198,7 @@ gulp.task("serve", () => {
   // Watch for other changes
   gulp.watch("./src/sass/**/*.scss", gulp.series("sass"));
   gulp.watch("./src/pug/**/*.pug", gulp.series("pugToHtmlEnglish", "pugToHtmlArabic"));
-  gulp.watch("./src/images/**/*", gulp.series("imgSquash"));
+  gulp.watch("./src/images/**/*", gulp.series("copyImages", "imgSquash"));
   gulp.watch("./src/videos/**/*", gulp.series("videos"));
   gulp.watch("./src/js/**/*", gulp.series("javaScript"));
   gulp.watch("./src/cssVendor/*", gulp.series("cssVendor"));
@@ -180,4 +206,4 @@ gulp.task("serve", () => {
 });
 
 // Default task
-gulp.task("default", gulp.series("clean-json", "combine-json", "sass", "pugToHtmlEnglish", "pugToHtmlArabic", "imgSquash", "videos", "fonts", "javaScript", "cssVendor", "serve"));
+gulp.task("default", gulp.series("clean-json", "combine-json", "sass", "pugToHtmlEnglish", "pugToHtmlArabic", "copyImages", "imgSquash", "videos", "fonts", "javaScript", "cssVendor", "serve"));

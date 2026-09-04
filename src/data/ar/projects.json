@@ -20,7 +20,7 @@
         "category": "web",
         "link": "https://beta.imperium-group.com/",
         "badge": "مشروع حي لعميل",
-        "tech": "Next.js • TailwindCSS • Swiper • Interactive Video",
+        "tech": "Laravel • TailwindCSS • Swiper • Interactive Video",
         "description": "قمنا بتصميم وتطوير المنصة الرقمية الرسمية لمجموعة إمبريوم الرائدة في التصميم المعماري والتنفيذ الفاخر في الإمارات. تشتمل على فيديو تفاعلي مرتبط بالتمرير، وقوائم خدمات تفاعلية، ومعرض أعمال ديناميكي وأداء فائق السرعة وتجربة مستخدم سلسة على جميع الأجهزة.",
         "gallery": [
           {

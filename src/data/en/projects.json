@@ -20,7 +20,7 @@
         "category": "web",
         "link": "https://beta.imperium-group.com/",
         "badge": "Live Client Platform",
-        "tech": "Next.js • TailwindCSS • Swiper • Interactive Video",
+        "tech": "Laravel • TailwindCSS • Swiper • Interactive Video",
         "description": "We engineered the official digital flagship platform for Imperium Group (UAE). Built with cinematic scroll-synchronized video playback, fluid architectural service accordions, filterable project portfolio, dynamic ISO & award certifications carousel, and ultra-smooth mobile responsive experience.",
         "gallery": [
           {
