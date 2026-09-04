@@ -1,33 +1,34 @@
 {
   "stats": {
-    "subTitle": "Featured Case Study",
-    "title": "Design startup movement",
-    "description": "In vel varius turpis, non dictum sem. Aenean in efficitur ipsum, in egestas ipsum. Mauris in mi ac tellus.",
+    "subTitle": "Proven Impact & Metrics",
+    "title": "Numbers that speak for our craftsmanship.",
+    "description": "We engineer high-performance software and brand identities that deliver measurable business growth and exceptional reliability.",
     "items": [
       {
-        "icon": "far fa-smile",
-        "value": 15,
+        "icon": "fa-solid fa-code-branch",
+        "value": 150,
         "suffix": "+",
-        "label": "Years of operation"
+        "label": "Products Delivered"
       },
       {
-        "icon": "fas fa-th-large",
-        "value": 360,
-        "suffix": "+",
-        "label": "Projects delivered"
+        "icon": "fa-solid fa-face-smile",
+        "value": 99,
+        "suffix": "%",
+        "label": "Client Satisfaction"
       },
       {
-        "icon": "fas fa-users",
-        "value": 600,
+        "icon": "fa-solid fa-trophy",
+        "value": 12,
         "suffix": "+",
-        "label": "Specialist"
+        "label": "Design & Tech Awards"
       },
       {
-        "icon": "fab fa-apple",
-        "value": 64,
-        "suffix": "+",
-        "label": "Years of operation"
+        "icon": "fa-solid fa-bolt",
+        "value": 10,
+        "suffix": "x",
+        "label": "Performance Speedup"
       }
     ]
   }
 }
+

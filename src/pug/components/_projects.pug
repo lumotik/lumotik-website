@@ -2,33 +2,105 @@
 - const projectsTabs = data.projects.tabs;
 - const allProjects = data.projects.allProjects;
 
-  section#projects.projects
-    .container
-      .section-title
-        p.sub-title=projectsInfo.subTitle
-        h2.main-title
-          span=projectsInfo.title1
-          br
-          span=projectsInfo.title2
-      //- tabs
-      .projects__tabs
+section#projects.projects
+  .container
+    .section-title(data-aos="fade-up")
+      p.sub-title=projectsInfo.subTitle
+      h2.main-title
+        span=projectsInfo.title1
+        br
+        span=projectsInfo.title2
 
-        ul#myTab.nav.nav-tabs.mb-3.mb-md-5.gap-md-5.gap-3(role='tablist')
-          each tab, index in projectsTabs
-            li.nav-item(role='presentation')
-              button(id=`${tab.id}-tab` class=`nav-link ${index == 0 ? 'active' : ''}` data-bs-toggle='tab' data-bs-target=`#${tab.id}-tab-pane` type='button' role='tab' aria-controls=`${tab.id}-tab-pane` aria-selected='true')= tab.title
+    //- Tabs
+    .projects__tabs(data-aos="fade-up")
+      ul#myTab.nav.nav-tabs.mb-4.mb-md-5(role='tablist')
+        each tab, index in projectsTabs
+          li.nav-item(role='presentation')
+            button(id=`${tab.id}-tab` class=`nav-link ${index == 0 ? 'active' : ''}` data-bs-toggle='tab' data-bs-target=`#${tab.id}-tab-pane` type='button' role='tab' aria-controls=`${tab.id}-tab-pane` aria-selected='true')= tab.title
 
-        //- contents
-        .tab-content
-          each tab, index in projectsTabs
-            div(id=`${tab.id}-tab-pane` class=`tab-pane fade show ${index == 0 ? 'active' : ''}`  role='tabpanel' aria-labelledby=`${tab.id}-tab` tabindex='0')
-              .row.g-md-5.g-2
-                each project in tab.id == "all" ? allProjects :allProjects.filter(project => project.category == tab.id )
-                  .col-12.col-md-6
-                    .project-item.mx-2.mx-md-4(data-aos="fade-up" data-aos-duration="1000")
-                      a(href="#")
-                        .image
-                          img(src=project.image)
-                        .project-item__info
-                          h4.mb-2= project.title
-                          p= project.subTitle
+      //- Tab Contents
+      .tab-content
+        each tab, index in projectsTabs
+          - const filteredProjects = tab.id == "all" ? allProjects : allProjects.filter(project => project.category == tab.id);
+          div(id=`${tab.id}-tab-pane` class=`tab-pane fade show ${index == 0 ? 'active' : ''}` role='tabpanel' aria-labelledby=`${tab.id}-tab` tabindex='0')
+            if filteredProjects.length === 1
+              //- Featured Large Showcase Card for Single Project
+              each project in filteredProjects
+                .project-showcase(data-aos="fade-up" data-aos-duration="1000")
+                  .row.g-4.align-items-center
+                    .col-12.col-lg-7
+                      .project-showcase__preview
+                        .project-media-stage
+                          if project.video
+                            video.main-video(src=project.video poster=project.videoPoster autoplay muted loop playsinline preload="metadata")
+                          img.main-img(class=project.video ? "d-none" : "" src=project.image alt=project.title loading="lazy")
+                          if project.badge
+                            span.project-badge= project.badge
+                          if project.video
+                            .media-playback-controls
+                              button.media-btn-toggle(type="button" title="Play/Pause" aria-label="Toggle playback")
+                                i.fa-solid.fa-pause
+                              button.media-btn-mute(type="button" title="Mute/Unmute" aria-label="Toggle audio")
+                                i.fa-solid.fa-volume-xmark
+                        if project.gallery && project.gallery.length
+                          .project-gallery-wrapper
+                            .project-gallery-header
+                              span.gallery-label
+                                i.fa-solid.fa-photo-film.me-2
+                                span= (lang === "en" ? "Project Media & Photo Gallery" : "معرض الوسائط والصور الحية")
+                              span.gallery-hint= (lang === "en" ? "Click to switch view" : "اضغط للتبديل")
+                            .project-showcase__thumbs.interactive-gallery
+                              each item, gIndex in project.gallery
+                                button.gallery-thumb(
+                                  type="button"
+                                  class=(gIndex === 0 ? "active" : "")
+                                  data-media-type=item.type
+                                  data-media-src=item.src
+                                  data-media-poster=(item.poster || "")
+                                  title=item.title
+                                  aria-label=item.title
+                                )
+                                  img(src=item.thumb alt=item.title loading="lazy")
+                                  if item.type === "video"
+                                    span.thumb-video-badge
+                                      i.fa-solid.fa-play
+                    .col-12.col-lg-5
+                      .project-showcase__content
+                        .d-flex.align-items-center.gap-2.mb-3
+                          span.badge.bg-primary.text-dark.fw-bold= (lang === "en" ? "Web Platform" : "منصة ويب")
+                          span.badge(style="background: rgba(0,255,255,0.15); color: #00ffff; border: 1px solid rgba(0,255,255,0.3);")= (lang === "en" ? "Client: Imperium Group (UAE)" : "العميل: مجموعة إمبريوم (الإمارات)")
+                        h3.project-showcase__title= project.title
+                        p.project-showcase__subtitle= project.subTitle
+                        p.project-showcase__desc= project.description
+                        if project.tech
+                          .project-showcase__tech
+                            i(class="fa-solid fa-code me-2")
+                            span= project.tech
+                        .mt-4.d-flex.flex-wrap.gap-3
+                          a.main-button(href=(project.link || "#") target="_blank" rel="noopener")
+                            i(class="fa-solid fa-arrow-up-right-from-square me-2")
+                            span= (lang === "en" ? "Launch Live Platform" : "زيارة المنصة الرقمية")
+            else
+              .row.g-4
+                each project in filteredProjects
+                  .col-12.col-md-6.col-lg-4
+                    .project-item(data-aos="fade-up" data-aos-duration="1000")
+                      .image
+                        img(src=project.image alt=project.title loading="lazy")
+                        if project.badge
+                          span.project-badge= project.badge
+                      .project-item__info
+                        h4.mb-2= project.title
+                        p.project-subtitle.mb-2= project.subTitle
+                        if project.description
+                          p.project-desc.mb-3= project.description
+                        if project.tech
+                          p.project-tech.mb-3
+                            i(class="fa-solid fa-code me-1")
+                            span= project.tech
+                        .project-action.mt-auto
+                          a.project-link(href=(project.link || "#") target="_blank" rel="noopener")
+                            span= (lang === "en" ? "Visit Project" : "زيارة المشروع")
+                            i(class="fa-solid fa-arrow-up-right-from-square ms-2")
+
+

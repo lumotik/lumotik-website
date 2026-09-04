@@ -1,37 +1,26 @@
-a(ref="#main-wrapper" id="goTop" class="go-top")
+a(href="#hero" id="goTop" class="go-top")
   i(class="fa-solid fa-angles-up")
-
-//- header.header
-//-   .container
-//-     nav.header__nav
-//-       a.header__logo(href="#")
-//-         img(src="./images/logo.svg" alt="")
-//-       .header__links
-//-         a(href="#") Home
-//-         a(href="#") Services
-//-         a(href="#") Case Study
-//-         a(href="#") Portfolio
-//-         a(href="#") Pricing
-//-         a(href="#") Blog
-//-         a(href="#") Let's Talk
-
 
 header.header
   .container
     nav.navbar
-      a.navbar-brand(href="./index.html")
-        img(src="./images/logo.svg" width="70" height="auto" alt="Hi to Soni Courses")
+      a.navbar-brand(href=(lang === "en" ? "./index.html" : "./index-ar.html"))
+        img(src="./images/logo.svg" width="160" height="42" alt="Lumotik Digital Agency")
       .overlay
       ul#onePageNav.navbar-nav.collapsed-mobile
-        h5.collapsed-mobile__header القائمة
+        .collapsed-mobile__header
+          span= (lang === "en" ? "Navigation" : "القائمة")
+          button.close__btn(type="button" style="background: none; border: none; color: #00ffff; font-size: 20px;") &times;
         each link, index in data.navbar
           li.nav-item(class=(index === 0 ? "active" : ""))
             a.nav-link(href=link.url)= link.text
-        //- li.nav-item
-        //-   a.nav-link(href="#") Portfolio
-        //- li.nav-item
-        //-   a.nav-link(href="#") Pricing
-        //- li.nav-item
-        //-   a.nav-link(href="#") Blog
+        li.nav-item
+          a.nav-link(href=(lang === "en" ? "./index-ar.html" : "./index.html"))
+            i(class="fa-solid fa-globe me-1")
+            span= (lang === "en" ? "العربية" : "English")
+        li.nav-item.nav-cta
+          a.main-button(href="#about-us")
+            span= (lang === "en" ? "Start a Project" : "ابدأ مشروعك")
       button.navbar-toggler(type="button")
         i.fas.fa-bars
+

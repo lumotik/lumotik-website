@@ -1,70 +1,438 @@
 .projects {
+  padding: 100px 0;
+  background-color: #071010;
+  position: relative;
+
   // tabs
   .nav-tabs {
-    border-bottom: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    padding-bottom: 16px;
 
     .nav-link {
-      color: #525260;
-      font-size: 20px;
-      font-weight: 500;
-      border: none;
-      border-bottom: 1px solid transparent;
-      transition: all 0.3s ease-in-out;
-      padding: 0;
+      color: rgba(255, 255, 255, 0.6);
+      font-size: 15px;
+      font-weight: 600;
+      font-family: $primary-font;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 9999px;
+      padding: 8px 20px;
+      background: rgba(255, 255, 255, 0.02);
+      transition: $transition-sm;
 
       &.active,
       &:hover,
       &:focus {
-        color: $dark-color;
-        border-bottom-color: $primary-color;
+        color: #071010 !important;
+        background: $linearGradient;
+        border-color: $primary-color;
+        box-shadow: 0 0 15px rgba(0, 255, 255, 0.3);
       }
     }
   }
 
   .tab-content {
-    .project-item {
-      margin: 0 32px;
-      border-radius: 30px;
+    // Large Featured Showcase for single project
+    .project-showcase {
+      margin: 0;
+      border-radius: 24px;
       overflow: hidden;
-      box-shadow: 0 55px 86px -35px $lighter-gray-color;
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(0, 255, 255, 0.15);
+      backdrop-filter: blur(20px);
+      padding: 28px;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+      transition: $transition-sm;
+
+      @media (max-width: 767.98px) {
+        padding: 18px;
+      }
+
+      &:hover {
+        border-color: rgba(0, 255, 255, 0.35);
+        box-shadow: 0 25px 60px rgba(0, 0, 0, 0.6), 0 0 30px rgba(0, 255, 255, 0.12);
+
+        .project-showcase__preview .main-img {
+          transform: scale(1.03);
+        }
+      }
+
+      &__preview {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+
+        .project-media-stage {
+          position: relative;
+          border-radius: 18px;
+          overflow: hidden;
+          border: 1px solid rgba(0, 255, 255, 0.2);
+          background: #000;
+          box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+
+          .main-video,
+          .main-img {
+            width: 100%;
+            height: 380px;
+            object-fit: cover;
+            display: block;
+            transition: opacity 0.4s ease, transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+
+            @media (max-width: 991.98px) {
+              height: 290px;
+            }
+
+            @media (max-width: 575.98px) {
+              height: 230px;
+            }
+          }
+
+          .main-img.d-none {
+            display: none !important;
+          }
+
+          .project-badge {
+            position: absolute;
+            top: 16px;
+            inset-inline-start: 16px;
+            background: rgba(10, 14, 26, 0.85);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(0, 255, 255, 0.4);
+            color: $primary-color;
+            font-family: $primary-font;
+            font-size: 12px;
+            font-weight: 600;
+            padding: 6px 14px;
+            border-radius: 9999px;
+            z-index: 3;
+            box-shadow: 0 0 15px rgba(0, 255, 255, 0.25);
+          }
+
+          .media-playback-controls {
+            position: absolute;
+            bottom: 16px;
+            inset-inline-end: 16px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            z-index: 3;
+
+            button {
+              width: 38px;
+              height: 38px;
+              border-radius: 50%;
+              background: rgba(10, 14, 26, 0.75);
+              backdrop-filter: blur(8px);
+              border: 1px solid rgba(0, 255, 255, 0.35);
+              color: $primary-color;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              font-size: 14px;
+              transition: $transition-sm;
+              box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+
+              &:hover {
+                background: $primary-color;
+                color: #071010;
+                transform: scale(1.1);
+                box-shadow: 0 0 15px rgba(0, 255, 255, 0.6);
+              }
+            }
+          }
+        }
+
+        .project-gallery-wrapper {
+          .project-gallery-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 8px;
+            padding: 0 4px;
+
+            .gallery-label {
+              font-size: 13px;
+              font-weight: 600;
+              color: rgba(255, 255, 255, 0.8);
+              display: flex;
+              align-items: center;
+
+              i {
+                color: $primary-color;
+              }
+            }
+
+            .gallery-hint {
+              font-size: 11px;
+              color: $secondary-color;
+              opacity: 0.8;
+            }
+          }
+
+          .interactive-gallery {
+            display: flex;
+            gap: 10px;
+            overflow-x: auto;
+            padding-bottom: 6px;
+            scrollbar-width: thin;
+            scrollbar-color: rgba(0, 255, 255, 0.3) transparent;
+
+            &::-webkit-scrollbar {
+              height: 4px;
+            }
+
+            &::-webkit-scrollbar-thumb {
+              background: rgba(0, 255, 255, 0.3);
+              border-radius: 4px;
+            }
+
+            .gallery-thumb {
+              position: relative;
+              flex-shrink: 0;
+              width: 72px;
+              height: 52px;
+              border-radius: 10px;
+              overflow: hidden;
+              padding: 0;
+              background: #000;
+              border: 2px solid rgba(255, 255, 255, 0.15);
+              cursor: pointer;
+              transition: $transition-sm;
+
+              @media (max-width: 575.98px) {
+                width: 58px;
+                height: 42px;
+              }
+
+              img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                display: block;
+                transition: transform 0.4s ease;
+              }
+
+              .thumb-video-badge {
+                position: absolute;
+                inset: 0;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background: rgba(0, 0, 0, 0.45);
+                color: $primary-color;
+                font-size: 16px;
+                transition: $transition-sm;
+                text-shadow: 0 0 8px rgba(0, 255, 255, 0.8);
+              }
+
+              &:hover {
+                border-color: rgba(0, 255, 255, 0.6);
+                transform: translateY(-2px);
+
+                img {
+                  transform: scale(1.1);
+                }
+
+                .thumb-video-badge {
+                  background: rgba(0, 255, 255, 0.2);
+                  color: #fff;
+                }
+              }
+
+              &.active {
+                border-color: $primary-color;
+                box-shadow: 0 0 14px rgba(0, 255, 255, 0.5);
+                transform: translateY(-2px);
+
+                &::after {
+                  content: "";
+                  position: absolute;
+                  bottom: 0;
+                  left: 0;
+                  right: 0;
+                  height: 3px;
+                  background: $primary-color;
+                }
+              }
+            }
+          }
+        }
+      }
+
+      &__content {
+        padding: 8px 12px;
+
+        @media (max-width: 991.98px) {
+          padding-top: 20px;
+        }
+
+        .project-showcase__title {
+          font-size: 30px;
+          font-weight: 800;
+          color: $white-color;
+          margin-bottom: 6px;
+          font-family: $primary-font;
+
+          @media (max-width: 575.98px) {
+            font-size: 24px;
+          }
+        }
+
+        .project-showcase__subtitle {
+          font-size: 15px;
+          font-weight: 500;
+          color: $secondary-color;
+          font-family: $secondary-font;
+          margin-bottom: 16px;
+          line-height: 1.6;
+        }
+
+        .project-showcase__desc {
+          font-size: 15px;
+          color: rgba(255, 255, 255, 0.72);
+          line-height: 1.7;
+          margin-bottom: 20px;
+        }
+
+        .project-showcase__tech {
+          font-family: $mono-font;
+          font-size: 13px;
+          color: $primary-color;
+          background: rgba(0, 255, 255, 0.06);
+          border: 1px solid rgba(0, 255, 255, 0.2);
+          padding: 8px 16px;
+          border-radius: 8px;
+          display: inline-flex;
+          align-items: center;
+        }
+      }
+    }
+
+    // Grid items (for when multiple projects are present)
+    .project-item {
+      margin: 0;
+      border-radius: $borderRadius-lg;
+      overflow: hidden;
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      backdrop-filter: blur(16px);
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.4);
+      transition: $transition-sm;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
 
       .image {
-        height: 380px;
+        height: 240px;
         overflow: hidden;
+        position: relative;
+        background: #000;
 
         img {
-          transition: all 0.6s ease-in-out;
+          transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
           height: 100%;
           width: 100%;
+          object-fit: cover;
+        }
+
+        &::after {
+          content: "";
+          position: absolute;
+          inset: 0;
+          background: linear-gradient(180deg, transparent 40%, rgba(7, 16, 16, 0.85) 100%);
+        }
+
+        .project-badge {
+          position: absolute;
+          top: 14px;
+          inset-inline-start: 14px;
+          background: rgba(10, 14, 26, 0.8);
+          backdrop-filter: blur(8px);
+          border: 1px solid rgba(0, 255, 255, 0.35);
+          color: $primary-color;
+          font-family: $primary-font;
+          font-size: 11px;
+          font-weight: 600;
+          padding: 4px 12px;
+          border-radius: 9999px;
+          z-index: 2;
+          box-shadow: 0 0 10px rgba(0, 255, 255, 0.2);
         }
       }
 
       &__info {
-        padding: 32px;
+        padding: 24px;
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
 
         h4 {
-          font-size: 32px;
-          color: #292930;
+          font-size: 21px;
+          font-weight: 700;
+          color: $white-color;
+          margin-bottom: 6px;
+          font-family: $primary-font;
           transition: color 0.3s ease-in-out;
-
-          &:hover {
-            color: $primary-color;
-          }
         }
 
-        p {
-          font-size: 16px;
-          color: #525260;
+        .project-subtitle {
+          font-size: 13px;
+          font-weight: 500;
+          color: $secondary-color;
+          font-family: $secondary-font;
+        }
+
+        .project-desc {
+          font-size: 14px;
+          color: rgba(255, 255, 255, 0.65);
+          line-height: 1.6;
+        }
+
+        .project-tech {
+          font-size: 12px;
+          color: $primary-color;
+          font-family: $mono-font;
+        }
+
+        .project-action {
+          border-top: 1px solid rgba(255, 255, 255, 0.08);
+          padding-top: 14px;
+
+          .project-link {
+            display: inline-flex;
+            align-items: center;
+            color: $primary-color;
+            font-size: 14px;
+            font-weight: 600;
+            font-family: $primary-font;
+            transition: $transition-sm;
+
+            &:hover {
+              color: $white-color;
+              transform: translateX(4px);
+            }
+          }
         }
       }
 
       &:hover {
-        .image {
-          img {
-            transform: scale(1.1);
-          }
+        transform: translateY(-6px);
+        border-color: rgba(0, 255, 255, 0.35);
+        box-shadow: 0 20px 45px rgba(0, 0, 0, 0.6), 0 0 25px rgba(0, 255, 255, 0.15);
+
+        .image img {
+          transform: scale(1.08);
+        }
+
+        .project-item__info h4 {
+          color: $primary-color;
         }
       }
     }
   }
 }
+
+

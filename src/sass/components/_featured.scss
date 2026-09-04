@@ -1,53 +1,128 @@
 .featured {
-  padding-block: 120px;
+  padding: 100px 0;
   margin: 0;
+  background-color: $dark-bg;
+  position: relative;
+
   &__wrapper {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
-    gap: 24px;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    align-items: center;
+
+    @include responsive(max, 991px) {
+      grid-template-columns: 1fr;
+    }
   }
+
   &__header {
-    margin-block-end: 60px;
+    margin-block-end: 36px;
   }
+
   &__subtitle {
-    color: $rose-color;
-    font-weight: 500;
-    font-size: 20px;
-    margin-block-end: 16px;
+    color: $primary-color;
+    font-family: $mono-font;
+    font-weight: 600;
+    font-size: 13px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-block-end: 14px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+
+    &::before {
+      content: "";
+      width: 6px;
+      height: 6px;
+      background: $primary-color;
+      border-radius: 50%;
+      box-shadow: 0 0 8px $primary-color;
+    }
   }
+
   &__title {
-    color: $dark-color;
-    font-weight: 500;
-    font-size: 56px;
-    margin-block-end: 35px;
+    color: $white-color;
+    font-weight: 700;
+    font-size: 44px;
+    margin-block-end: 24px;
+    font-family: $primary-font;
+    letter-spacing: -0.02em;
+
+    @include responsive(max, 575px) {
+      font-size: 30px;
+    }
   }
+
   &__description {
-    color: #525260;
-    font-size: 18px;
-    margin-block-end: 35px;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 16px;
+    line-height: 1.7;
+    margin-block-end: 20px;
   }
+
   &__btn {
-    padding: 24px 48px;
+    padding: 14px 36px;
+    margin-top: 12px;
+    margin-bottom: 36px;
   }
+
   &__counter {
     display: flex;
     align-items: center;
-  }
-  &__count {
-    &:not(:last-child) {
-      border-inline-end: 1px solid #c7c7d5;
-      margin-inline-end: 60px;
-      padding-inline-end: 60px;
+    gap: 40px;
+    padding-top: 24px;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+
+    @include responsive(max, 575px) {
+      gap: 24px;
     }
   }
-  &__number {
-    color: $rose-color;
-    font-weight: 500;
-    font-size: 56px;
-    margin: 0;
+
+  &__count {
+    &:not(:last-child) {
+      border-inline-end: 1px solid rgba(0, 255, 255, 0.2);
+      padding-inline-end: 40px;
+
+      @include responsive(max, 575px) {
+        padding-inline-end: 24px;
+      }
+    }
   }
+
+  &__number {
+    color: $primary-color;
+    font-family: $mono-font;
+    font-weight: 700;
+    font-size: 44px;
+    margin: 0;
+    text-shadow: 0 0 15px rgba(0, 255, 255, 0.3);
+
+    @include responsive(max, 575px) {
+      font-size: 32px;
+    }
+  }
+
   &__text {
-    color: #525260;
-    font-size: 16px;
+    color: rgba(255, 255, 255, 0.65);
+    font-size: 14px;
+    font-family: $primary-font;
+  }
+
+  &__img {
+    border-radius: $borderRadius-lg;
+    overflow: hidden;
+    border: 1px solid rgba(0, 255, 255, 0.2);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6), 0 0 30px rgba(0, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.02);
+
+    img {
+      transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+
+      &:hover {
+        transform: scale(1.03);
+      }
+    }
   }
 }
+

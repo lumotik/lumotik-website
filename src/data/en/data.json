@@ -1,101 +1,104 @@
 {
 	"aboutUs": {
 		"info": {
-			"subTitle": "About us",
-			"title": "We do design, code & develop.",
-			"text1": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries,",
-			"text2": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters"
+			"subTitle": "About Lumotik",
+			"title": "We engineer digital excellence through design and code.",
+			"text1": "At Lumotik, we blend cutting-edge aesthetic precision with enterprise-grade engineering. We build high-impact web and mobile products, scalable cloud ecosystems, and transformative AI systems that help forward-thinking companies scale faster.",
+			"text2": "Our dedicated multidisciplinary teams of designers, architects, and full-stack engineers turn complex technical challenges into sleek, frictionless user experiences."
 		},
 		"form": {
-			"title": "Get a free Keystroke quote now",
+			"title": "Request a Free Project Consultation",
 			"inputs": [
 				{
-					"title": "Name",
-					"placeholder": "John Smith",
+					"title": "Your Name",
+					"placeholder": "Alex Johnson",
 					"id": "name",
+					"name": "name",
 					"type": "text"
 				},
 				{
-					"title": "Email",
-					"placeholder": "Example@gmail.com",
+					"title": "Work Email",
+					"placeholder": "alex@company.com",
 					"id": "email",
+					"name": "email",
 					"type": "email"
 				},
 				{
-					"title": "Phone",
-					"placeholder": "+20123456789",
+					"title": "Phone / WhatsApp",
+					"placeholder": "+1 (555) 019-2834",
 					"id": "phone",
-					"type": "phone"
+					"name": "phone",
+					"type": "tel"
 				}
 			],
-			"actionButton": "Send"
+			"actionButton": "Send Inquiry"
 		}
 	},
 	"footer": {
 		"info": {
-			"header": "Get in touch!",
-			"description": "Fusce varius, dolor tempor interdum tristique, dui urna bib endum magna, ut ullamcorper puru.",
-			"placeholder": "Email address",
-			"subscribe": "Subscribe"
+			"header": "Let's build the future together.",
+			"description": "Have an ambitious project in mind? Subscribe for our tech insights or reach out to start collaborating.",
+			"placeholder": "Enter your work email",
+			"subscribe": "Join Insights"
 		},
 		"links": {
-			"services_title": "Services",
+			"services_title": "Core Services",
 			"services": [
 				{
-					"text": "Logo & Branding",
-					"url": "#"
+					"text": "UI/UX & Brand Identity",
+					"url": "#services"
 				},
 				{
-					"text": "Website Development",
-					"url": "#"
+					"text": "Web & Mobile Development",
+					"url": "#services"
 				},
 				{
-					"text": "Mobile App Development",
-					"url": "#"
+					"text": "Cloud Architecture & DevOps",
+					"url": "#services"
 				},
 				{
-					"text": "Search Engine Optimization",
-					"url": "#"
+					"text": "AI & Interactive 3D Web",
+					"url": "#services"
 				},
 				{
-					"text": "Pay-Per-Click",
-					"url": "#"
+					"text": "Performance & SEO Audits",
+					"url": "#services"
 				},
 				{
-					"text": "Social Media Marketing",
-					"url": "#"
+					"text": "Cybersecurity & Code Review",
+					"url": "#services"
 				}
 			],
-			"resources_title": "Resources",
+			"resources_title": "Navigation",
 			"resources": [
 				{
-					"text": "Contact",
-					"url": "#"
+					"text": "Featured Case Studies",
+					"url": "#featured"
 				},
 				{
-					"text": "Blog",
-					"url": "#"
+					"text": "Selected Portfolio",
+					"url": "#projects"
 				},
 				{
-					"text": "Case Studies",
-					"url": "#"
+					"text": "Impact & Stats",
+					"url": "#stats"
 				},
 				{
-					"text": "Portfolio",
-					"url": "#"
+					"text": "Request a Quote",
+					"url": "#about-us"
 				}
 			]
 		},
 		"copyright": {
-			"title": "© 2025. All rights reserved by",
-			"company": "Lumotik Team",
+			"title": "© 2026. All rights reserved by",
+			"company": "Lumotik Digital Agency",
 			"support": [
 				{
 					"text": "Privacy Policy",
 					"url": "#"
 				},
 				{
-					"text": "Terms of Use",
+					"text": "Terms of Service",
 					"url": "#"
 				}
 			]
@@ -129,48 +132,87 @@
 	],
 	"projects": {
 		"info": {
-			"subTitle": "Our Project",
-			"title1": "Some of our",
-			"title2": "finest work."
+			"subTitle": "Client Case & Works",
+			"title1": "Platforms we've engineered.",
+			"title2": "Built for industry leaders."
 		},
 		"tabs": [
 			{
 				"id": "all",
-				"title": "All Work"
+				"title": "All Projects"
 			},
 			{
-				"id": "cat1",
-				"title": "Category 1"
+				"id": "web",
+				"title": "Web Platforms"
 			},
 			{
-				"id": "cat2",
-				"title": "Category 2"
+				"id": "luxury",
+				"title": "Luxury & Corporate"
 			}
 		],
 		"allProjects": [
 			{
-				"image": "https://images.unsplash.com/photo-1739582814657-10931286d7a5?q=80&w=1528&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-				"title": "Creative Agency",
-				"subTitle": "Full Branding, Website, App",
-				"category": "cat2"
-			},
-			{
-				"image": "https://images.unsplash.com/photo-1736618626242-542735175261?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-				"title": "Digital Marketing",
-				"subTitle": "Logo, Website & Mobile App",
-				"category": "cat2"
-			},
-			{
-				"image": "https://images.unsplash.com/photo-1728984273683-d962fd89ef4d?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-				"title": "Digital Agency",
-				"subTitle": "Website, UI/UX, App",
-				"category": "cat2"
-			},
-			{
-				"image": "https://images.unsplash.com/photo-1738430275589-2cd3d0d0d57a?q=80&w=1461&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-				"title": "Plan Management",
-				"subTitle": "Branding, Website, IOS App",
-				"category": "cat1"
+				"image": "https://beta.imperium-group.com/storage/media/legacy/52f95ae072cf5a4f-img-ext-night.jpg",
+				"video": "https://beta.imperium-group.com/storage/media/legacy/2f7440f7eb0edcca-hero.mp4",
+				"videoPoster": "https://beta.imperium-group.com/storage/media/legacy/52f95ae072cf5a4f-img-ext-night.jpg",
+				"title": "Imperium Group — Luxury Architecture & Fit-Out Platform",
+				"subTitle": "Full-Stack Web Platform • UI/UX Design • UAE Brand",
+				"category": "web",
+				"link": "https://beta.imperium-group.com/",
+				"badge": "Live Client Platform",
+				"tech": "Next.js • TailwindCSS • Swiper • Interactive Video",
+				"description": "We engineered the official digital flagship platform for Imperium Group (UAE). Built with cinematic scroll-synchronized video playback, fluid architectural service accordions, filterable project portfolio, dynamic ISO & award certifications carousel, and ultra-smooth mobile responsive experience.",
+				"gallery": [
+					{
+						"type": "video",
+						"src": "https://beta.imperium-group.com/storage/media/legacy/2f7440f7eb0edcca-hero.mp4",
+						"poster": "https://beta.imperium-group.com/storage/media/legacy/52f95ae072cf5a4f-img-ext-night.jpg",
+						"thumb": "https://beta.imperium-group.com/storage/media/legacy/52f95ae072cf5a4f-img-ext-night.jpg",
+						"title": "🎬 Interactive Platform Video"
+					},
+					{
+						"type": "image",
+						"src": "./images/imperium-platform/tab-01-home.jpg",
+						"thumb": "./images/imperium-platform/tab-01-home.jpg",
+						"title": "🏠 Tab: Home & Hero Cinematic Architecture"
+					},
+					{
+						"type": "image",
+						"src": "./images/imperium-platform/tab-02-architecture-service.jpg",
+						"thumb": "./images/imperium-platform/tab-02-architecture-service.jpg",
+						"title": "🏛️ Tab: Architecture Design & Master Planning"
+					},
+					{
+						"type": "image",
+						"src": "./images/imperium-platform/tab-03-interior-service.jpg",
+						"thumb": "./images/imperium-platform/tab-03-interior-service.jpg",
+						"title": "✨ Tab: Luxury Interior Design & Bespoke Living"
+					},
+					{
+						"type": "image",
+						"src": "./images/imperium-platform/tab-04-landscape-fitout.jpg",
+						"thumb": "./images/imperium-platform/tab-04-landscape-fitout.jpg",
+						"title": "🌿 Tab: Landscape Architecture & Fit-Out"
+					},
+					{
+						"type": "image",
+						"src": "./images/imperium-platform/tab-05-projects-portfolio.jpg",
+						"thumb": "./images/imperium-platform/tab-05-projects-portfolio.jpg",
+						"title": "📁 Tab: Projects & Portfolio Showcase"
+					},
+					{
+						"type": "image",
+						"src": "./images/imperium-platform/tab-06-about-team.jpg",
+						"thumb": "./images/imperium-platform/tab-06-about-team.jpg",
+						"title": "👥 Tab: About Us, Philosophy & Leadership Team"
+					},
+					{
+						"type": "image",
+						"src": "./images/imperium-platform/tab-07-contacts.jpg",
+						"thumb": "./images/imperium-platform/tab-07-contacts.jpg",
+						"title": "📍 Tab: Contacts, Consultation & Global Inquiries"
+					}
+				]
 			}
 		]
 	},
@@ -217,33 +259,33 @@
 		}
 	],
 	"stats": {
-		"subTitle": "Featured Case Study",
-		"title": "Design startup movement",
-		"description": "In vel varius turpis, non dictum sem. Aenean in efficitur ipsum, in egestas ipsum. Mauris in mi ac tellus.",
+		"subTitle": "Proven Impact & Metrics",
+		"title": "Numbers that speak for our craftsmanship.",
+		"description": "We engineer high-performance software and brand identities that deliver measurable business growth and exceptional reliability.",
 		"items": [
 			{
-				"icon": "far fa-smile",
-				"value": 15,
+				"icon": "fa-solid fa-code-branch",
+				"value": 150,
 				"suffix": "+",
-				"label": "Years of operation"
+				"label": "Products Delivered"
 			},
 			{
-				"icon": "fas fa-th-large",
-				"value": 360,
-				"suffix": "+",
-				"label": "Projects delivered"
+				"icon": "fa-solid fa-face-smile",
+				"value": 99,
+				"suffix": "%",
+				"label": "Client Satisfaction"
 			},
 			{
-				"icon": "fas fa-users",
-				"value": 600,
+				"icon": "fa-solid fa-trophy",
+				"value": 12,
 				"suffix": "+",
-				"label": "Specialist"
+				"label": "Design & Tech Awards"
 			},
 			{
-				"icon": "fab fa-apple",
-				"value": 64,
-				"suffix": "+",
-				"label": "Years of operation"
+				"icon": "fa-solid fa-bolt",
+				"value": 10,
+				"suffix": "x",
+				"label": "Performance Speedup"
 			}
 		]
 	}

@@ -1,33 +1,34 @@
 {
   "stats": {
-    "subTitle": "دراسة حالة مميزة",
-    "title": "حركة الشركات الناشئة في التصميم",
-    "description": "في فيل فاريوس توربيس، غير ديكتوم سيم. في عيينة في إفيكتيتور إيبسوم، في إيجستاس إيبسوم. موريس في مي آك تيلوس.",
+    "subTitle": "أثر ملموس ونتائج مثبتة",
+    "title": "أرقام تعكس دقة وإتقان أعمالنا البرمجية.",
+    "description": "نطور حلولاً برمجية وتصميمية متقدمة تحقق نمواً مستداماً وكفاءة تشغيلية فائقة لعملائنا.",
     "items": [
       {
-        "icon": "far fa-smile",
-        "value": 15,
+        "icon": "fa-solid fa-code-branch",
+        "value": 150,
         "suffix": "+",
-        "label": "سنوات من العمل"
+        "label": "مشروع رقمي تم تسليمه"
       },
       {
-        "icon": "fas fa-th-large",
-        "value": 360,
-        "suffix": "+",
-        "label": "مشاريع تم تسليمها"
+        "icon": "fa-solid fa-face-smile",
+        "value": 99,
+        "suffix": "%",
+        "label": "نسبة رضا العملاء"
       },
       {
-        "icon": "fas fa-users",
-        "value": 600,
+        "icon": "fa-solid fa-trophy",
+        "value": 12,
         "suffix": "+",
-        "label": "أخصائي"
+        "label": "جوائز تصميم وتقنية"
       },
       {
-        "icon": "fab fa-apple",
-        "value": 64,
-        "suffix": "+",
-        "label": "سنوات من العمل"
+        "icon": "fa-solid fa-bolt",
+        "value": 10,
+        "suffix": "x",
+        "label": "مضاعفة سرعة الأداء"
       }
     ]
   }
 }
+

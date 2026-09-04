@@ -1,80 +1,167 @@
 .services {
-  padding-block: 120px;
+  padding: 100px 0;
   margin: 0;
-  background-color: $dark-color;
+  background-color: #071010;
   position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 10%;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(28, 189, 255, 0.08) 0%, transparent 70%);
+    filter: blur(50px);
+    pointer-events: none;
+  }
+
   &__wrapper {
     position: relative;
     z-index: 1;
   }
+
   &__header {
-    margin-block-end: 60px;
+    margin-block-end: 50px;
     position: relative;
     z-index: 1;
+    max-width: 650px;
   }
+
   &__subtitle {
-    color: $rose-color;
-    font-weight: 500;
-    font-size: 20px;
-    margin-block-end: 16px;
+    color: $primary-color;
+    font-family: $mono-font;
+    font-weight: 600;
+    font-size: 13px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-block-end: 14px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+
+    &::before {
+      content: "";
+      width: 6px;
+      height: 6px;
+      background: $primary-color;
+      border-radius: 50%;
+      box-shadow: 0 0 8px $primary-color;
+    }
   }
 
   &__title {
     color: $white-color;
-    font-weight: 500;
-    font-size: 56px;
-    margin-block-end: 35px;
+    font-weight: 700;
+    font-size: 48px;
+    margin-block-end: 20px;
+    font-family: $primary-font;
+    letter-spacing: -0.02em;
+
+    @include responsive(max, 768px) {
+      font-size: 32px;
+    }
   }
+
   &__description {
-    color: $white-color;
-    opacity: 0.6;
-    font-size: 18px;
+    color: rgba(255, 255, 255, 0.65);
+    font-size: 17px;
+    line-height: 1.65;
   }
+
   &__cards {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: 24px;
   }
+
   &__card {
     display: flex;
-    gap: 24px;
-    padding: 40px;
-    border-radius: 30px;
+    flex-direction: column;
+    gap: 20px;
+    padding: 36px;
+    border-radius: $borderRadius-lg;
     position: relative;
-    border: 1px solid transparent;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
     cursor: pointer;
-    transition: border-color 0.3s ease-in-out, background-image 0.3s ease-in;
+    transition: $transition-sm;
+    overflow: hidden;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, rgba(0, 255, 255, 0.4), transparent);
+      opacity: 0;
+      transition: $transition-sm;
+    }
+
     &:hover {
-      background-image: linear-gradient(180deg, #27272e 0%, #303035 100%);
-      border-color: rgb(82, 82, 96);
+      transform: translateY(-4px);
+      background: rgba(255, 255, 255, 0.06);
+      border-color: rgba(0, 255, 255, 0.35);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5), 0 0 25px rgba(0, 255, 255, 0.15);
+
+      &::before {
+        opacity: 1;
+      }
+
+      .services__card-icon-box {
+        background: rgba(0, 255, 255, 0.2);
+        box-shadow: 0 0 20px rgba(0, 255, 255, 0.4);
+        border-color: $primary-color;
+      }
     }
-    &-img {
-      flex-shrink: 0;
-      width: 60px;
+
+    &-icon-box {
+      width: 56px;
+      height: 56px;
+      border-radius: 16px;
+      background: rgba(0, 255, 255, 0.08);
+      border: 1px solid rgba(0, 255, 255, 0.2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 22px;
+      color: $primary-color;
+      transition: $transition-sm;
     }
+
     &-title {
       color: $white-color;
-      font-size: 24px;
-      margin-block-end: 32px;
+      font-size: 22px;
+      font-weight: 700;
+      margin-block-end: 8px;
+      font-family: $primary-font;
     }
+
     &-description {
-      color: $lighter-gray-color;
-      font-size: 16px;
-      margin-block-end: 32px;
+      color: rgba(255, 255, 255, 0.65);
+      font-size: 15px;
+      line-height: 1.6;
+      margin-bottom: 0;
+    }
+
+    &-tag {
+      font-family: $mono-font;
+      font-size: 12px;
+      color: $secondary-color;
+      letter-spacing: 0.5px;
+      margin-top: auto;
+      display: flex;
+      align-items: center;
+      gap: 6px;
     }
   }
+
   &__bubbles {
-    position: absolute;
-    inset: 0;
-    &-line {
-      position: absolute;
-      top: 120px;
-      inset-inline-end: 0;
-    }
-    &-curve {
-      position: absolute;
-      bottom: 120px;
-      inset-inline-start: 0;
-    }
+    display: none;
   }
 }
+

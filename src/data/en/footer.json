@@ -1,36 +1,37 @@
 {
   "footer": {
     "info": {
-      "header": "Get in touch!",
-      "description": "Fusce varius, dolor tempor interdum tristique, dui urna bib endum magna, ut ullamcorper puru.",
-      "placeholder": "Email address",
-      "subscribe": "Subscribe"
+      "header": "Let's build the future together.",
+      "description": "Have an ambitious project in mind? Subscribe for our tech insights or reach out to start collaborating.",
+      "placeholder": "Enter your work email",
+      "subscribe": "Join Insights"
     },
     "links": {
-      "services_title": "Services",
+      "services_title": "Core Services",
       "services": [
-        { "text": "Logo & Branding", "url": "#" },
-        { "text": "Website Development", "url": "#" },
-        { "text": "Mobile App Development", "url": "#" },
-        { "text": "Search Engine Optimization", "url": "#" },
-        { "text": "Pay-Per-Click", "url": "#" },
-        { "text": "Social Media Marketing", "url": "#" }
+        { "text": "UI/UX & Brand Identity", "url": "#services" },
+        { "text": "Web & Mobile Development", "url": "#services" },
+        { "text": "Cloud Architecture & DevOps", "url": "#services" },
+        { "text": "AI & Interactive 3D Web", "url": "#services" },
+        { "text": "Performance & SEO Audits", "url": "#services" },
+        { "text": "Cybersecurity & Code Review", "url": "#services" }
       ],
-      "resources_title": "Resources",
+      "resources_title": "Navigation",
       "resources": [
-        { "text": "Contact", "url": "#" },
-        { "text": "Blog", "url": "#" },
-        { "text": "Case Studies", "url": "#" },
-        { "text": "Portfolio", "url": "#" }
+        { "text": "Featured Case Studies", "url": "#featured" },
+        { "text": "Selected Portfolio", "url": "#projects" },
+        { "text": "Impact & Stats", "url": "#stats" },
+        { "text": "Request a Quote", "url": "#about-us" }
       ]
     },
     "copyright": {
-      "title": "© 2025. All rights reserved by",
-      "company": "Lumotik Team",
+      "title": "© 2026. All rights reserved by",
+      "company": "Lumotik Digital Agency",
       "support": [
         { "text": "Privacy Policy", "url": "#" },
-        { "text": "Terms of Use", "url": "#" }
+        { "text": "Terms of Service", "url": "#" }
       ]
     }
   }
 }
+

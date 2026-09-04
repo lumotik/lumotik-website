@@ -1,9 +1,38 @@
 section#hero.hero
-    .container 
-    .hero__content
-        h1.hero__title
-        | Build beautiful 
-        span website&
-        br
-        | mobile apps.
-        p.hero__text Create live segments and target the right people for messages based on their behaviors.
+  .container
+    .hero__content(data-aos="fade-up" data-aos-duration="1000")
+      .hero__badge
+        span.pulse-dot
+        span= (lang === "en" ? "Next-Gen Digital Engineering" : "هندسة رقمية فائقة التطور")
+      h1.hero__title
+        if lang === "en"
+          | Designing & Engineering 
+          br
+          span.gradient-text The Future of Digital Experiences.
+        else
+          | نصمم ونبتكر 
+          br
+          span.gradient-text مستقبل التجارب الرقمية الذكية.
+      p.hero__text
+        if lang === "en"
+          | Lumotik is a premium digital agency crafting high-impact UI/UX design, full-stack web platforms, mobile ecosystems, and high-performance cloud architectures.
+        else
+          | لوموتيك هي وكالة رقمية متقدمة تصنع واجهات المستخدم المتميزة، وتطور منصات الويب وتطبيقات الجوال والأنظمة السحابية عالية الكفاءة.
+      .hero__actions
+        a.main-button(href="#projects")
+          i(class="fa-solid fa-rocket me-2")
+          span= (lang === "en" ? "Explore Projects" : "استكشف أعمالنا")
+        a.main-button.main-button--ghost(href="#about-us")
+          i(class="fa-regular fa-paper-plane me-2")
+          span= (lang === "en" ? "Request a Quote" : "اطلب عرض سعر")
+      .hero__features
+        .hero__features-item
+          i(class="fa-solid fa-check-double")
+          span= (lang === "en" ? "Production-Grade Code" : "كود عالي الجودة")
+        .hero__features-item
+          i(class="fa-solid fa-bolt")
+          span= (lang === "en" ? "Ultra Fast Performance" : "أداء فائق السرعة")
+        .hero__features-item
+          i(class="fa-solid fa-shield-halved")
+          span= (lang === "en" ? "Enterprise Security" : "أمان على مستوى المؤسسات")
+

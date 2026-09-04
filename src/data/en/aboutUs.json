@@ -1,34 +1,38 @@
 {
   "aboutUs": {
     "info": {
-      "subTitle": "About us",
-      "title": "We do design, code & develop.",
-      "text1": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries,",
-      "text2": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters"
+      "subTitle": "About Lumotik",
+      "title": "We engineer digital excellence through design and code.",
+      "text1": "At Lumotik, we blend cutting-edge aesthetic precision with enterprise-grade engineering. We build high-impact web and mobile products, scalable cloud ecosystems, and transformative AI systems that help forward-thinking companies scale faster.",
+      "text2": "Our dedicated multidisciplinary teams of designers, architects, and full-stack engineers turn complex technical challenges into sleek, frictionless user experiences."
     },
     "form": {
-      "title": "Get a free Keystroke quote now",
+      "title": "Request a Free Project Consultation",
       "inputs": [
         {
-          "title": "Name",
-          "placeholder": "John Smith",
+          "title": "Your Name",
+          "placeholder": "Alex Johnson",
           "id": "name",
+          "name": "name",
           "type": "text"
         },
         {
-          "title": "Email",
-          "placeholder": "Example@gmail.com",
+          "title": "Work Email",
+          "placeholder": "alex@company.com",
           "id": "email",
+          "name": "email",
           "type": "email"
         },
         {
-          "title": "Phone",
-          "placeholder": "+20123456789",
+          "title": "Phone / WhatsApp",
+          "placeholder": "+1 (555) 019-2834",
           "id": "phone",
-          "type": "phone"
+          "name": "phone",
+          "type": "tel"
         }
       ],
-      "actionButton": "Send"
+      "actionButton": "Send Inquiry"
     }
   }
 }
+

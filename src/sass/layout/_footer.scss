@@ -1,29 +1,46 @@
 .footer {
   overflow: hidden;
+  background-color: #071010;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding-top: 80px;
 
   &__social {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 8px;
-    margin-bottom: 5rem;
+    gap: 16px;
+    margin-bottom: 4rem;
+    padding-bottom: 2.5rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 
     &__item {
-      font-size: 30px;
-      color: $gray-color;
-      transition: color 0.3s ease-in-out;
+      font-size: 24px;
+      color: rgba(255, 255, 255, 0.6);
+      transition: $transition-sm;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 52px;
+      height: 52px;
+      border-radius: 14px;
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.08);
 
       &:hover {
         color: $primary-color;
+        background: rgba(0, 255, 255, 0.1);
+        border-color: $primary-color;
+        box-shadow: 0 0 20px rgba(0, 255, 255, 0.35);
+        transform: translateY(-3px);
       }
     }
   }
 
   &__info {
-    padding-inline-end: 5rem;
-    border-inline-end: 2px solid $lighter-gray-color;
-    margin-inline-end: 2.5rem;
-    margin-block-end: 5rem;
+    padding-inline-end: 4rem;
+    border-inline-end: 1px solid rgba(255, 255, 255, 0.08);
+    margin-inline-end: 2rem;
+    margin-block-end: 4rem;
 
     @include responsive(max, 1200px) {
       padding-inline-end: unset;
@@ -34,45 +51,56 @@
   }
 
   &__title {
-    font-size: 4rem;
-    color: $dark-color;
+    font-size: 38px;
+    color: $white-color;
     margin-block-end: 1rem;
-    font-weight: 500;
+    font-weight: 700;
+    font-family: $primary-font;
+    letter-spacing: -0.02em;
   }
 
   &__description {
-    font-size: 1rem;
-    color: $dark-color;
-    margin-block-end: 2.5rem;
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.65);
+    margin-block-end: 2rem;
+    line-height: 1.6;
   }
 
   &__newsletter {
-    background-color: $white-color;
-    border-radius: 20px;
-    height: 72px;
-    padding: 10px;
-    padding-inline-start: 55px;
-    box-shadow: 0 24px 48px -15px rgba(153, 161, 170, 0.25);
+    background-color: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(0, 255, 255, 0.25);
+    border-radius: 16px;
+    height: 64px;
+    padding: 6px;
     display: flex;
-    align-items: stretch;
+    align-items: center;
     width: 100%;
     position: relative;
+    backdrop-filter: blur(10px);
+    transition: $transition-sm;
 
-    &:before {
-      content: url(../images/icons/message.webp);
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      inset-inline-start: 30px;
-      z-index: 1;
+    &:focus-within {
+      border-color: $primary-color;
+      box-shadow: 0 0 20px rgba(0, 255, 255, 0.25);
     }
 
     input {
       border: 0;
       border-radius: 0;
-      color: #27272e;
-      padding: 5px 15px;
+      color: $white-color;
+      padding: 10px 16px;
       width: 100%;
+      background: transparent;
+
+      &::placeholder {
+        color: rgba(255, 255, 255, 0.4);
+      }
+    }
+
+    button {
+      flex-shrink: 0;
+      height: 100%;
+      padding: 0 24px;
     }
   }
 
@@ -80,21 +108,25 @@
     margin-bottom: 3rem;
 
     &__title {
-      font-size: 20px;
+      font-size: 18px;
       font-weight: 700;
+      color: $white-color;
+      font-family: $primary-font;
       margin-bottom: 1.5rem;
+      letter-spacing: -0.01em;
     }
 
     ul {
       li {
         a {
           display: inline-block;
-          color: $gray-color;
-          padding-block: 8px;
-          font-size: 18px;
+          color: rgba(255, 255, 255, 0.6);
+          padding-block: 6px;
+          font-size: 15px;
 
           &:hover {
             color: $primary-color;
+            transform: translateX(4px);
           }
         }
       }
@@ -107,21 +139,25 @@
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
-    border-top: 1px solid $gray-color;
+    gap: 16px;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
 
     @include responsive(max, 768px) {
       justify-content: center;
+      text-align: center;
     }
 
     &__description {
-      color: $gray-color;
+      color: rgba(255, 255, 255, 0.55);
+      font-size: 14px;
       margin: 0;
 
       a {
-        color: inherit;
+        color: $primary-color;
+        font-weight: 600;
 
         &:hover {
-          color: $primary-color;
+          color: $secondary-color;
         }
       }
     }
@@ -130,23 +166,23 @@
       li {
         display: inline-block;
         position: relative;
-        padding-inline: 20px;
+        padding-inline: 16px;
 
         &:not(:last-child)::after {
           content: "";
           height: 4px;
           width: 4px;
-          background-color: $gray-color;
+          background-color: rgba(255, 255, 255, 0.2);
           border-radius: 50%;
           position: absolute;
           top: 50%;
-          inset-inline-end: -5px;
+          inset-inline-end: -2px;
           transform: translateY(-50%);
         }
 
         a {
-          font-size: 1rem;
-          color: $gray-color;
+          font-size: 14px;
+          color: rgba(255, 255, 255, 0.55);
 
           &:hover {
             color: $primary-color;
@@ -156,3 +192,4 @@
     }
   }
 }
+

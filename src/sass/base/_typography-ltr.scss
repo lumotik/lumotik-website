@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&family=Sora:wght@400;600;700;800&family=Tajawal:wght@400;500;700;800;900&display=swap");
+
 // Primary Font in English
 @font-face {
   font-family: "DM-Sans";
@@ -5,33 +7,3 @@
   font-weight: 300 400 500 700 900;
 }
 
-// Secondary Font in English
-@font-face {
-  font-family: "Poppins";
-  src: url("../fonts/en/Poppins-Medium.woff2") format("woff2"), url("../fonts/en/Poppins-Medium.woff") format("woff"), url("../fonts/en/Poppins-Medium.ttf") format("truetype");
-  font-weight: 500;
-}
-
-@font-face {
-  font-family: "Poppins";
-  src: url("../fonts/en/Poppins-Regular.woff2") format("woff2"), url("../fonts/en/Poppins-Regular.woff") format("woff"), url("../fonts/en/Poppins-Regular.ttf") format("truetype");
-  font-weight: 400;
-}
-
-@font-face {
-  font-family: "Poppins";
-  src: url("../fonts/en/Poppins-Black.woff2") format("woff2"), url("../fonts/en/Poppins-Black.woff") format("woff"), url("../fonts/en/Poppins-Black.ttf") format("truetype");
-  font-weight: 900;
-}
-
-@font-face {
-  font-family: "Poppins";
-  src: url("../fonts/en/Poppins-Bold.woff2") format("woff2"), url("../fonts/en/Poppins-Bold.woff") format("woff"), url("../fonts/en/Poppins-Bold.ttf") format("truetype");
-  font-weight: 700;
-}
-
-@font-face {
-  font-family: "Poppins";
-  src: url("../fonts/en/Poppins-Light.woff2") format("woff2"), url("../fonts/en/Poppins-Light.woff") format("woff"), url("../fonts/en/Poppins-Light.ttf") format("truetype");
-  font-weight: 300;
-}

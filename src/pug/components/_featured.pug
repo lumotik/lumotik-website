@@ -1,25 +1,34 @@
-- var services = Array.from({ length: 6 }, (_, i) => ({icon: `./images/services/icon-${i + 1}.webp`,title: ["Design", "Development", "Online marketing", "Business", "Technology", "Content strategy"][i], description: "Simply drag and drop photos and videos into your workspace to automatically add them to your Collab Cloud library."}));
-
 section#featured.featured
   .container
     .featured__wrapper
-      .featured__item
+      .featured__item(data-aos="fade-right" data-aos-duration="1000")
         .featured__header
-          p.featured__subtitle Featured Case Study
-          h2.featured__title 
-            | Website and web 
-            br
-            | Development,Design
-          p.featured__description Donec metus lorem, vulputate at sapien sit amet, auctor iaculis lorem. In vel hendrerit nisi. Vestibulum eget risus velit. Aliquam tristique libero at dui sodales, et placerat orci lobortis..
-          p.featured__description Maecenas ipsum neque, elementum id dignissim et, imperdiet vitae mauris.
-          button.main-button.featured__btn Read Case Study
+          p.featured__subtitle= (lang === "en" ? "Featured Case Study" : "دراسة حالة مميزة")
+          h2.featured__title
+            if lang === "en"
+              | Next-Gen FinTech Platform & Mobile App
+            else
+              | منصة التقنية المالية وتطبيق الجوال الذكي
+          p.featured__description
+            if lang === "en"
+              | We partnered with leading venture-backed fintechs to re-architect their transaction engine and build a fluid, ultra-responsive mobile experience from the ground up.
+            else
+              | قمنا بإعادة هندسة البنية الرقمية وتطوير تطبيق جوال فائق السلاسة لإحدى الشركات الرائدة في التقنية المالية مع أمان بنكي عالي المستوى.
+          p.featured__description
+            if lang === "en"
+              | Scaled to 2M+ active users with sub-50ms latency and 99.99% system availability.
+            else
+              | تم التوسع لخدمة أكثر من 2 مليون مستخدم نشط بزمن استجابة أقل من 50 مللي ثانية ونسبة توفر 99.99%.
+          a.main-button.featured__btn(href="#projects")
+            i(class="fa-solid fa-arrow-up-right-from-square me-2")
+            span= (lang === "en" ? "Explore Case Study" : "شاهد دراسة الحالة")
         .featured__counter
           .featured__count
-            p.featured__number 20%
-            p.featured__text ROI increase
+            p.featured__number +145%
+            p.featured__text= (lang === "en" ? "User Conversion Rate" : "زيادة معدل التحويل")
           .featured__count
-            p.featured__number 20%
-            p.featured__text ROI increase
-      .featured__item
+            p.featured__number 0.4s
+            p.featured__text= (lang === "en" ? "Average Load Speed" : "سرعة استجابة الصفحة")
+      .featured__item(data-aos="fade-left" data-aos-duration="1000")
         .featured__img
-          img(src="./images/featured/case-study-5.webp")
+          img(src="./images/featured/case-study-5.webp" alt="Lumotik Featured Case Study")

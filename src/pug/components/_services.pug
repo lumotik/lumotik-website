@@ -1,26 +1,44 @@
-- var services = Array.from({ length: 6 }, (_, i) => ({icon: `./images/services/icon-${i + 1}.webp`,title: ["Design", "Development", "Online marketing", "Business", "Technology", "Content strategy"][i], description: "Simply drag and drop photos and videos into your workspace to automatically add them to your Collab Cloud library."}));
+- 
+  var servicesEn = [
+    {icon: "fa-solid fa-wand-magic-sparkles", title: "UI/UX & Brand Identity", description: "World-class interface design, design systems, interactive prototypes, and cohesive brand identities built to convert.", tag: "Figma • Design Systems • 3D"},
+    {icon: "fa-solid fa-code", title: "Web & Mobile Development", description: "Robust web applications, Jamstack architectures, cross-platform mobile apps, and scalable APIs built with modern stacks.", tag: "React • Next.js • Flutter • Node.js"},
+    {icon: "fa-solid fa-cloud-arrow-up", title: "Cloud & DevOps Architecture", description: "Automated CI/CD pipelines, high-availability microservices, Kubernetes clusters, and zero-downtime serverless infra.", tag: "AWS • Docker • Kubernetes • Serverless"},
+    {icon: "fa-solid fa-brain", title: "AI & Interactive Systems", description: "Custom LLM integrations, AI agents, conversational interfaces, WebGL shaders, and immersive interactive graphics.", tag: "OpenAI • WebGL • Three.js • Python"},
+    {icon: "fa-solid fa-chart-line", title: "Performance & SEO Engineering", description: "Sub-second load times, Core Web Vitals optimization, semantic architecture, and high-conversion landing funnels.", tag: "Lighthouse 100 • Core Web Vitals"},
+    {icon: "fa-solid fa-shield-halved", title: "Cybersecurity & Code Audits", description: "Comprehensive source code audits, vulnerability mitigation, automated testing suites, and data privacy compliance.", tag: "OWASP • SOC2 Ready • Automated Tests"}
+  ];
+- 
+  var servicesAr = [
+    {icon: "fa-solid fa-wand-magic-sparkles", title: "تصميم واجهات وتجربة المستخدم", description: "تصميم واجهات رقمية متقدمة، وأنظمة تصميم متكاملة، ونماذج تفاعلية تعزز ولاء المستخدم وتزيد معدلات التحويل.", tag: "Figma • Design Systems • 3D"},
+    {icon: "fa-solid fa-code", title: "تطوير الويب وتطبيقات الجوال", description: "تطوير منصات وتطبيقات عالية الأداء وقابلة للتوسع باستخدام أحدث التقنيات وأفضل الممارسات البرمجية.", tag: "React • Next.js • Flutter • Node.js"},
+    {icon: "fa-solid fa-cloud-arrow-up", title: "البنية السحابية وهندسة ديف أوبس", description: "بناء بنية تحتية سحابية آمنة ومؤتمتة تضمن استمرارية الخدمة وسرعة استجابة فائقة تحت أقصى ضغط.", tag: "AWS • Docker • Kubernetes • Serverless"},
+    {icon: "fa-solid fa-brain", title: "أنظمة الذكاء الاصطناعي والتفاعل 3D", description: "تكامل نماذج الذكاء الاصطناعي التوليدي، وتطوير الأنظمة الذكية، وتجارب الويب ثلاثية الأبعاد التفاعلية.", tag: "OpenAI • WebGL • Three.js • Python"},
+    {icon: "fa-solid fa-chart-line", title: "تحسين الأداء ومحركات البحث", description: "تسريع تحميل الصفحات لكسر حاجز الثواني، وتحقيق أعلى مؤشرات Core Web Vitals لضمان تصدر النتائج.", tag: "Lighthouse 100 • Core Web Vitals"},
+    {icon: "fa-solid fa-shield-halved", title: "الأمان السيبراني ومراجعة الكود", description: "فحص شامل للكود المصدري، وسد الثغرات الأمنية، واختبارات الأمان لضمان سلامة بيانات عملائك.", tag: "OWASP • SOC2 Ready • Automated Tests"}
+  ];
+- var servicesList = (lang === "en" ? servicesEn : servicesAr);
 
 section#services.services
   .container
     .services__wrapper
-      .services__header
-        p.services__subtitle What We Can Do For You
+      .services__header(data-aos="fade-up")
+        p.services__subtitle= (lang === "en" ? "Capabilities & Expertise" : "خدماتنا وخبراتنا")
         h2.services__title
-          | Services we can help
-          br
-          | you with.
-        p.services__description Nulla facilisi. Nullam in magna id dolor blandit rutrum eget vulputate augue sed eu imperdiet.
+          if lang === "en"
+            | Engineering high-impact digital solutions.
+          else
+            | نصنع حلولاً برمجية وتصميمية تصنع الفارق.
+        p.services__description= (lang === "en" ? "From napkin concept to enterprise deployment, we provide end-to-end craft across the modern digital spectrum." : "من الفكرة المبدئية إلى الإطلاق الشامل، نقدم حلولاً تقنية متكاملة تضمن تفوق علامتك التجارية.")
 
       .services__cards
-        each service, index in services
-          .services__card(class=(index === 1 ? "active" : ""))
-            .services__card-img
-              img(src=service.icon, alt=service.title + " Icon")
+        each service, index in servicesList
+          .services__card(data-aos="fade-up" data-aos-delay=(index * 100))
+            .services__card-icon-box
+              i(class=service.icon)
             .services__body
               h3.services__card-title= service.title
               p.services__card-description= service.description
-  .services__bubbles
-    .services__bubbles-line
-      img(src="https://new.axilthemes.com/demo/template/abstrak/assets/media/others/line-9.png")
-    .services__bubbles-curve
-      img.flip-shape(src="https://new.axilthemes.com/demo/template/abstrak/assets/media/others/bubble-42.png")
+            .services__card-tag
+              i(class="fa-solid fa-terminal me-1")
+              span= service.tag
+

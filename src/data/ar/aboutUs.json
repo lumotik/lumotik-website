@@ -1,34 +1,38 @@
 {
   "aboutUs": {
     "info": {
-      "subTitle": "عنا",
-      "title": "We do design, code & develop.",
-      "text1": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries,",
-      "text2": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters"
+      "subTitle": "عن لوموتيك",
+      "title": "نبتكر التميز الرقمي عبر التصميم المتقن والبرمجة المتقدمة.",
+      "text1": "في لوموتيك، ندمج دقة التصميم الجمالي مع أعلى معايير الهندسة البرمجية. نبني منصات ويب وتطبيقات ذكية، وبنى تحتية سحابية مرنة، وأنظمة ذكاء اصطناعي تمكّن الشركات الطموحة من النمو والريادة.",
+      "text2": "تعمل فرقنا المتخصصة من مصممين ومهندسي برمجيات على تحويل التحديات التقنية المعقدة إلى تجارب مستخدم مذهلة وسلسة."
     },
     "form": {
-      "title": "Get a free Keystroke quote now",
+      "title": "اطلب استشارة مجانية لمشروعك",
       "inputs": [
         {
-          "title": "الأسم",
-          "placeholder": "John Smith",
+          "title": "الاسم بالكامل",
+          "placeholder": "محمد أحمد",
           "id": "name",
+          "name": "name",
           "type": "text"
         },
         {
-          "title": "البريد الالكترونى",
-          "placeholder": "Example@gmail.com",
+          "title": "البريد الإلكتروني للعمل",
+          "placeholder": "name@company.com",
           "id": "email",
+          "name": "email",
           "type": "email"
         },
         {
-          "title": "الهاتف",
-          "placeholder": "+20123456789",
+          "title": "رقم الهاتف / واتساب",
+          "placeholder": "+966 50 123 4567",
           "id": "phone",
-          "type": "phone"
+          "name": "phone",
+          "type": "tel"
         }
       ],
-      "actionButton": "ارسل"
+      "actionButton": "إرسال الطلب"
     }
   }
 }
+

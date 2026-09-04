@@ -152,6 +152,14 @@ gulp.task("imgSquash", () => {
     .pipe(gulp.dest("./dist/images"));
 });
 
+// Copy videos to dist
+gulp.task("videos", () => {
+  return gulp
+    .src("./src/videos/**/*")
+    .pipe(changed("./dist/videos"))
+    .pipe(gulp.dest("./dist/videos"));
+});
+
 // Serve and watch for changes
 gulp.task("serve", () => {
   create().init({
@@ -165,10 +173,11 @@ gulp.task("serve", () => {
   gulp.watch("./src/sass/**/*.scss", gulp.series("sass"));
   gulp.watch("./src/pug/**/*.pug", gulp.series("pugToHtmlEnglish", "pugToHtmlArabic"));
   gulp.watch("./src/images/**/*", gulp.series("imgSquash"));
+  gulp.watch("./src/videos/**/*", gulp.series("videos"));
   gulp.watch("./src/js/**/*", gulp.series("javaScript"));
   gulp.watch("./src/cssVendor/*", gulp.series("cssVendor"));
   gulp.watch("./dist/*.html").on("change", create().reload);
 });
 
 // Default task
-gulp.task("default", gulp.series("clean-json", "combine-json", "sass", "pugToHtmlEnglish", "pugToHtmlArabic", "imgSquash", "fonts", "javaScript", "cssVendor", "serve"));
+gulp.task("default", gulp.series("clean-json", "combine-json", "sass", "pugToHtmlEnglish", "pugToHtmlArabic", "imgSquash", "videos", "fonts", "javaScript", "cssVendor", "serve"));

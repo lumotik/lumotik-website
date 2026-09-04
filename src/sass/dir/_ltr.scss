@@ -5,10 +5,13 @@ $p: -1;
 $n: 1;
 
 // Fonts
-$primary-font: "DM-Sans", sans-serif;
-$secondary-font: "Poppins", sans-serif;
+$primary-font: "Sora", sans-serif;
+$secondary-font: "Inter", sans-serif;
+$mono-font: "JetBrains Mono", monospace;
 
 body {
   direction: ltr;
-  font-family: $primary-font;
+  font-family: $secondary-font;
 }
+
+

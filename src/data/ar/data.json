@@ -1,101 +1,104 @@
 {
 	"aboutUs": {
 		"info": {
-			"subTitle": "عنا",
-			"title": "We do design, code & develop.",
-			"text1": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries,",
-			"text2": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters"
+			"subTitle": "عن لوموتيك",
+			"title": "نبتكر التميز الرقمي عبر التصميم المتقن والبرمجة المتقدمة.",
+			"text1": "في لوموتيك، ندمج دقة التصميم الجمالي مع أعلى معايير الهندسة البرمجية. نبني منصات ويب وتطبيقات ذكية، وبنى تحتية سحابية مرنة، وأنظمة ذكاء اصطناعي تمكّن الشركات الطموحة من النمو والريادة.",
+			"text2": "تعمل فرقنا المتخصصة من مصممين ومهندسي برمجيات على تحويل التحديات التقنية المعقدة إلى تجارب مستخدم مذهلة وسلسة."
 		},
 		"form": {
-			"title": "Get a free Keystroke quote now",
+			"title": "اطلب استشارة مجانية لمشروعك",
 			"inputs": [
 				{
-					"title": "الأسم",
-					"placeholder": "John Smith",
+					"title": "الاسم بالكامل",
+					"placeholder": "محمد أحمد",
 					"id": "name",
+					"name": "name",
 					"type": "text"
 				},
 				{
-					"title": "البريد الالكترونى",
-					"placeholder": "Example@gmail.com",
+					"title": "البريد الإلكتروني للعمل",
+					"placeholder": "name@company.com",
 					"id": "email",
+					"name": "email",
 					"type": "email"
 				},
 				{
-					"title": "الهاتف",
-					"placeholder": "+20123456789",
+					"title": "رقم الهاتف / واتساب",
+					"placeholder": "+966 50 123 4567",
 					"id": "phone",
-					"type": "phone"
+					"name": "phone",
+					"type": "tel"
 				}
 			],
-			"actionButton": "ارسل"
+			"actionButton": "إرسال الطلب"
 		}
 	},
 	"footer": {
 		"info": {
-			"header": "تواصل معنا!",
-			"description": "فوسكيه فارياس، دولور تيمبور إنتردم تريستيك، دوي أورنا بيب إندم ماجنا، أوت أولامكوربر بورو.",
-			"placeholder": "عنوان البريد الإلكتروني",
-			"subscribe": "اشترك"
+			"header": "لنبتكر المستقبل سوياً.",
+			"description": "هل لديك فكرة مشروع واعدة؟ اشترك في نشرتنا التقنية أو تواصل معنا لبدء التعاون.",
+			"placeholder": "أدخل بريدك الإلكتروني",
+			"subscribe": "اشترك الآن"
 		},
 		"links": {
-			"services_title": "الخدمات",
+			"services_title": "خدماتنا الأساسية",
 			"services": [
 				{
-					"text": "الشعار والعلامة التجارية",
-					"url": "#"
+					"text": "تصميم الهوية وتجربة المستخدم",
+					"url": "#services"
 				},
 				{
-					"text": "تطوير المواقع الإلكترونية",
-					"url": "#"
+					"text": "تطوير الويب وتطبيقات الجوال",
+					"url": "#services"
 				},
 				{
-					"text": "تطوير تطبيقات الهاتف المحمول",
-					"url": "#"
+					"text": "البنية السحابية وهندسة ديف أوبس",
+					"url": "#services"
 				},
 				{
-					"text": "تحسين محركات البحث",
-					"url": "#"
+					"text": "أنظمة الذكاء الاصطناعي والتفاعل 3D",
+					"url": "#services"
 				},
 				{
-					"text": "الإعلانات المدفوعة لكل نقرة",
-					"url": "#"
+					"text": "تحسين الأداء ومحركات البحث",
+					"url": "#services"
 				},
 				{
-					"text": "تسويق وسائل التواصل الاجتماعي",
-					"url": "#"
+					"text": "الأمان السيبراني ومراجعة الكود",
+					"url": "#services"
 				}
 			],
-			"resources_title": "الموارد",
+			"resources_title": "روابط سريعة",
 			"resources": [
 				{
-					"text": "اتصل بنا",
-					"url": "#"
+					"text": "دراسات الحالة المميزة",
+					"url": "#featured"
 				},
 				{
-					"text": "المدونة",
-					"url": "#"
+					"text": "أعمالنا المختارة",
+					"url": "#projects"
 				},
 				{
-					"text": "دراسات الحالة",
-					"url": "#"
+					"text": "إحصائياتنا ونتائجنا",
+					"url": "#stats"
 				},
 				{
-					"text": "معرض الأعمال",
-					"url": "#"
+					"text": "اطلب عرض سعر",
+					"url": "#about-us"
 				}
 			]
 		},
 		"copyright": {
-			"title": "© 2025. جميع الحقوق محفوظة لـ",
-			"company": "فريق Lumotik",
+			"title": "© 2026. جميع الحقوق محفوظة لـ",
+			"company": "وكالة لوموتيك الرقمية",
 			"support": [
 				{
 					"text": "سياسة الخصوصية",
 					"url": "#"
 				},
 				{
-					"text": "شروط الاستخدام",
+					"text": "شروط الخدمة",
 					"url": "#"
 				}
 			]
@@ -129,9 +132,9 @@
 	],
 	"projects": {
 		"info": {
-			"subTitle": "مشاريعنا",
-			"title1": "بعض من",
-			"title2": "افضل اعمالنا"
+			"subTitle": "أعمالنا ومشاريع عملائنا",
+			"title1": "منصات رقمية قمنا بتطويرها.",
+			"title2": "صُنعت لرواد الأعمال والمؤسسات الكبرى."
 		},
 		"tabs": [
 			{
@@ -139,38 +142,77 @@
 				"title": "كل المشاريع"
 			},
 			{
-				"id": "cat1",
-				"title": "الفئة 1"
+				"id": "web",
+				"title": "منصات الويب"
 			},
 			{
-				"id": "cat2",
-				"title": "الفئة 2"
+				"id": "luxury",
+				"title": "المشاريع الفاخرة"
 			}
 		],
 		"allProjects": [
 			{
-				"image": "https://images.unsplash.com/photo-1739582814657-10931286d7a5?q=80&w=1528&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-				"title": "Creative Agency",
-				"subTitle": "Full Branding, Website, App",
-				"category": "cat2"
-			},
-			{
-				"image": "https://images.unsplash.com/photo-1736618626242-542735175261?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-				"title": "Digital Marketing",
-				"subTitle": "Logo, Website & Mobile App",
-				"category": "cat2"
-			},
-			{
-				"image": "https://images.unsplash.com/photo-1728984273683-d962fd89ef4d?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-				"title": "Digital Agency",
-				"subTitle": "Website, UI/UX, App",
-				"category": "cat2"
-			},
-			{
-				"image": "https://images.unsplash.com/photo-1738430275589-2cd3d0d0d57a?q=80&w=1461&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-				"title": "Plan Management",
-				"subTitle": "Branding, Website, IOS App",
-				"category": "cat1"
+				"image": "https://beta.imperium-group.com/storage/media/legacy/52f95ae072cf5a4f-img-ext-night.jpg",
+				"video": "https://beta.imperium-group.com/storage/media/legacy/2f7440f7eb0edcca-hero.mp4",
+				"videoPoster": "https://beta.imperium-group.com/storage/media/legacy/52f95ae072cf5a4f-img-ext-night.jpg",
+				"title": "مجموعة إمبريوم (Imperium Group) — منصة العمارة والتأثيث الفاخر",
+				"subTitle": "تطوير منصة ويب متكاملة • تصميم تجربة المستخدم • الإمارات",
+				"category": "web",
+				"link": "https://beta.imperium-group.com/",
+				"badge": "مشروع حي لعميل",
+				"tech": "Next.js • TailwindCSS • Swiper • Interactive Video",
+				"description": "قمنا بتصميم وتطوير المنصة الرقمية الرسمية لمجموعة إمبريوم الرائدة في التصميم المعماري والتنفيذ الفاخر في الإمارات. تشتمل على فيديو تفاعلي مرتبط بالتمرير، وقوائم خدمات تفاعلية، ومعرض أعمال ديناميكي وأداء فائق السرعة وتجربة مستخدم سلسة على جميع الأجهزة.",
+				"gallery": [
+					{
+						"type": "video",
+						"src": "https://beta.imperium-group.com/storage/media/legacy/2f7440f7eb0edcca-hero.mp4",
+						"poster": "https://beta.imperium-group.com/storage/media/legacy/52f95ae072cf5a4f-img-ext-night.jpg",
+						"thumb": "https://beta.imperium-group.com/storage/media/legacy/52f95ae072cf5a4f-img-ext-night.jpg",
+						"title": "🎬 فيديو المنصة التفاعلي"
+					},
+					{
+						"type": "image",
+						"src": "./images/imperium-platform/tab-01-home.jpg",
+						"thumb": "./images/imperium-platform/tab-01-home.jpg",
+						"title": "🏠 تبويب: الرئيسية والفيديو المعماري التفاعلي"
+					},
+					{
+						"type": "image",
+						"src": "./images/imperium-platform/tab-02-architecture-service.jpg",
+						"thumb": "./images/imperium-platform/tab-02-architecture-service.jpg",
+						"title": "🏛️ تبويب: التصميم المعماري والمخططات الرئيسية"
+					},
+					{
+						"type": "image",
+						"src": "./images/imperium-platform/tab-03-interior-service.jpg",
+						"thumb": "./images/imperium-platform/tab-03-interior-service.jpg",
+						"title": "✨ تبويب: التصميم الداخلي الفاخر والتأثيث الراقي"
+					},
+					{
+						"type": "image",
+						"src": "./images/imperium-platform/tab-04-landscape-fitout.jpg",
+						"thumb": "./images/imperium-platform/tab-04-landscape-fitout.jpg",
+						"title": "🌿 تبويب: تنسيق الحدائق وأعمال التشطيبات الفاخرة"
+					},
+					{
+						"type": "image",
+						"src": "./images/imperium-platform/tab-05-projects-portfolio.jpg",
+						"thumb": "./images/imperium-platform/tab-05-projects-portfolio.jpg",
+						"title": "📁 تبويب: معرض المشاريع ودراسات الحالة"
+					},
+					{
+						"type": "image",
+						"src": "./images/imperium-platform/tab-06-about-team.jpg",
+						"thumb": "./images/imperium-platform/tab-06-about-team.jpg",
+						"title": "👥 تبويب: من نحن، الرؤية وفريق القيادة"
+					},
+					{
+						"type": "image",
+						"src": "./images/imperium-platform/tab-07-contacts.jpg",
+						"thumb": "./images/imperium-platform/tab-07-contacts.jpg",
+						"title": "📍 تبويب: التواصل وطلب الاستشارات الرقمية"
+					}
+				]
 			}
 		]
 	},
@@ -217,33 +259,33 @@
 		}
 	],
 	"stats": {
-		"subTitle": "دراسة حالة مميزة",
-		"title": "حركة الشركات الناشئة في التصميم",
-		"description": "في فيل فاريوس توربيس، غير ديكتوم سيم. في عيينة في إفيكتيتور إيبسوم، في إيجستاس إيبسوم. موريس في مي آك تيلوس.",
+		"subTitle": "أثر ملموس ونتائج مثبتة",
+		"title": "أرقام تعكس دقة وإتقان أعمالنا البرمجية.",
+		"description": "نطور حلولاً برمجية وتصميمية متقدمة تحقق نمواً مستداماً وكفاءة تشغيلية فائقة لعملائنا.",
 		"items": [
 			{
-				"icon": "far fa-smile",
-				"value": 15,
+				"icon": "fa-solid fa-code-branch",
+				"value": 150,
 				"suffix": "+",
-				"label": "سنوات من العمل"
+				"label": "مشروع رقمي تم تسليمه"
 			},
 			{
-				"icon": "fas fa-th-large",
-				"value": 360,
-				"suffix": "+",
-				"label": "مشاريع تم تسليمها"
+				"icon": "fa-solid fa-face-smile",
+				"value": 99,
+				"suffix": "%",
+				"label": "نسبة رضا العملاء"
 			},
 			{
-				"icon": "fas fa-users",
-				"value": 600,
+				"icon": "fa-solid fa-trophy",
+				"value": 12,
 				"suffix": "+",
-				"label": "أخصائي"
+				"label": "جوائز تصميم وتقنية"
 			},
 			{
-				"icon": "fab fa-apple",
-				"value": 64,
-				"suffix": "+",
-				"label": "سنوات من العمل"
+				"icon": "fa-solid fa-bolt",
+				"value": 10,
+				"suffix": "x",
+				"label": "مضاعفة سرعة الأداء"
 			}
 		]
 	}

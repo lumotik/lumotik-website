@@ -1,40 +1,80 @@
 {
   "projects": {
     "info": {
-      "subTitle": "مشاريعنا",
-      "title1": "بعض من",
-      "title2": "افضل اعمالنا"
+      "subTitle": "أعمالنا ومشاريع عملائنا",
+      "title1": "منصات رقمية قمنا بتطويرها.",
+      "title2": "صُنعت لرواد الأعمال والمؤسسات الكبرى."
     },
     "tabs": [
       { "id": "all", "title": "كل المشاريع" },
-      { "id": "cat1", "title": "الفئة 1" },
-      { "id": "cat2", "title": "الفئة 2" }
+      { "id": "web", "title": "منصات الويب" },
+      { "id": "luxury", "title": "المشاريع الفاخرة" }
     ],
     "allProjects": [
       {
-        "image": "https://images.unsplash.com/photo-1739582814657-10931286d7a5?q=80&w=1528&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-        "title": "Creative Agency",
-        "subTitle": "Full Branding, Website, App",
-        "category": "cat2"
-      },
-      {
-        "image": "https://images.unsplash.com/photo-1736618626242-542735175261?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-        "title": "Digital Marketing",
-        "subTitle": "Logo, Website & Mobile App",
-        "category": "cat2"
-      },
-      {
-        "image": "https://images.unsplash.com/photo-1728984273683-d962fd89ef4d?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-        "title": "Digital Agency",
-        "subTitle": "Website, UI/UX, App",
-        "category": "cat2"
-      },
-      {
-        "image": "https://images.unsplash.com/photo-1738430275589-2cd3d0d0d57a?q=80&w=1461&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-        "title": "Plan Management",
-        "subTitle": "Branding, Website, IOS App",
-        "category": "cat1"
+        "image": "https://beta.imperium-group.com/storage/media/legacy/52f95ae072cf5a4f-img-ext-night.jpg",
+        "video": "https://beta.imperium-group.com/storage/media/legacy/2f7440f7eb0edcca-hero.mp4",
+        "videoPoster": "https://beta.imperium-group.com/storage/media/legacy/52f95ae072cf5a4f-img-ext-night.jpg",
+        "title": "مجموعة إمبريوم (Imperium Group) — منصة العمارة والتأثيث الفاخر",
+        "subTitle": "تطوير منصة ويب متكاملة • تصميم تجربة المستخدم • الإمارات",
+        "category": "web",
+        "link": "https://beta.imperium-group.com/",
+        "badge": "مشروع حي لعميل",
+        "tech": "Next.js • TailwindCSS • Swiper • Interactive Video",
+        "description": "قمنا بتصميم وتطوير المنصة الرقمية الرسمية لمجموعة إمبريوم الرائدة في التصميم المعماري والتنفيذ الفاخر في الإمارات. تشتمل على فيديو تفاعلي مرتبط بالتمرير، وقوائم خدمات تفاعلية، ومعرض أعمال ديناميكي وأداء فائق السرعة وتجربة مستخدم سلسة على جميع الأجهزة.",
+        "gallery": [
+          {
+            "type": "video",
+            "src": "https://beta.imperium-group.com/storage/media/legacy/2f7440f7eb0edcca-hero.mp4",
+            "poster": "https://beta.imperium-group.com/storage/media/legacy/52f95ae072cf5a4f-img-ext-night.jpg",
+            "thumb": "https://beta.imperium-group.com/storage/media/legacy/52f95ae072cf5a4f-img-ext-night.jpg",
+            "title": "🎬 فيديو المنصة التفاعلي"
+          },
+          {
+            "type": "image",
+            "src": "./images/imperium-platform/tab-01-home.jpg",
+            "thumb": "./images/imperium-platform/tab-01-home.jpg",
+            "title": "🏠 تبويب: الرئيسية والفيديو المعماري التفاعلي"
+          },
+          {
+            "type": "image",
+            "src": "./images/imperium-platform/tab-02-architecture-service.jpg",
+            "thumb": "./images/imperium-platform/tab-02-architecture-service.jpg",
+            "title": "🏛️ تبويب: التصميم المعماري والمخططات الرئيسية"
+          },
+          {
+            "type": "image",
+            "src": "./images/imperium-platform/tab-03-interior-service.jpg",
+            "thumb": "./images/imperium-platform/tab-03-interior-service.jpg",
+            "title": "✨ تبويب: التصميم الداخلي الفاخر والتأثيث الراقي"
+          },
+          {
+            "type": "image",
+            "src": "./images/imperium-platform/tab-04-landscape-fitout.jpg",
+            "thumb": "./images/imperium-platform/tab-04-landscape-fitout.jpg",
+            "title": "🌿 تبويب: تنسيق الحدائق وأعمال التشطيبات الفاخرة"
+          },
+          {
+            "type": "image",
+            "src": "./images/imperium-platform/tab-05-projects-portfolio.jpg",
+            "thumb": "./images/imperium-platform/tab-05-projects-portfolio.jpg",
+            "title": "📁 تبويب: معرض المشاريع ودراسات الحالة"
+          },
+          {
+            "type": "image",
+            "src": "./images/imperium-platform/tab-06-about-team.jpg",
+            "thumb": "./images/imperium-platform/tab-06-about-team.jpg",
+            "title": "👥 تبويب: من نحن، الرؤية وفريق القيادة"
+          },
+          {
+            "type": "image",
+            "src": "./images/imperium-platform/tab-07-contacts.jpg",
+            "thumb": "./images/imperium-platform/tab-07-contacts.jpg",
+            "title": "📍 تبويب: التواصل وطلب الاستشارات الرقمية"
+          }
+        ]
       }
     ]
   }
 }
+

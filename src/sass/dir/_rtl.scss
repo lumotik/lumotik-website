@@ -5,14 +5,62 @@ $p: 1;
 $n: -1;
 
 // overwrite fonts for arabic fonts
-$primary-font: "Tajawal", sans-serif;
-$secondary-font: "Tajawal", sans-serif;
+$primary-font: "Cairo", "IBM Plex Sans Arabic", "Tajawal", sans-serif;
+$secondary-font: "Cairo", "IBM Plex Sans Arabic", "Tajawal", sans-serif;
+$mono-font: "JetBrains Mono", "Cairo", monospace;
 
 body {
   direction: rtl;
-  font-family: $primary-font;
+  font-family: $secondary-font;
 }
 
-input[type="email"] {
-  direction: rtl;
+// Reset letter-spacing globally for Arabic typography to prevent detached/broken characters
+* {
+  letter-spacing: normal !important;
 }
+
+h1, h2, h3, h4, h5, h6,
+.main-title,
+.sub-title,
+.services__title,
+.services__subtitle,
+.services__card-title,
+.services__card-description,
+.services__card-tag,
+.project-showcase__title,
+.project-showcase__subtitle,
+.project-showcase__desc,
+.project-badge,
+.project-item__info h4,
+.project-subtitle,
+.project-desc,
+.badge,
+.featured-badge,
+.stat-item__label,
+.nav-link,
+.main-button,
+.header__brand-text,
+.footer h4,
+.footer p,
+.footer a {
+  font-family: $primary-font !important;
+  letter-spacing: normal !important;
+}
+
+.project-showcase__subtitle,
+.project-subtitle {
+  font-family: $primary-font !important;
+  letter-spacing: normal !important;
+  font-weight: 500 !important;
+}
+
+input[type="email"],
+input,
+textarea,
+select {
+  direction: rtl;
+  font-family: $secondary-font !important;
+}
+
+
+

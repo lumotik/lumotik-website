@@ -1,30 +1,38 @@
 - const aboutUsInfo = data.aboutUs.info
 - const form = data.aboutUs.form
 
-  section#about-us.about-us
-    .container.position-relative.z-2
-      .row.g-4.align-items-center
-        .col-12.col-md-7
-          div.px-3.px-md-5(data-aos="fade-up" data-aos-duration="1000")
-            .section-title
-              .p.sub-title= aboutUsInfo.subTitle
-              h2.main-title.mb-4= aboutUsInfo.title
-            p.mb-4=aboutUsInfo.text1
+section#about-us.about-us
+  .container.position-relative.z-2
+    .row.g-5.align-items-center
+      .col-12.col-lg-7
+        div(data-aos="fade-up" data-aos-duration="1000")
+          .section-title
+            p.sub-title= aboutUsInfo.subTitle
+            h2.main-title= aboutUsInfo.title
+          p.mb-4.fs-5= aboutUsInfo.text1
+          p.text-white-50= aboutUsInfo.text2
 
-            p=aboutUsInfo.text2
+          .row.g-3.mt-4
+            .col-6
+              .p-3.rounded-3(style="background: rgba(255,255,255,0.03); border: 1px solid rgba(0,255,255,0.15);")
+                h4.text-primary.mb-1 100%
+                small.text-white-50= (lang === "en" ? "Code Ownership" : "ملكية الكود بالكامل")
+            .col-6
+              .p-3.rounded-3(style="background: rgba(255,255,255,0.03); border: 1px solid rgba(0,255,255,0.15);")
+                h4.text-primary.mb-1 24/7
+                small.text-white-50= (lang === "en" ? "Dedicated Support" : "دعم فني مستمر")
 
-        .col-12.col-md-5
-          .about-us__form.p-5(data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100")
-            h3.mb-3= form.title
+      .col-12.col-lg-5
+        .about-us__form.p-4.p-md-5(data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100")
+          h3.mb-2= form.title
+          p.small.text-white-50.mb-4= (lang === "en" ? "Tell us about your project and we'll reply within 24 hours." : "أخبرنا عن تفاصيل مشروعك وسنتواصل معك خلال 24 ساعة.")
 
-            .d-flex.flex-column.gap-3
-              each input in form.inputs
-                .about-us__form__field.d-flex.flex-column.gap-1
-                  p=input.title
-                  input(type=input.type, name=input.name, placeholder=input.placeholder)
-              button.main-button.w-100.mt-2= form.actionButton
-    div
-      .about-us__bubble
-        img.flip-shape(src="./images/shapes/bubble-7.webp" alt="bubble")
-      .about-us__line.d-none.d-md-block
-        img(src="./images/shapes/line-4.webp" alt="line")
+          form.d-flex.flex-column.gap-3(action="#" method="POST" onsubmit="event.preventDefault(); alert('Thank you! We will get back to you shortly.');")
+            each input in form.inputs
+              .about-us__form__field.d-flex.flex-column.gap-1
+                p=input.title
+                input(type=input.type, name=input.name, placeholder=input.placeholder required)
+            button.main-button.w-100.mt-3(type="submit")
+              i(class="fa-solid fa-paper-plane me-2")
+              span= form.actionButton
+

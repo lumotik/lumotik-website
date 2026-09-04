@@ -1,31 +1,61 @@
 .stats {
   padding: 100px 0;
-  background-color: #1c1d21; // Match the dark background from image
+  background-color: #071010;
   color: #fff;
   position: relative;
   overflow: hidden;
 
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 600px;
+    height: 300px;
+    background: radial-gradient(ellipse, rgba(0, 255, 255, 0.06) 0%, transparent 70%);
+    filter: blur(60px);
+    pointer-events: none;
+  }
+
   &__header {
     text-align: center;
-    max-width: 600px;
+    max-width: 650px;
     margin: 0 auto 60px;
+    position: relative;
+    z-index: 1;
   }
 
   &__subtitle {
-    color: #ff4d61; // Pinkish color for subtitle
+    color: $primary-color;
+    font-family: $mono-font;
     font-weight: 600;
     text-transform: uppercase;
-    font-size: 14px;
-    letter-spacing: 1px;
+    font-size: 13px;
+    letter-spacing: 2px;
     margin-bottom: 15px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+
+    &::before {
+      content: "";
+      width: 6px;
+      height: 6px;
+      background: $primary-color;
+      border-radius: 50%;
+      box-shadow: 0 0 8px $primary-color;
+    }
   }
 
   &__title {
-    color: #ffffff; // Pinkish color for subtitle
-    font-size: 48px;
+    color: #ffffff;
+    font-size: 44px;
     font-weight: 700;
+    font-family: $primary-font;
     margin-bottom: 20px;
     line-height: 1.2;
+    letter-spacing: -0.02em;
 
     @media (max-width: 768px) {
       font-size: 32px;
@@ -33,15 +63,17 @@
   }
 
   &__description {
-    color: rgba(255, 255, 255, 0.6);
-    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.65);
+    line-height: 1.65;
     font-size: 16px;
   }
 
   &__grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 30px;
+    gap: 24px;
+    position: relative;
+    z-index: 1;
 
     @media (max-width: 992px) {
       grid-template-columns: repeat(2, 1fr);
@@ -53,64 +85,67 @@
   }
 
   &__card {
-    padding: 40px 20px;
-    border-radius: 20px;
+    padding: 36px 24px;
+    border-radius: $borderRadius-lg;
     text-align: center;
-    transition: all 0.3s ease;
-    background: transparent;
+    transition: $transition-sm;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
 
     &.active,
     &:hover {
-      background: rgba(255, 255, 255, 0.05); // Subtle background on hover
+      background: rgba(255, 255, 255, 0.06);
+      border-color: rgba(0, 255, 255, 0.35);
       transform: translateY(-5px);
+      box-shadow: 0 16px 35px rgba(0, 0, 0, 0.5), 0 0 20px rgba(0, 255, 255, 0.15);
+
+      .stats__card-icon {
+        background: rgba(0, 255, 255, 0.15);
+        border-color: $primary-color;
+        color: $primary-color;
+        box-shadow: 0 0 15px rgba(0, 255, 255, 0.3);
+      }
     }
 
     &-icon {
-      font-size: 24px;
-      color: #fff;
-      margin-bottom: 25px;
+      font-size: 22px;
+      color: rgba(255, 255, 255, 0.8);
+      margin-bottom: 20px;
       display: flex;
       align-items: center;
       justify-content: center;
-      width: 60px;
-      height: 60px;
+      width: 54px;
+      height: 54px;
       background: rgba(255, 255, 255, 0.05);
-      border-radius: 50%;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 16px;
       margin-left: auto;
       margin-right: auto;
+      transition: $transition-sm;
     }
 
     &-number-wrapper {
-      font-size: 40px;
+      font-size: 42px;
       font-weight: 700;
-      color: #5956e9; // Purplish color from image
-      margin-bottom: 10px;
+      font-family: $mono-font;
+      color: $primary-color;
+      margin-bottom: 8px;
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 5px;
+      gap: 4px;
+      text-shadow: 0 0 15px rgba(0, 255, 255, 0.35);
     }
 
     &-label {
-      color: #fff;
-      font-size: 14px;
+      color: rgba(255, 255, 255, 0.7);
+      font-size: 15px;
       margin: 0;
       font-weight: 500;
+      font-family: $primary-font;
     }
-  }
-
-  // Adding decorative background elements like in the screenshot
-  &::before {
-    content: "";
-    position: absolute;
-    left: -50px;
-    top: 50%;
-    width: 200px;
-    height: 200px;
-    background: rgba(255, 255, 255, 0.03);
-    border-radius: 50%;
-    z-index: 0;
-    filter: blur(50px);
   }
 }
 
@@ -121,3 +156,4 @@
     }
   }
 }
+

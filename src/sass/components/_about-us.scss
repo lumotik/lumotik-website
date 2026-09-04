@@ -1,42 +1,67 @@
 .about-us {
-  background-color: $lighter-gray-color;
+  background-color: $dark-bg;
+  padding: 100px 0;
   position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 20%;
+    left: -100px;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(0, 255, 255, 0.08) 0%, transparent 70%);
+    filter: blur(60px);
+    pointer-events: none;
+  }
 
   &__bubble,
   &__line {
-    position: absolute;
-    inset-inline-start: 0;
-  }
-
-  &__bubble {
-    top: 0;
-    height: 320px;
-  }
-
-  &__line {
-    top: 64px;
+    display: none;
   }
 
   &__form {
-    background-color: white;
-    border-radius: 32px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(0, 255, 255, 0.2);
+    border-radius: $borderRadius-xl;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5), 0 0 25px rgba(0, 255, 255, 0.1);
+    position: relative;
+
+    h3 {
+      font-size: 26px;
+      font-weight: 700;
+      color: $white-color;
+      font-family: $primary-font;
+    }
 
     &__field {
       p {
-        font-weight: 500;
-        color: $dark-color;
-        border: none;
-        border-bottom: 1px solid transparent;
-        transition: all 0.3s ease-in-out;
-        padding: 0;
+        font-weight: 600;
+        font-family: $mono-font;
+        font-size: 13px;
+        color: rgba(255, 255, 255, 0.8);
+        letter-spacing: 0.5px;
+        text-transform: uppercase;
+      }
 
-        &.active,
-        &:hover,
+      input {
+        background: rgba(0, 0, 0, 0.3);
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        border-radius: $borderRadius-md;
+        color: $white-color;
+        padding: 14px 18px;
+        font-size: 15px;
+
         &:focus {
-          color: #27272e;
-          border-bottom-color: $primary-color;
+          border-color: $primary-color;
+          box-shadow: 0 0 15px rgba(0, 255, 255, 0.25);
+          background: rgba(0, 255, 255, 0.04);
         }
       }
     }
   }
 }
+
