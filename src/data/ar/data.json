@@ -214,16 +214,14 @@
 	},
 	"socialLinks": [
 		{
-			"name": "واتساب",
+			"name": "واتساب (@etchinoo98)",
 			"url": "https://wa.me/?text=مرحبا%20لوموتيك",
-			"icon": "fa-brands fa-whatsapp",
-			"text": "@etchinoo98"
+			"icon": "fa-brands fa-whatsapp"
 		},
 		{
-			"name": "البريد الإلكتروني",
+			"name": "البريد الإلكتروني (lumotik1@gmail.com)",
 			"url": "mailto:lumotik1@gmail.com",
-			"icon": "fa-solid fa-envelope",
-			"text": "lumotik1@gmail.com"
+			"icon": "fa-solid fa-envelope"
 		}
 	],
 	"stats": {
