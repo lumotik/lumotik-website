@@ -72,6 +72,8 @@
 
       // Close mobile navigation drawer immediately if open
       $('.navbar-nav.collapsed-mobile').removeClass('active');
+      $('.navbar .overlay').removeClass('active');
+      $('body').removeClass('nav-open');
 
       // Update active nav class immediately for instant visual feedback
       this.$elem.find('.' + this.options.currentClass).removeClass(this.options.currentClass);
