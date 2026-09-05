@@ -69,7 +69,6 @@ gulp.task("pugToHtmlEnglish", () => {
   const jsonData = getJsonData("en");
   return gulp
     .src("./src/pug/*.pug")
-    .pipe(changed("./dist")) // Only process changed files
     .pipe(
       pug({
         pretty: true,
@@ -88,7 +87,6 @@ gulp.task("pugToHtmlArabic", () => {
   const jsonData = getJsonData("ar");
   return gulp
     .src("./src/pug/*.pug")
-    .pipe(changed("./dist")) // Only process changed files
     .pipe(
       pug({
         pretty: true,
@@ -111,10 +109,9 @@ gulp.task("pugToHtmlArabic", () => {
 gulp.task("sass", () => {
   return gulp
     .src("./src/sass/main-*.scss")
-    .pipe(changed("./dist/css")) // Only process changed files
     .pipe(sass().on("error", sass.logError))
     .pipe(autoprefixer("last 2 versions"))
-    .pipe(cleanCSS({ compatibility: "ie8" }))
+    .pipe(cleanCSS({ level: 1 }))
     .pipe(gulp.dest("./dist/css/"))
     .pipe(create().stream());
 });

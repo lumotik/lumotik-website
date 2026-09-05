@@ -7,20 +7,31 @@ header.header
       a.navbar-brand(href=(lang === "en" ? "./index.html" : "./index-ar.html"))
         img(src="./images/logo.svg" width="160" height="42" alt="Lumotik Digital Agency")
       .overlay
-      ul#onePageNav.navbar-nav.collapsed-mobile
+      .navbar-nav.collapsed-mobile#onePageNav
         .collapsed-mobile__header
-          span= (lang === "en" ? "Navigation" : "القائمة")
+          .d-flex.align-items-center.gap-2
+            img(src="./images/logo.svg" width="130" height="34" alt="Lumotik")
           button.close__btn(type="button" aria-label=(lang === "en" ? "Close Navigation" : "إغلاق القائمة"))
             i.fa-solid.fa-xmark
-        each link, index in data.navbar
-          li.nav-item(class=(index === 0 ? "active" : ""))
-            a.nav-link(href=link.url)= link.text
-        li.nav-item
-          a.nav-link(href=(lang === "en" ? "./index-ar.html" : "./index.html"))
-            i(class="fa-solid fa-globe me-1")
-            span= (lang === "en" ? "العربية" : "English")
-        li.nav-item.nav-cta
-          a.main-button(href="#about-us")
+        ul.collapsed-mobile__links.list-unstyled
+          each link, index in data.navbar
+            li.nav-item(class=(index === 0 ? "active" : ""))
+              a.nav-link(href=link.url)
+                span= link.text
+                i.fa-solid.fa-chevron-right.nav-arrow
+          li.nav-item.nav-item--lang
+            a.nav-link(href=(lang === "en" ? "./index-ar.html" : "./index.html"))
+              span
+                i.fa-solid.fa-globe.me-2
+                span= (lang === "en" ? "العربية" : "English")
+              span.badge.badge-lang= (lang === "en" ? "AR" : "EN")
+        .collapsed-mobile__footer
+          .collapsed-mobile__social
+            each link in data.socialLinks
+              a.mobile-social-btn(href=link.url target="_blank" rel="noopener noreferrer" title=link.name aria-label=link.name)
+                i(class=(link.icon.includes('fa-solid') || link.icon.includes('fa-brands') || link.icon.includes('fa-regular') ? link.icon : (link.icon === 'fa-envelope' ? 'fa-solid ' + link.icon : 'fa-brands ' + link.icon)) aria-hidden="true")
+          a.main-button.w-100(href="#about-us")
+            i.fa-solid.fa-rocket.me-2
             span= (lang === "en" ? "Start a Project" : "ابدأ مشروعك")
       button.navbar-toggler(type="button" aria-label=(lang === "en" ? "Open Navigation" : "فتح القائمة"))
         i.fas.fa-bars

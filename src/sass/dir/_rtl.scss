@@ -62,5 +62,28 @@ select {
   font-family: $secondary-font !important;
 }
 
+@media only screen and (max-width: 992px) {
+  .header .navbar .navbar-nav.collapsed-mobile {
+    left: auto !important;
+    right: 0 !important;
+    border-right: none !important;
+    border-left: 1px solid rgba(0, 255, 255, 0.2) !important;
+    transform: translateX(100%);
+
+    &.active {
+      transform: translateX(0) !important;
+    }
+
+    .nav-arrow {
+      transform: rotate(180deg) !important;
+    }
+
+    .nav-item:hover .nav-arrow,
+    .nav-item.active .nav-arrow {
+      transform: rotate(180deg) translateX(4px) !important;
+    }
+  }
+}
+
 
 
