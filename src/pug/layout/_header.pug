@@ -28,8 +28,10 @@ header.header
           each link, index in data.navbar
             li.nav-item(class=(index === 0 ? "active" : ""))
               a.nav-link(href=link.url)
-                span= link.text
-                i.fa-solid.fa-chevron-right.nav-arrow
+                span.nav-link__content
+                  span.nav-mono-tag= `// 0${index + 1}`
+                  span.nav-title= link.text
+                span.nav-status-indicator
           li.nav-item.nav-item--lang.d-none.d-lg-block
             a.nav-link(href=(lang === "en" ? "./index-ar.html" : "./index.html"))
               span

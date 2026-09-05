@@ -73,15 +73,6 @@ select {
     &.active {
       transform: translateX(0) !important;
     }
-
-    .nav-arrow {
-      transform: rotate(180deg) !important;
-    }
-
-    .nav-item:hover .nav-arrow,
-    .nav-item.active .nav-arrow {
-      transform: rotate(180deg) translateX(4px) !important;
-    }
   }
 }
 
