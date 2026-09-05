@@ -16,8 +16,16 @@ function goTop() {
   });
 }
 
+function openNav() {
+  $(".navbar-nav.collapsed-mobile").addClass("active");
+  $(".navbar .overlay").addClass("active");
+  $("body").addClass("nav-open");
+}
+
 function closeNav() {
   $(".navbar-nav.collapsed-mobile").removeClass("active");
+  $(".navbar .overlay").removeClass("active");
+  $("body").removeClass("nav-open");
 }
 
 $(document).ready(function () {
@@ -48,8 +56,10 @@ $(document).ready(function () {
     }
   });
 
-  $(".navbar-toggler").click(function () {
-    $(".navbar-nav.collapsed-mobile").addClass("active");
+  $(".navbar-toggler").on("click", function (e) {
+    e.preventDefault();
+    e.stopPropagation();
+    openNav();
   });
 
   // Interactive Project Media Gallery & Video Controls
@@ -128,8 +138,26 @@ $(document).ready(function () {
     });
   }
 
-  $(".navbar-nav.collapsed-mobile .close__btn").click(closeNav);
-  $(".navbar .overlay").click(closeNav);
+  $(".navbar-nav.collapsed-mobile .close__btn").on("click", function (e) {
+    e.preventDefault();
+    closeNav();
+  });
+  $(".navbar .overlay").on("click", function (e) {
+    e.preventDefault();
+    closeNav();
+  });
+
+  // Close nav on Escape key
+  $(document).on("keydown", function (e) {
+    if (e.key === "Escape") {
+      closeNav();
+    }
+  });
+
+  // Ensure all links inside mobile nav close the nav when tapped
+  $(".navbar-nav.collapsed-mobile a").on("click", function () {
+    closeNav();
+  });
 
   // Counter Animation
   const statsSection = document.querySelector(".stats");

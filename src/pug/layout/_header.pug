@@ -10,7 +10,8 @@ header.header
       ul#onePageNav.navbar-nav.collapsed-mobile
         .collapsed-mobile__header
           span= (lang === "en" ? "Navigation" : "القائمة")
-          button.close__btn(type="button" style="background: none; border: none; color: #00ffff; font-size: 20px;") &times;
+          button.close__btn(type="button" aria-label=(lang === "en" ? "Close Navigation" : "إغلاق القائمة"))
+            i.fa-solid.fa-xmark
         each link, index in data.navbar
           li.nav-item(class=(index === 0 ? "active" : ""))
             a.nav-link(href=link.url)= link.text
@@ -21,6 +22,6 @@ header.header
         li.nav-item.nav-cta
           a.main-button(href="#about-us")
             span= (lang === "en" ? "Start a Project" : "ابدأ مشروعك")
-      button.navbar-toggler(type="button")
+      button.navbar-toggler(type="button" aria-label=(lang === "en" ? "Open Navigation" : "فتح القائمة"))
         i.fas.fa-bars
 
