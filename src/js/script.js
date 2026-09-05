@@ -154,13 +154,21 @@ $(document).ready(function () {
           });
       }
 
+      var videoLoadStarted = false;
+      function startVideoLoad() {
+        if (videoLoadStarted) return;
+        videoLoadStarted = true;
+        loadVideoLast();
+      }
+
       // Schedule video load as the LAST thing after full window load
       if (document.readyState === "complete") {
-        setTimeout(loadVideoLast, 1000);
+        setTimeout(startVideoLoad, 1000);
       } else {
-        $(window).on("load", function () {
-          setTimeout(loadVideoLast, 1000);
+        window.addEventListener("load", function () {
+          setTimeout(startVideoLoad, 1000);
         });
+        setTimeout(startVideoLoad, 2500);
       }
 
       // Gallery thumbnail click
