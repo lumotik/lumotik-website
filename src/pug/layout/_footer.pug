@@ -4,8 +4,12 @@ footer.footer
     .container 
         .footer__social
             each link ,index in data.socialLinks
-                a(class="footer__social__item" href=link.url, target="_blank" rel="noopener noreferrer" title=`${link.name}` aria-label=`${link.name}` data-aos="fade-up" data-aos-delay=`${index}00` data-aos-duration="1000")
-                    i(class=(link.icon.includes('fa-solid') || link.icon.includes('fa-brands') || link.icon.includes('fa-regular') ? link.icon : (link.icon === 'fa-envelope' ? 'fa-solid ' + link.icon : 'fa-brands ' + link.icon)) aria-hidden="true")
+                a.footer__contact-chip(href=link.url, target="_blank" rel="noopener noreferrer" title=`${link.name}: ${link.handle}` aria-label=`${link.name}: ${link.handle}` data-aos="fade-up" data-aos-delay=`${index}00` data-aos-duration="1000")
+                    span.footer__contact-chip__icon
+                        i(class=(link.icon.includes('fa-solid') || link.icon.includes('fa-brands') || link.icon.includes('fa-regular') ? link.icon : (link.icon === 'fa-envelope' ? 'fa-solid ' + link.icon : 'fa-brands ' + link.icon)) aria-hidden="true")
+                    span.footer__contact-chip__content
+                        span.footer__contact-chip__label= link.name
+                        span.footer__contact-chip__val= link.handle
         .row 
             .col-xl-6.col-lg-5(data-aos="fade-right", data-aos-duration="1000")
                 .footer__info 
