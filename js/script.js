@@ -84,7 +84,8 @@ $(document).ready(function () {
       var $controls = $showcase.find(".media-playback-controls");
       var videoSrc = $video.data("video-src");
       var userManuallySelectedMedia = false;
-      var videoReady = false;
+      var videoBlobUrl = null;
+      var isVideoActive = false;
 
       function isSlowNetwork() {
         if (navigator.connection) {
@@ -95,67 +96,62 @@ $(document).ready(function () {
         return false;
       }
 
-      // Background video preloader with timeout check
-      function attemptBackgroundVideoLoad() {
+      // Load video as the very LAST thing after the website is completely loaded
+      function loadVideoLast() {
         if (!videoSrc || !$video.length || isSlowNetwork()) {
-          // Slow network or no video: keep showing images only
+          // Slow connection or no video: keep showing high-res images only
           return;
         }
 
-        var videoEl = $video[0];
-        var isTimedOut = false;
+        var controller = window.AbortController ? new AbortController() : null;
+        var timeoutId = setTimeout(function () {
+          if (controller) controller.abort();
+        }, 8000); // 8 second download timeout
 
-        // Max 5 seconds for video to buffer enough to play
-        var timer = setTimeout(function () {
-          isTimedOut = true;
-          if (!videoReady) {
-            // Cancel background load to prevent bandwidth drain
-            try {
-              videoEl.pause();
-              videoEl.removeAttribute("src");
-              videoEl.load();
-            } catch (err) {}
-          }
-        }, 5000);
+        // Fetch video in background without blocking initial page load or triggering tab loading bar
+        fetch(videoSrc, { signal: controller ? controller.signal : undefined })
+          .then(function (res) {
+            if (!res.ok) throw new Error("Video load failed");
+            return res.blob();
+          })
+          .then(function (blob) {
+            clearTimeout(timeoutId);
+            videoBlobUrl = URL.createObjectURL(blob);
 
-        function handleCanPlay() {
-          if (isTimedOut || videoReady) return;
-          clearTimeout(timer);
-          videoReady = true;
+            var videoEl = $video[0];
+            videoEl.src = videoBlobUrl;
 
-          // If the user hasn't clicked another thumbnail in the meantime, show video smoothly
-          if (!userManuallySelectedMedia) {
-            var activeThumb = $showcase.find(".gallery-thumb.active");
-            if (!activeThumb.length || activeThumb.data("media-type") === "video") {
-              $img.addClass("d-none");
-              $video.removeClass("d-none");
-              $controls.fadeIn(300);
-              var p = videoEl.play();
-              if (p !== undefined) {
-                p.catch(function () {});
+            // When video is ready to play and user hasn't clicked another thumbnail, preview it smoothly
+            videoEl.oncanplay = function () {
+              if (!userManuallySelectedMedia) {
+                var activeThumb = $showcase.find(".gallery-thumb.active");
+                if (!activeThumb.length || activeThumb.data("media-type") === "video") {
+                  $img.addClass("d-none");
+                  $video.removeClass("d-none");
+                  $controls.fadeIn(300);
+                  isVideoActive = true;
+                  var p = videoEl.play();
+                  if (p !== undefined) {
+                    p.catch(function () {});
+                  }
+                  $toggleBtn.find("i").removeClass("fa-play").addClass("fa-pause");
+                }
               }
-              $toggleBtn.find("i").removeClass("fa-play").addClass("fa-pause");
-            }
-          }
-        }
-
-        videoEl.addEventListener("canplaythrough", handleCanPlay, { once: true });
-        videoEl.addEventListener("loadeddata", handleCanPlay, { once: true });
-        videoEl.addEventListener("error", function () {
-          clearTimeout(timer);
-        }, { once: true });
-
-        // Set src and initiate background load asynchronously after page load
-        videoEl.src = videoSrc;
-        videoEl.load();
+            };
+            videoEl.load();
+          })
+          .catch(function () {
+            // If download was aborted (slow internet) or failed, keep showing the images seamlessly
+            clearTimeout(timeoutId);
+          });
       }
 
-      // Defer video download to after full window load to prevent browser tab loading indicator
+      // Schedule video load as the LAST thing after full window load
       if (document.readyState === "complete") {
-        setTimeout(attemptBackgroundVideoLoad, 100);
+        setTimeout(loadVideoLast, 1000);
       } else {
         $(window).on("load", function () {
-          setTimeout(attemptBackgroundVideoLoad, 100);
+          setTimeout(loadVideoLast, 1000);
         });
       }
 
@@ -177,9 +173,11 @@ $(document).ready(function () {
             $img.addClass("d-none");
             $video.removeClass("d-none");
             $controls.fadeIn(200);
+            isVideoActive = true;
 
-            if ($video.attr("src") !== mediaSrc) {
-              $video.attr("src", mediaSrc);
+            var targetSrc = videoBlobUrl || mediaSrc;
+            if ($video.attr("src") !== targetSrc) {
+              $video.attr("src", targetSrc);
               if (mediaPoster) $video.attr("poster", mediaPoster);
               videoEl.load();
             }
@@ -197,6 +195,7 @@ $(document).ready(function () {
           if ($video.length) {
             $video[0].pause();
             $video.addClass("d-none");
+            isVideoActive = false;
           }
           $controls.fadeOut(200);
           $img.removeClass("d-none")
