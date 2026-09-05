@@ -7,24 +7,39 @@
   &__social {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
+    flex-wrap: wrap;
     gap: 16px;
     margin-bottom: 4rem;
     padding-bottom: 2.5rem;
     border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 
     &__item {
-      font-size: 24px;
-      color: rgba(255, 255, 255, 0.6);
+      font-size: 18px;
+      color: rgba(255, 255, 255, 0.8);
       transition: $transition-sm;
-      display: flex;
+      display: inline-flex;
       align-items: center;
       justify-content: center;
-      width: 52px;
-      height: 52px;
+      gap: 12px;
+      padding: 12px 24px;
+      min-height: 52px;
       border-radius: 14px;
       background: rgba(255, 255, 255, 0.03);
       border: 1px solid rgba(255, 255, 255, 0.08);
+      text-decoration: none;
+
+      .footer__social__text {
+        font-size: 15px;
+        font-weight: 500;
+        color: rgba(255, 255, 255, 0.9);
+        letter-spacing: normal;
+      }
+
+      i {
+        font-size: 20px;
+        color: $primary-color;
+      }
 
       &:hover {
         color: $primary-color;
@@ -32,6 +47,10 @@
         border-color: $primary-color;
         box-shadow: 0 0 20px rgba(0, 255, 255, 0.35);
         transform: translateY(-3px);
+
+        .footer__social__text {
+          color: $primary-color;
+        }
       }
     }
   }

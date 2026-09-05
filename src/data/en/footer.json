@@ -2,7 +2,7 @@
   "footer": {
     "info": {
       "header": "Let's build the future together.",
-      "description": "Have an ambitious project in mind? Subscribe for our tech insights or reach out to start collaborating.",
+      "description": "Have an ambitious project in mind? Reach out via WhatsApp or email to start collaborating.",
       "placeholder": "Enter your work email",
       "subscribe": "Join Insights"
     },
@@ -18,10 +18,10 @@
       ],
       "resources_title": "Navigation",
       "resources": [
-        { "text": "Featured Case Studies", "url": "#featured" },
-        { "text": "Selected Portfolio", "url": "#projects" },
+        { "text": "Our Projects", "url": "#projects" },
+        { "text": "About Us", "url": "#about-us" },
         { "text": "Impact & Stats", "url": "#stats" },
-        { "text": "Request a Quote", "url": "#about-us" }
+        { "text": "Contact Us", "url": "#about-us" }
       ]
     },
     "copyright": {

@@ -1,44 +1,16 @@
 {
   "socialLinks": [
     {
-      "name": "فيسبوك",
-      "url": "https://www.facebook.com",
-      "icon": "fa-facebook-f"
+      "name": "واتساب",
+      "url": "https://wa.me/?text=مرحبا%20لوموتيك",
+      "icon": "fa-brands fa-whatsapp",
+      "text": "@etchinoo98"
     },
     {
-      "name": "تويطر",
-      "url": "https://www.twitter.com",
-      "icon": "fa-x-twitter"
-    },
-    {
-      "name": "Pinterest",
-      "url": "https://www.pinterest.com",
-      "icon": "fa-pinterest-p"
-    },
-    {
-      "name": "Linkedin",
-      "url": "https://www.linkedin.com",
-      "icon": "fa-linkedin-in"
-    },
-    {
-      "name": "Instagram",
-      "url": "https://www.instagram.com",
-      "icon": "fa-instagram"
-    },
-    {
-      "name": "Vimeo",
-      "url": "https://www.vimeo.com",
-      "icon": "fa-vimeo-v"
-    },
-    {
-      "name": "Dribbble",
-      "url": "https://www.dribbble.com",
-      "icon": "fa-dribbble"
-    },
-    {
-      "name": "Behance",
-      "url": "https://www.behance.com",
-      "icon": "fa-behance"
+      "name": "البريد الإلكتروني",
+      "url": "mailto:lumotik1@gmail.com",
+      "icon": "fa-solid fa-envelope",
+      "text": "lumotik1@gmail.com"
     }
   ]
 }

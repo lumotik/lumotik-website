@@ -37,7 +37,7 @@
 	"footer": {
 		"info": {
 			"header": "لنبتكر المستقبل سوياً.",
-			"description": "هل لديك فكرة مشروع واعدة؟ اشترك في نشرتنا التقنية أو تواصل معنا لبدء التعاون.",
+			"description": "هل لديك فكرة مشروع واعدة؟ تواصل معنا مباشرة عبر واتساب أو البريد الإلكتروني لبدء التعاون.",
 			"placeholder": "أدخل بريدك الإلكتروني",
 			"subscribe": "اشترك الآن"
 		},
@@ -72,19 +72,19 @@
 			"resources_title": "روابط سريعة",
 			"resources": [
 				{
-					"text": "دراسات الحالة المميزة",
-					"url": "#featured"
+					"text": "مشاريعنا وأعمالنا",
+					"url": "#projects"
 				},
 				{
-					"text": "أعمالنا المختارة",
-					"url": "#projects"
+					"text": "من نحن",
+					"url": "#about-us"
 				},
 				{
 					"text": "إحصائياتنا ونتائجنا",
 					"url": "#stats"
 				},
 				{
-					"text": "اطلب عرض سعر",
+					"text": "تواصل معنا",
 					"url": "#about-us"
 				}
 			]
@@ -114,16 +114,12 @@
 			"url": "#services"
 		},
 		{
-			"text": "أعمال مميزة",
-			"url": "#featured"
+			"text": "مشاريعنا",
+			"url": "#projects"
 		},
 		{
 			"text": "من نحن",
 			"url": "#about-us"
-		},
-		{
-			"text": "مشاريعنا",
-			"url": "#projects"
 		},
 		{
 			"text": "إحصائياتنا",
@@ -218,44 +214,16 @@
 	},
 	"socialLinks": [
 		{
-			"name": "فيسبوك",
-			"url": "https://www.facebook.com",
-			"icon": "fa-facebook-f"
+			"name": "واتساب",
+			"url": "https://wa.me/?text=مرحبا%20لوموتيك",
+			"icon": "fa-brands fa-whatsapp",
+			"text": "@etchinoo98"
 		},
 		{
-			"name": "تويطر",
-			"url": "https://www.twitter.com",
-			"icon": "fa-x-twitter"
-		},
-		{
-			"name": "Pinterest",
-			"url": "https://www.pinterest.com",
-			"icon": "fa-pinterest-p"
-		},
-		{
-			"name": "Linkedin",
-			"url": "https://www.linkedin.com",
-			"icon": "fa-linkedin-in"
-		},
-		{
-			"name": "Instagram",
-			"url": "https://www.instagram.com",
-			"icon": "fa-instagram"
-		},
-		{
-			"name": "Vimeo",
-			"url": "https://www.vimeo.com",
-			"icon": "fa-vimeo-v"
-		},
-		{
-			"name": "Dribbble",
-			"url": "https://www.dribbble.com",
-			"icon": "fa-dribbble"
-		},
-		{
-			"name": "Behance",
-			"url": "https://www.behance.com",
-			"icon": "fa-behance"
+			"name": "البريد الإلكتروني",
+			"url": "mailto:lumotik1@gmail.com",
+			"icon": "fa-solid fa-envelope",
+			"text": "lumotik1@gmail.com"
 		}
 	],
 	"stats": {
