@@ -359,13 +359,9 @@
   }
 
   .header-actions {
-    display: none;
+    display: flex;
     align-items: center;
     gap: 10px;
-
-    @media only screen and (max-width: 992px) {
-      display: flex;
-    }
 
     .header-lang-btn {
       display: inline-flex;

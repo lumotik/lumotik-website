@@ -29,12 +29,6 @@ header.header
             li.nav-item(class=(index === 0 ? "active" : ""))
               a.nav-link(href=link.url)
                 span= link.text
-          li.nav-item.nav-item--lang.d-none.d-lg-block
-            a.nav-link(href=(lang === "en" ? "./index-ar.html" : "./index.html"))
-              span
-                i.fa-solid.fa-globe.me-2
-                span= (lang === "en" ? "العربية" : "English")
-              span.badge.badge-lang= (lang === "en" ? "AR" : "EN")
         .collapsed-mobile__footer
           .collapsed-mobile__social
             each link in data.socialLinks
