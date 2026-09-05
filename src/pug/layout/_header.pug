@@ -6,41 +6,60 @@ header.header
     nav.navbar
       a.navbar-brand(href=(lang === "en" ? "./index.html" : "./index-ar.html"))
         img(src="./images/logo.svg" width="160" height="42" alt="Lumotik Digital Agency")
-      .overlay
-      .navbar-nav.collapsed-mobile#onePageNav
-        .collapsed-mobile__header
-          .d-flex.align-items-center.gap-2
-            img(src="./images/logo.svg" width="130" height="34" alt="Lumotik")
-          button.close__btn(type="button" aria-label=(lang === "en" ? "Close Navigation" : "إغلاق القائمة"))
-            i.fa-solid.fa-xmark
-        .mobile-lang-segmented
-          a.lang-segment(href="./index.html" class=(lang === "en" ? "active" : "") aria-label="English")
-            i.fa-solid.fa-globe
-            span English
-            if lang === "en"
-              i.fa-solid.fa-check.check-icon
-          a.lang-segment(href="./index-ar.html" class=(lang === "ar" ? "active" : "") aria-label="العربية")
-            i.fa-solid.fa-globe
-            span العربية
-            if lang === "ar"
-              i.fa-solid.fa-check.check-icon
-        ul.collapsed-mobile__links.list-unstyled
-          each link, index in data.navbar
-            li.nav-item(class=(index === 0 ? "active" : ""))
-              a.nav-link(href=link.url)
-                span= link.text
-        .collapsed-mobile__footer
-          .collapsed-mobile__social
-            each link in data.socialLinks
-              a.mobile-social-btn(href=link.url target="_blank" rel="noopener noreferrer" title=link.name aria-label=link.name)
-                i(class=(link.icon.includes('fa-solid') || link.icon.includes('fa-brands') || link.icon.includes('fa-regular') ? link.icon : (link.icon === 'fa-envelope' ? 'fa-solid ' + link.icon : 'fa-brands ' + link.icon)) aria-hidden="true")
-          a.main-button.w-100(href="#about-us")
-            i.fa-solid.fa-rocket.me-2
-            span= (lang === "en" ? "Start a Project" : "ابدأ مشروعك")
+
+      //- Desktop Navigation (Visible on Large Screens >= 992px)
+      ul.navbar-nav.desktop-nav.d-none.d-lg-flex#onePageNav
+        each link, index in data.navbar
+          li.nav-item(class=(index === 0 ? "active" : ""))
+            a.nav-link(href=link.url)
+              span= link.text
+
+      //- Top Header Actions (Language switch pill & Mobile Hamburger Toggle)
       .header-actions.d-flex.align-items-center.gap-2
         a.header-lang-btn(href=(lang === "en" ? "./index-ar.html" : "./index.html") title=(lang === "en" ? "تغيير اللغة إلى العربية" : "Switch language to English") aria-label=(lang === "en" ? "Switch language" : "تغيير اللغة"))
           i.fa-solid.fa-globe
           span.lang-code= (lang === "en" ? "العربية" : "EN")
-        button.navbar-toggler(type="button" aria-label=(lang === "en" ? "Open Navigation" : "فتح القائمة"))
+        button.navbar-toggler.d-inline-flex.d-lg-none(type="button" aria-label=(lang === "en" ? "Open Navigation" : "فتح القائمة"))
           i.fas.fa-bars
+
+//- Root Level Mobile Backdrop Overlay
+.mobile-nav-overlay
+
+//- Root Level Mobile Drawer (Placed outside header so it is 100% immune to backdrop-filter coordinate traps)
+aside.mobile-nav-drawer#mobileNavDrawer(aria-label="Mobile Navigation")
+  .mobile-drawer__header
+    a.mobile-drawer__brand(href=(lang === "en" ? "./index.html" : "./index-ar.html"))
+      img(src="./images/logo.svg" width="130" height="34" alt="Lumotik")
+    button.mobile-drawer__close(type="button" aria-label=(lang === "en" ? "Close Navigation" : "إغلاق القائمة"))
+      i.fa-solid.fa-xmark
+
+  .mobile-drawer__body
+    //- Segmented Language Switcher
+    .mobile-lang-segmented
+      a.lang-segment(href="./index.html" class=(lang === "en" ? "active" : "") aria-label="English")
+        i.fa-solid.fa-globe
+        span English
+        if lang === "en"
+          i.fa-solid.fa-check.check-icon
+      a.lang-segment(href="./index-ar.html" class=(lang === "ar" ? "active" : "") aria-label="العربية")
+        i.fa-solid.fa-globe
+        span العربية
+        if lang === "ar"
+          i.fa-solid.fa-check.check-icon
+
+    //- Mobile Nav Links
+    ul.mobile-drawer__links.list-unstyled#mobileOnePageNav
+      each link, index in data.navbar
+        li.mobile-nav-item(class=(index === 0 ? "active" : ""))
+          a.mobile-nav-link(href=link.url)
+            span= link.text
+
+  .mobile-drawer__footer
+    .mobile-drawer__social
+      each link in data.socialLinks
+        a.mobile-social-btn(href=link.url target="_blank" rel="noopener noreferrer" title=link.name aria-label=link.name)
+          i(class=(link.icon.includes('fa-solid') || link.icon.includes('fa-brands') || link.icon.includes('fa-regular') ? link.icon : (link.icon === 'fa-envelope' ? 'fa-solid ' + link.icon : 'fa-brands ' + link.icon)) aria-hidden="true")
+    a.main-button.w-100(href="#about-us")
+      i.fa-solid.fa-rocket.me-2
+      span= (lang === "en" ? "Start a Project" : "ابدأ مشروعك")
 

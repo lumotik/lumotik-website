@@ -17,26 +17,37 @@ function goTop() {
 }
 
 function openNav() {
-  $(".navbar-nav.collapsed-mobile").addClass("active");
-  $(".navbar .overlay").addClass("active");
+  $("#mobileNavDrawer").addClass("active");
+  $(".mobile-nav-overlay").addClass("active");
   $("body").addClass("nav-open");
 }
 
 function closeNav() {
-  $(".navbar-nav.collapsed-mobile").removeClass("active");
-  $(".navbar .overlay").removeClass("active");
+  $("#mobileNavDrawer").removeClass("active");
+  $(".mobile-nav-overlay").removeClass("active");
   $("body").removeClass("nav-open");
 }
 
 $(document).ready(function () {
   AOS.init();
-  $("#onePageNav").onePageNav({
-    currentClass: "active",
-    changeHash: false,
-    headerSelector: ".header",
-    offsetAdjustment: 10,
-    scrollThreshold: 0.3,
-  });
+  if ($("#onePageNav").length) {
+    $("#onePageNav").onePageNav({
+      currentClass: "active",
+      changeHash: false,
+      headerSelector: ".header",
+      offsetAdjustment: 10,
+      scrollThreshold: 0.3,
+    });
+  }
+  if ($("#mobileOnePageNav").length) {
+    $("#mobileOnePageNav").onePageNav({
+      currentClass: "active",
+      changeHash: false,
+      headerSelector: ".header",
+      offsetAdjustment: 10,
+      scrollThreshold: 0.3,
+    });
+  }
   goTop();
 
   // Smooth scroll for all on-page hash links (e.g., CTA buttons)
@@ -138,11 +149,11 @@ $(document).ready(function () {
     });
   }
 
-  $(".navbar-nav.collapsed-mobile .close__btn").on("click", function (e) {
+  $(".mobile-drawer__close").on("click", function (e) {
     e.preventDefault();
     closeNav();
   });
-  $(".navbar .overlay").on("click", function (e) {
+  $(".mobile-nav-overlay").on("click", function (e) {
     e.preventDefault();
     closeNav();
   });
@@ -155,7 +166,7 @@ $(document).ready(function () {
   });
 
   // Ensure all links inside mobile nav close the nav when tapped
-  $(".navbar-nav.collapsed-mobile a").on("click", function () {
+  $("#mobileNavDrawer a").on("click", function () {
     closeNav();
   });
 

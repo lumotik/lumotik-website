@@ -146,20 +146,25 @@
         }
 
         .project-gallery-wrapper {
-          margin-top: 4px;
-          padding-top: 4px;
+          margin-top: 12px;
+          padding-top: 14px;
+          border-top: 1px solid rgba(255, 255, 255, 0.07);
 
           .project-gallery-header {
             display: flex;
             align-items: center;
             justify-content: space-between;
-            margin-bottom: 18px;
+            margin-bottom: 28px;
             padding: 0 6px;
+
+            @media (max-width: 575.98px) {
+              margin-bottom: 22px;
+            }
 
             .gallery-label {
               font-size: 14px;
               font-weight: 600;
-              color: rgba(255, 255, 255, 0.85);
+              color: rgba(255, 255, 255, 0.9);
               display: flex;
               align-items: center;
               gap: 10px;
@@ -181,7 +186,7 @@
             display: flex;
             gap: 14px;
             overflow-x: auto;
-            padding: 4px 4px 12px 4px;
+            padding: 4px 4px 14px 4px;
             scrollbar-width: thin;
             scrollbar-color: rgba(0, 255, 255, 0.3) transparent;
 
