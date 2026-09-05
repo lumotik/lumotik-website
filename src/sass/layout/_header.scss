@@ -422,3 +422,24 @@ body.nav-open {
   touch-action: none;
 }
 
+// RTL Drawer Overrides
+html[dir="rtl"] .mobile-nav-drawer,
+body[dir="rtl"] .mobile-nav-drawer,
+[dir="rtl"] .mobile-nav-drawer {
+  left: auto !important;
+  right: 0 !important;
+  border-right: none !important;
+  border-left: 1px solid rgba(0, 255, 255, 0.2) !important;
+  transform: translateX(100%) !important;
+
+  &.active {
+    transform: translateX(0) !important;
+    visibility: visible !important;
+    pointer-events: auto !important;
+  }
+
+  .mobile-drawer__body .mobile-drawer__links .mobile-nav-item .mobile-nav-link {
+    text-align: right !important;
+  }
+}
+

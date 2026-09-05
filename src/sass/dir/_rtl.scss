@@ -67,7 +67,7 @@ select {
   right: 0 !important;
   border-right: none !important;
   border-left: 1px solid rgba(0, 255, 255, 0.2) !important;
-  transform: translateX(100%);
+  transform: translateX(100%) !important;
 
   &.active {
     transform: translateX(0) !important;
