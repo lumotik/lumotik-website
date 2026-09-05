@@ -119,10 +119,9 @@ $(document).ready(function () {
             videoBlobUrl = URL.createObjectURL(blob);
 
             var videoEl = $video[0];
-            videoEl.src = videoBlobUrl;
+            videoEl.muted = true;
 
-            // When video is ready to play and user hasn't clicked another thumbnail, preview it smoothly
-            videoEl.oncanplay = function () {
+            function showAndPlayVideo() {
               if (!userManuallySelectedMedia) {
                 var activeThumb = $showcase.find(".gallery-thumb.active");
                 if (!activeThumb.length || activeThumb.data("media-type") === "video") {
@@ -137,8 +136,17 @@ $(document).ready(function () {
                   $toggleBtn.find("i").removeClass("fa-play").addClass("fa-pause");
                 }
               }
-            };
+            }
+
+            videoEl.addEventListener("canplay", showAndPlayVideo, { once: true });
+            videoEl.addEventListener("loadeddata", showAndPlayVideo, { once: true });
+
+            videoEl.src = videoBlobUrl;
             videoEl.load();
+
+            if (videoEl.readyState >= 2) {
+              showAndPlayVideo();
+            }
           })
           .catch(function () {
             // If download was aborted (slow internet) or failed, keep showing the images seamlessly
