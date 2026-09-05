@@ -140,9 +140,9 @@
 		],
 		"allProjects": [
 			{
-				"image": "https://beta.imperium-group.com/storage/media/legacy/52f95ae072cf5a4f-img-ext-night.jpg",
-				"video": "https://beta.imperium-group.com/storage/media/legacy/2f7440f7eb0edcca-hero.mp4",
-				"videoPoster": "https://beta.imperium-group.com/storage/media/legacy/52f95ae072cf5a4f-img-ext-night.jpg",
+				"image": "./images/imperium-platform/tab-01-home.jpg",
+				"video": "./videos/imperium-hero.mp4",
+				"videoPoster": "./images/imperium-platform/tab-01-home.jpg",
 				"title": "Imperium Group — Luxury Architecture & Fit-Out Platform",
 				"subTitle": "Full-Stack Web Platform • UI/UX Design • UAE Brand",
 				"category": "web",
@@ -153,9 +153,9 @@
 				"gallery": [
 					{
 						"type": "video",
-						"src": "https://beta.imperium-group.com/storage/media/legacy/2f7440f7eb0edcca-hero.mp4",
-						"poster": "https://beta.imperium-group.com/storage/media/legacy/52f95ae072cf5a4f-img-ext-night.jpg",
-						"thumb": "https://beta.imperium-group.com/storage/media/legacy/52f95ae072cf5a4f-img-ext-night.jpg",
+						"src": "./videos/imperium-hero.mp4",
+						"poster": "./images/imperium-platform/tab-01-home.jpg",
+						"thumb": "./images/imperium-platform/tab-01-home.jpg",
 						"title": "🎬 Interactive Platform Video"
 					},
 					{
