@@ -3,7 +3,6 @@
     { "text": "الرئيسية", "url": "#hero" },
     { "text": "خدماتنا", "url": "#services" },
     { "text": "مشاريعنا", "url": "#projects" },
-    { "text": "من نحن", "url": "#about-us" },
-    { "text": "إحصائياتنا", "url": "#stats" }
+    { "text": "من نحن", "url": "#about-us" }
   ]
 }

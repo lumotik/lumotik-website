@@ -3,7 +3,6 @@
     { "text": "Home", "url": "#hero" },
     { "text": "Services", "url": "#services" },
     { "text": "Projects", "url": "#projects" },
-    { "text": "About Us", "url": "#about-us" },
-    { "text": "Stats", "url": "#stats" }
+    { "text": "About Us", "url": "#about-us" }
   ]
 }

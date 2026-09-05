@@ -13,13 +13,24 @@ header.header
             img(src="./images/logo.svg" width="130" height="34" alt="Lumotik")
           button.close__btn(type="button" aria-label=(lang === "en" ? "Close Navigation" : "إغلاق القائمة"))
             i.fa-solid.fa-xmark
+        .mobile-lang-segmented
+          a.lang-segment(href="./index.html" class=(lang === "en" ? "active" : "") aria-label="English")
+            i.fa-solid.fa-globe
+            span English
+            if lang === "en"
+              i.fa-solid.fa-check.check-icon
+          a.lang-segment(href="./index-ar.html" class=(lang === "ar" ? "active" : "") aria-label="العربية")
+            i.fa-solid.fa-globe
+            span العربية
+            if lang === "ar"
+              i.fa-solid.fa-check.check-icon
         ul.collapsed-mobile__links.list-unstyled
           each link, index in data.navbar
             li.nav-item(class=(index === 0 ? "active" : ""))
               a.nav-link(href=link.url)
                 span= link.text
                 i.fa-solid.fa-chevron-right.nav-arrow
-          li.nav-item.nav-item--lang
+          li.nav-item.nav-item--lang.d-none.d-lg-block
             a.nav-link(href=(lang === "en" ? "./index-ar.html" : "./index.html"))
               span
                 i.fa-solid.fa-globe.me-2
@@ -33,6 +44,10 @@ header.header
           a.main-button.w-100(href="#about-us")
             i.fa-solid.fa-rocket.me-2
             span= (lang === "en" ? "Start a Project" : "ابدأ مشروعك")
-      button.navbar-toggler(type="button" aria-label=(lang === "en" ? "Open Navigation" : "فتح القائمة"))
-        i.fas.fa-bars
+      .header-actions.d-flex.align-items-center.gap-2
+        a.header-lang-btn(href=(lang === "en" ? "./index-ar.html" : "./index.html") title=(lang === "en" ? "تغيير اللغة إلى العربية" : "Switch language to English") aria-label=(lang === "en" ? "Switch language" : "تغيير اللغة"))
+          i.fa-solid.fa-globe
+          span.lang-code= (lang === "en" ? "العربية" : "EN")
+        button.navbar-toggler(type="button" aria-label=(lang === "en" ? "Open Navigation" : "فتح القائمة"))
+          i.fas.fa-bars
 

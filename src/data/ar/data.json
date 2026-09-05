@@ -80,10 +80,6 @@
 					"url": "#about-us"
 				},
 				{
-					"text": "إحصائياتنا ونتائجنا",
-					"url": "#stats"
-				},
-				{
 					"text": "تواصل معنا",
 					"url": "#about-us"
 				}
@@ -120,10 +116,6 @@
 		{
 			"text": "من نحن",
 			"url": "#about-us"
-		},
-		{
-			"text": "إحصائياتنا",
-			"url": "#stats"
 		}
 	],
 	"projects": {

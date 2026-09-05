@@ -20,7 +20,6 @@
       "resources": [
         { "text": "مشاريعنا وأعمالنا", "url": "#projects" },
         { "text": "من نحن", "url": "#about-us" },
-        { "text": "إحصائياتنا ونتائجنا", "url": "#stats" },
         { "text": "تواصل معنا", "url": "#about-us" }
       ]
     },

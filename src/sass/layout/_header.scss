@@ -79,6 +79,7 @@
 
       .collapsed-mobile__header,
       .collapsed-mobile__footer,
+      .mobile-lang-segmented,
       .close__btn,
       .nav-arrow,
       .badge-lang {
@@ -179,6 +180,56 @@
               background: rgba(0, 255, 255, 0.2);
               border-color: $primary-color;
               box-shadow: 0 0 12px rgba(0, 255, 255, 0.4);
+            }
+          }
+
+          .mobile-lang-segmented {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(0, 255, 255, 0.15);
+            border-radius: 12px;
+            padding: 4px;
+            margin-bottom: 1rem;
+
+            .lang-segment {
+              flex: 1;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              gap: 6px;
+              padding: 9px 12px;
+              border-radius: 8px;
+              font-size: 13px;
+              font-weight: 600;
+              font-family: $primary-font;
+              color: rgba(255, 255, 255, 0.7);
+              text-decoration: none;
+              transition: $transition-sm;
+              border: 1px solid transparent;
+
+              i {
+                font-size: 12px;
+              }
+
+              .check-icon {
+                font-size: 11px;
+              }
+
+              &.active {
+                background: $primary-color;
+                color: #071010;
+                font-weight: 700;
+                box-shadow: 0 0 14px rgba(0, 255, 255, 0.4);
+                border-color: transparent;
+              }
+
+              &:not(.active):hover {
+                background: rgba(0, 255, 255, 0.1);
+                color: $primary-color;
+                border-color: rgba(0, 255, 255, 0.2);
+              }
             }
           }
 
@@ -317,6 +368,45 @@
         opacity: 1;
         visibility: visible;
         pointer-events: auto;
+      }
+    }
+  }
+
+  .header-actions {
+    display: none;
+    align-items: center;
+    gap: 10px;
+
+    @media only screen and (max-width: 992px) {
+      display: flex;
+    }
+
+    .header-lang-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      padding: 8px 12px;
+      border-radius: 8px;
+      background: rgba(0, 255, 255, 0.08);
+      border: 1px solid rgba(0, 255, 255, 0.25);
+      color: $primary-color;
+      font-size: 13px;
+      font-weight: 600;
+      font-family: $primary-font;
+      text-decoration: none;
+      transition: $transition-sm;
+
+      i {
+        font-size: 12px;
+      }
+
+      &:hover,
+      &:active {
+        background: rgba(0, 255, 255, 0.2);
+        border-color: $primary-color;
+        color: #ffffff;
+        box-shadow: 0 0 15px rgba(0, 255, 255, 0.4);
       }
     }
   }

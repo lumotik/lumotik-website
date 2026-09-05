@@ -21,38 +21,35 @@ gulp.task("clean-json", async () => {
   await del(["./src/data/en/data.json", "./src/data/ar/data.json"]);
 });
 
-// Combine JSON files into data.json
+// Combine English JSON files
+gulp.task("combine-json-en", () => {
+  return gulp
+    .src("./src/data/en/*.json")
+    .pipe(
+      mergeJson({
+        fileName: "data.json",
+        edit: (json, file) => json,
+      })
+    )
+    .pipe(gulp.dest("./src/data/en"));
+});
+
+// Combine Arabic JSON files
+gulp.task("combine-json-ar", () => {
+  return gulp
+    .src("./src/data/ar/*.json")
+    .pipe(
+      mergeJson({
+        fileName: "data.json",
+        edit: (json, file) => json,
+      })
+    )
+    .pipe(gulp.dest("./src/data/ar"));
+});
+
 gulp.task(
   "combine-json",
-  gulp.series("clean-json", () => {
-    // Combine English JSON files
-    gulp
-      .src("./src/data/en/*.json")
-      .pipe(
-        mergeJson({
-          fileName: "data.json",
-          edit: (json, file) => {
-            const fileName = path.basename(file.path, ".json");
-            return json; // Return JSON content directly
-          },
-        })
-      )
-      .pipe(gulp.dest("./src/data/en"));
-
-    // Combine Arabic JSON files
-    return gulp
-      .src("./src/data/ar/*.json")
-      .pipe(
-        mergeJson({
-          fileName: "data.json",
-          edit: (json, file) => {
-            const fileName = path.basename(file.path, ".json");
-            return json; // Return JSON content directly
-          },
-        })
-      )
-      .pipe(gulp.dest("./src/data/ar"));
-  })
+  gulp.series("clean-json", gulp.parallel("combine-json-en", "combine-json-ar"))
 );
 
 // Helper function to read JSON data
