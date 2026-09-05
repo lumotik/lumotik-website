@@ -32,12 +32,12 @@ section#projects.projects
                       .project-showcase__preview
                         .project-media-stage
                           if project.video
-                            video.main-video(src=project.video poster=project.videoPoster autoplay muted loop playsinline preload="metadata")
-                          img.main-img(class=project.video ? "d-none" : "" src=project.image alt=project.title loading="lazy")
+                            video.main-video.d-none(data-video-src=project.video poster=(project.videoPoster || project.image) muted loop playsinline preload="none")
+                          img.main-img(src=project.image alt=project.title loading="eager")
                           if project.badge
                             span.project-badge= project.badge
                           if project.video
-                            .media-playback-controls
+                            .media-playback-controls(style="display: none;")
                               button.media-btn-toggle(type="button" title="Play/Pause" aria-label="Toggle playback")
                                 i.fa-solid.fa-pause
                               button.media-btn-mute(type="button" title="Mute/Unmute" aria-label="Toggle audio")
