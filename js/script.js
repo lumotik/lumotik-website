@@ -81,9 +81,87 @@ $(document).ready(function () {
       var $img = $showcase.find("img.main-img");
       var $toggleBtn = $showcase.find(".media-btn-toggle");
       var $muteBtn = $showcase.find(".media-btn-mute");
+      var $controls = $showcase.find(".media-playback-controls");
+      var videoSrc = $video.data("video-src");
+      var userManuallySelectedMedia = false;
+      var videoReady = false;
+
+      function isSlowNetwork() {
+        if (navigator.connection) {
+          if (navigator.connection.saveData) return true;
+          var type = navigator.connection.effectiveType;
+          if (type === "slow-2g" || type === "2g" || type === "3g") return true;
+        }
+        return false;
+      }
+
+      // Background video preloader with timeout check
+      function attemptBackgroundVideoLoad() {
+        if (!videoSrc || !$video.length || isSlowNetwork()) {
+          // Slow network or no video: keep showing images only
+          return;
+        }
+
+        var videoEl = $video[0];
+        var isTimedOut = false;
+
+        // Max 5 seconds for video to buffer enough to play
+        var timer = setTimeout(function () {
+          isTimedOut = true;
+          if (!videoReady) {
+            // Cancel background load to prevent bandwidth drain
+            try {
+              videoEl.pause();
+              videoEl.removeAttribute("src");
+              videoEl.load();
+            } catch (err) {}
+          }
+        }, 5000);
+
+        function handleCanPlay() {
+          if (isTimedOut || videoReady) return;
+          clearTimeout(timer);
+          videoReady = true;
+
+          // If the user hasn't clicked another thumbnail in the meantime, show video smoothly
+          if (!userManuallySelectedMedia) {
+            var activeThumb = $showcase.find(".gallery-thumb.active");
+            if (!activeThumb.length || activeThumb.data("media-type") === "video") {
+              $img.addClass("d-none");
+              $video.removeClass("d-none");
+              $controls.fadeIn(300);
+              var p = videoEl.play();
+              if (p !== undefined) {
+                p.catch(function () {});
+              }
+              $toggleBtn.find("i").removeClass("fa-play").addClass("fa-pause");
+            }
+          }
+        }
+
+        videoEl.addEventListener("canplaythrough", handleCanPlay, { once: true });
+        videoEl.addEventListener("loadeddata", handleCanPlay, { once: true });
+        videoEl.addEventListener("error", function () {
+          clearTimeout(timer);
+        }, { once: true });
+
+        // Set src and initiate background load asynchronously after page load
+        videoEl.src = videoSrc;
+        videoEl.load();
+      }
+
+      // Defer video download to after full window load to prevent browser tab loading indicator
+      if (document.readyState === "complete") {
+        setTimeout(attemptBackgroundVideoLoad, 100);
+      } else {
+        $(window).on("load", function () {
+          setTimeout(attemptBackgroundVideoLoad, 100);
+        });
+      }
 
       // Gallery thumbnail click
       $showcase.find(".gallery-thumb").on("click", function () {
+        userManuallySelectedMedia = true;
         var $thumb = $(this);
         var mediaType = $thumb.data("media-type");
         var mediaSrc = $thumb.data("media-src");
@@ -94,27 +172,36 @@ $(document).ready(function () {
         $thumb.addClass("active");
 
         if (mediaType === "video") {
-          $img.addClass("d-none");
-          $video.removeClass("d-none");
           if ($video.length) {
             var videoEl = $video[0];
+            $img.addClass("d-none");
+            $video.removeClass("d-none");
+            $controls.fadeIn(200);
+
             if ($video.attr("src") !== mediaSrc) {
               $video.attr("src", mediaSrc);
               if (mediaPoster) $video.attr("poster", mediaPoster);
+              videoEl.load();
             }
-            videoEl.play().catch(function () {});
+
+            var playPromise = videoEl.play();
+            if (playPromise !== undefined) {
+              playPromise.catch(function () {
+                $toggleBtn.find("i").removeClass("fa-pause").addClass("fa-play");
+              });
+            }
             $toggleBtn.find("i").removeClass("fa-play").addClass("fa-pause");
           }
-          $showcase.find(".media-playback-controls").fadeIn(200);
         } else {
+          // Switch to Image
           if ($video.length) {
             $video[0].pause();
             $video.addClass("d-none");
           }
+          $controls.fadeOut(200);
           $img.removeClass("d-none")
             .attr("src", mediaSrc)
             .attr("alt", mediaTitle || "Imperium Group Showcase");
-          $showcase.find(".media-playback-controls").fadeOut(200);
         }
       });
 
@@ -145,6 +232,13 @@ $(document).ready(function () {
             $muteBtn.find("i").removeClass("fa-volume-xmark").addClass("fa-volume-high");
           }
         }
+      });
+    });
+
+    // Pause videos when switching tabs
+    $('button[data-bs-toggle="tab"]').on("hide.bs.tab", function () {
+      $(".project-showcase video.main-video").each(function () {
+        this.pause();
       });
     });
   }
