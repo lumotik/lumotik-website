@@ -103,55 +103,58 @@ $(document).ready(function () {
           return;
         }
 
-        var controller = window.AbortController ? new AbortController() : null;
+        var videoEl = $video[0];
+        videoEl.muted = true;
+        var hasTimedOut = false;
+        var videoReady = false;
+
+        // 4.5s timeout for video buffering on slow connections
         var timeoutId = setTimeout(function () {
-          if (controller) controller.abort();
-        }, 8000); // 8 second download timeout
+          hasTimedOut = true;
+          if (!videoReady) {
+            // Buffering too slow: abort and stay on image
+            try {
+              videoEl.pause();
+              videoEl.removeAttribute("src");
+              videoEl.load();
+            } catch (e) {}
+          }
+        }, 4500);
 
-        // Fetch video in background without blocking initial page load or triggering tab loading bar
-        fetch(videoSrc, { signal: controller ? controller.signal : undefined })
-          .then(function (res) {
-            if (!res.ok) throw new Error("Video load failed");
-            return res.blob();
-          })
-          .then(function (blob) {
-            clearTimeout(timeoutId);
-            videoBlobUrl = URL.createObjectURL(blob);
+        function showAndPlayVideo() {
+          if (hasTimedOut || videoReady) return;
+          videoReady = true;
+          clearTimeout(timeoutId);
 
-            var videoEl = $video[0];
-            videoEl.muted = true;
-
-            function showAndPlayVideo() {
-              if (!userManuallySelectedMedia) {
-                var activeThumb = $showcase.find(".gallery-thumb.active");
-                if (!activeThumb.length || activeThumb.data("media-type") === "video") {
-                  $img.addClass("d-none");
-                  $video.removeClass("d-none");
-                  $controls.fadeIn(300);
-                  isVideoActive = true;
-                  var p = videoEl.play();
-                  if (p !== undefined) {
-                    p.catch(function () {});
-                  }
-                  $toggleBtn.find("i").removeClass("fa-play").addClass("fa-pause");
-                }
+          if (!userManuallySelectedMedia) {
+            var activeThumb = $showcase.find(".gallery-thumb.active");
+            if (!activeThumb.length || activeThumb.data("media-type") === "video") {
+              $img.addClass("d-none");
+              $video.removeClass("d-none");
+              $controls.fadeIn(300);
+              isVideoActive = true;
+              var p = videoEl.play();
+              if (p !== undefined) {
+                p.catch(function () {});
               }
+              $toggleBtn.find("i").removeClass("fa-play").addClass("fa-pause");
             }
+          }
+        }
 
-            videoEl.addEventListener("canplay", showAndPlayVideo, { once: true });
-            videoEl.addEventListener("loadeddata", showAndPlayVideo, { once: true });
+        videoEl.addEventListener("canplay", showAndPlayVideo, { once: true });
+        videoEl.addEventListener("loadeddata", showAndPlayVideo, { once: true });
+        videoEl.addEventListener("error", function () {
+          clearTimeout(timeoutId);
+        }, { once: true });
 
-            videoEl.src = videoBlobUrl;
-            videoEl.load();
+        // Set src on video element to trigger stream
+        videoEl.src = videoSrc;
+        videoEl.load();
 
-            if (videoEl.readyState >= 2) {
-              showAndPlayVideo();
-            }
-          })
-          .catch(function () {
-            // If download was aborted (slow internet) or failed, keep showing the images seamlessly
-            clearTimeout(timeoutId);
-          });
+        if (videoEl.readyState >= 2) {
+          showAndPlayVideo();
+        }
       }
 
       var videoLoadStarted = false;
