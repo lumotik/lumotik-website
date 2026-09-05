@@ -22,15 +22,6 @@ section#about-us.about-us
                 h4.text-primary.mb-1 24/7
                 small.text-white-50= (lang === "en" ? "Dedicated Support" : "دعم فني مستمر")
 
-          .mt-4.d-flex.flex-wrap.gap-3
-            each link in data.socialLinks
-              a.footer__contact-chip(href=link.url, target="_blank", rel="noopener noreferrer", title=`${link.name}: ${link.handle}`)
-                span.footer__contact-chip__icon
-                  i(class=(link.icon.includes('fa-solid') || link.icon.includes('fa-brands') || link.icon.includes('fa-regular') ? link.icon : (link.icon === 'fa-envelope' ? 'fa-solid ' + link.icon : 'fa-brands ' + link.icon)) aria-hidden="true")
-                span.footer__contact-chip__content
-                  span.footer__contact-chip__label= link.name
-                  span.footer__contact-chip__val= link.handle
-
       .col-12.col-lg-5
         .about-us__form.p-4.p-md-5(data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100")
           h3.mb-2= form.title

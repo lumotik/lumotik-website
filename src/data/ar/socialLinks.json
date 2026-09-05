@@ -2,13 +2,11 @@
   "socialLinks": [
     {
       "name": "واتساب",
-      "handle": "@etchinoo98",
       "url": "https://wa.me/etchinoo98",
       "icon": "fa-brands fa-whatsapp"
     },
     {
       "name": "البريد الإلكتروني",
-      "handle": "lumotik1@gmail.com",
       "url": "mailto:lumotik1@gmail.com",
       "icon": "fa-solid fa-envelope"
     }

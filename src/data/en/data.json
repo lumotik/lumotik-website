@@ -215,13 +215,11 @@
 	"socialLinks": [
 		{
 			"name": "WhatsApp",
-			"handle": "@etchinoo98",
 			"url": "https://wa.me/etchinoo98",
 			"icon": "fa-brands fa-whatsapp"
 		},
 		{
 			"name": "Email",
-			"handle": "lumotik1@gmail.com",
 			"url": "mailto:lumotik1@gmail.com",
 			"icon": "fa-solid fa-envelope"
 		}

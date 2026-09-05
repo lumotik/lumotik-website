@@ -8,78 +8,40 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-wrap: wrap;
-    gap: 16px;
+    gap: 18px;
     margin-bottom: 4rem;
     padding-bottom: 2.5rem;
     border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-  }
 
-  &__contact-chip {
-    display: inline-flex;
-    align-items: center;
-    gap: 14px;
-    padding: 10px 22px 10px 12px;
-    border-radius: 50px;
-    background: rgba(255, 255, 255, 0.03);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(12px);
-    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-    text-decoration: none;
-
-    &__icon {
-      width: 44px;
-      height: 44px;
-      border-radius: 50%;
+    &__item {
+      font-size: 24px;
+      color: rgba(255, 255, 255, 0.7);
+      transition: $transition-sm;
       display: flex;
       align-items: center;
       justify-content: center;
-      background: rgba(0, 255, 255, 0.1);
-      border: 1px solid rgba(0, 255, 255, 0.25);
-      color: $primary-color;
-      font-size: 20px;
-      transition: all 0.3s ease;
-      flex-shrink: 0;
-    }
+      width: 54px;
+      height: 54px;
+      border-radius: 14px;
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      text-decoration: none;
 
-    &__content {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      line-height: 1.25;
-    }
-
-    &__label {
-      font-size: 11px;
-      text-transform: uppercase;
-      letter-spacing: 0.06em;
-      color: rgba(255, 255, 255, 0.5);
-      font-weight: 600;
-    }
-
-    &__val {
-      font-size: 15px;
-      font-weight: 600;
-      color: #ffffff;
-      letter-spacing: normal;
-      transition: color 0.3s ease;
-    }
-
-    &:hover {
-      background: rgba(0, 255, 255, 0.08);
-      border-color: rgba(0, 255, 255, 0.4);
-      transform: translateY(-3px);
-      box-shadow: 0 10px 25px rgba(0, 255, 255, 0.15);
-
-      .footer__contact-chip__icon {
-        background: $primary-color;
-        color: #050d14;
-        box-shadow: 0 0 16px rgba(0, 255, 255, 0.6);
-        transform: scale(1.05);
+      i {
+        font-size: 24px;
+        transition: $transition-sm;
       }
 
-      .footer__contact-chip__val {
+      &:hover {
         color: $primary-color;
+        background: rgba(0, 255, 255, 0.1);
+        border-color: $primary-color;
+        box-shadow: 0 0 20px rgba(0, 255, 255, 0.35);
+        transform: translateY(-3px);
+
+        i {
+          transform: scale(1.12);
+        }
       }
     }
   }
